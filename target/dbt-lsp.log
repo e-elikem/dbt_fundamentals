@@ -19013,3 +19013,2379 @@ SELECT * FROM FINAL
 19:32:29.630492 [info ]: Started scheduling
 19:32:29.630520 [info ]: Finished scheduling [  0.00s]
 19:32:29.630705 [info ]: Cached model count updated: 5 models (accurate)
+20:22:55.421153 [info ]: Started loading project
+20:22:55.421806 [info ]: Loading ~/.dbt/profiles.yml
+20:22:55.437209 [info ]: Started loading project
+20:22:55.437484 [info ]: Loading ~/.dbt/profiles.yml
+20:22:55.437506 [info ]: Finished loading project [  0.02s]
+20:22:55.595366 [info ]:    Started resolving packages from packages.yml
+20:22:55.595574 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+20:22:55.595638 [debug]:    Started loading packages
+20:22:55.596511 [debug]:     Loaded [  0.00s] packages
+20:22:55.597024 [info ]: Finished loading project [  0.16s]
+20:22:55.597152 [info ]: Started parsing
+20:22:55.621046 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:22:55.622149 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+20:22:55.622612 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:22:55.622993 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:22:55.623424 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:22:55.623780 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:22:55.626369 [info ]: Finished parsing [  0.03s]
+20:22:55.626596 [info ]: Cached model count updated: 5 models (estimate)
+20:22:55.626605 [info ]: Cached model count updated: 5 models (accurate)
+20:22:55.626625 [info ]: Started scheduling
+20:22:55.626648 [info ]: Finished scheduling [  0.00s]
+20:22:55.626655 [debug]: Compilation - 0 nodes selected: {}
+20:22:55.626671 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+20:22:55.626685 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:22:55.626690 [info ]: Started scheduling
+20:22:55.626726 [info ]: Finished scheduling [  0.00s]
+20:22:55.627092 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:22:55.627449 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:22:55.628274 [info ]: Started building task graph
+20:22:55.628289 [info ]: Finished building task graph [  0.00s]
+20:22:55.640329 [info ]: Started scheduling
+20:22:55.640362 [info ]: Finished scheduling [  0.00s]
+20:22:55.642311 [info ]: Cached model count updated: 5 models (accurate)
+20:22:56.828666 [info ]: Started loading project
+20:22:56.829342 [info ]: Loading ~/.dbt/profiles.yml
+20:22:56.854586 [info ]: Cached model count updated: 5 models (estimate)
+20:22:56.854634 [info ]: Cached model count updated: 5 models (accurate)
+20:22:56.854673 [info ]: Started scheduling
+20:22:56.854787 [info ]: Finished scheduling [  0.00s]
+20:22:56.854806 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:22:56.856037 [info ]: Started building task graph
+20:22:56.856140 [info ]: Finished building task graph [  0.00s]
+20:22:56.863909 [info ]: Started rendering (5 nodes)
+20:22:56.863924 [info ]: Started model dbt_eelikem.dim_customers
+20:22:56.863937 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:22:56.863957 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:22:56.863961 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:22:56.863968 [info ]: Started model dbt_eelikem.fct_orders
+20:22:56.863972 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:22:56.863978 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:22:56.863984 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:22:56.863991 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:22:56.863996 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:22:56.864011 [info ]: Finished loading project [  0.04s]
+20:22:56.868887 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:22:56.868961 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:22:56.868995 [info ]: Started analyzing (5 nodes)
+20:22:56.869005 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:22:56.869077 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:22:56.869091 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:22:56.869123 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:22:56.869165 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:22:56.869184 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:22:56.869200 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:22:56.869207 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:22:56.869208 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:22:56.869216 [debug]: Finished rendering [  0.01s] model dbt_eelikem.fct_orders [success]
+20:22:56.869224 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:22:56.869356 [debug]: Finished rendering [  0.01s] model dbt_eelikem.dim_customers [success]
+20:22:56.869367 [info ]: Finished rendering [  0.01s] (5 nodes, 0 skipped, 0 errors)
+20:22:56.869375 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:22:56.869545 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:22:56.869562 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_stripe_payment (view)
+20:22:56.869577 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:22:56.869582 [info ]:  Succeeded [  0.01s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:22:56.869590 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:22:56.869595 [info ]:  Succeeded [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:22:56.869831 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:22:56.869842 [info ]:  Succeeded [  0.01s] model dbt_eelikem.dim_customers (table)
+20:22:56.869942 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:22:56.869952 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:22:56.869957 [info ]:  Succeeded [  0.01s] model dbt_eelikem.fct_orders (table)
+20:22:56.871760 [info ]: Started scheduling
+20:22:56.871795 [info ]: Finished scheduling [  0.00s]
+20:22:56.872013 [info ]: Cached model count updated: 5 models (accurate)
+20:23:13.578097 [info ]: Started loading project
+20:23:13.578514 [info ]: Loading ~/.dbt/profiles.yml
+20:23:13.581507 [info ]: Started loading project
+20:23:13.581738 [info ]: Loading ~/.dbt/profiles.yml
+20:23:13.581752 [info ]: Finished loading project [  0.00s]
+20:23:13.733674 [info ]:    Started resolving packages from packages.yml
+20:23:14.134262 [info ]:   Finished [  0.40s] resolving packages from packages.yml (2 items)
+20:23:14.134527 [info ]: Auto installing dependencies while running `dbt compile`. To ensure dependencies are cached, run `dbt deps` to initialize a valid package-lock.yml.
+20:23:14.134581 [info ]: Installing packages
+20:23:14.137428 [info ]: Installing dbt-labs/codegen
+20:23:14.137941 [info ]: Installing dbt-labs/dbt_utils
+20:23:14.399087 [info ]:  Installed dbt-labs/codegen: 0.14.1
+20:23:14.497757 [info ]:  Installed dbt-labs/dbt_utils: 1.4.1
+20:23:14.497788 [info ]:  Installed 2 packages
+20:23:14.498160 [debug]:    Started loading packages
+20:23:14.502948 [debug]:     Loaded [  0.00s] packages
+20:23:14.503440 [info ]: Finished loading project [  0.92s]
+20:23:14.503609 [info ]: Started parsing
+20:23:14.529834 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:23:14.530644 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+20:23:14.531074 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:23:14.531450 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:23:14.531903 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:23:14.532266 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:23:14.535231 [info ]: Finished parsing [  0.03s]
+20:23:14.535483 [info ]: Cached model count updated: 5 models (estimate)
+20:23:14.535493 [info ]: Cached model count updated: 5 models (accurate)
+20:23:14.535509 [info ]: Started scheduling
+20:23:14.535534 [info ]: Finished scheduling [  0.00s]
+20:23:14.535541 [debug]: Compilation - 0 nodes selected: {}
+20:23:14.535552 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+20:23:14.535564 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:23:14.535569 [info ]: Started scheduling
+20:23:14.535603 [info ]: Finished scheduling [  0.00s]
+20:23:14.535628 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:23:14.535639 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:23:14.578550 [info ]: Started building task graph
+20:23:14.578574 [info ]: Finished building task graph [  0.00s]
+20:23:14.588584 [info ]: Started scheduling
+20:23:14.588623 [info ]: Finished scheduling [  0.00s]
+20:23:14.588962 [info ]: Cached model count updated: 5 models (accurate)
+20:23:15.823059 [info ]: Started loading project
+20:23:15.823576 [info ]: Loading ~/.dbt/profiles.yml
+20:23:15.854163 [info ]: Cached model count updated: 5 models (estimate)
+20:23:15.854215 [info ]: Cached model count updated: 5 models (accurate)
+20:23:15.854253 [info ]: Started scheduling
+20:23:15.854356 [info ]: Finished scheduling [  0.00s]
+20:23:15.854379 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:23:15.902262 [info ]: Started building task graph
+20:23:15.902319 [info ]: Finished building task graph [  0.00s]
+20:23:15.908248 [info ]: Started rendering (5 nodes)
+20:23:15.908264 [info ]: Started model dbt_eelikem.dim_customers
+20:23:15.908271 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:23:15.908284 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:23:15.908288 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:23:15.908294 [info ]: Started model dbt_eelikem.fct_orders
+20:23:15.908297 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:23:15.908303 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:23:15.908307 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:23:15.908315 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:23:15.908318 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:23:15.908327 [info ]: Finished loading project [  0.09s]
+20:23:15.909548 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:23:15.909560 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:23:15.909559 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:23:15.909622 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:23:15.909677 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:23:15.909677 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:23:15.909689 [info ]: Started analyzing (5 nodes)
+20:23:15.909697 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:23:15.909713 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:23:15.909722 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:23:15.909734 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:23:15.909742 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:23:15.909753 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:23:15.909758 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:23:15.909765 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:23:15.909770 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:23:15.909775 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:23:15.909849 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:23:15.909863 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:23:15.909874 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:23:15.909878 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_stripe_payment (view)
+20:23:15.909885 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:23:15.909891 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:23:15.910050 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:23:15.910061 [info ]:  Succeeded [  0.00s] model dbt_eelikem.dim_customers (table)
+20:23:15.910078 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:23:15.910085 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:23:15.910089 [info ]:  Succeeded [  0.00s] model dbt_eelikem.fct_orders (table)
+20:23:15.912039 [info ]: Started scheduling
+20:23:15.912069 [info ]: Finished scheduling [  0.00s]
+20:23:15.912439 [info ]: Cached model count updated: 5 models (accurate)
+20:31:51.311865 [info ]: Started loading project
+20:31:51.312482 [info ]: Loading ~/.dbt/profiles.yml
+20:31:51.316559 [info ]: Started loading project
+20:31:51.316769 [info ]: Loading ~/.dbt/profiles.yml
+20:31:51.316787 [info ]: Finished loading project [  0.00s]
+20:31:51.467549 [info ]: Loading packages.yml
+20:31:51.467678 [debug]:    Started loading packages
+20:31:51.469618 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:31:51.471159 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:31:51.471789 [info ]: Started parsing
+20:31:51.494417 [debug]:     Loaded [  0.03s] packages
+20:31:51.494435 [info ]: Finished loading project [  0.18s]
+20:31:51.496852 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:31:51.497813 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+20:31:51.498342 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:31:51.498706 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:31:51.499006 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:31:51.499351 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:31:51.501541 [info ]: Finished parsing [  0.03s]
+20:31:51.501774 [info ]: Cached model count updated: 5 models (estimate)
+20:31:51.501787 [info ]: Cached model count updated: 5 models (accurate)
+20:31:51.501811 [info ]: Started scheduling
+20:31:51.501861 [info ]: Finished scheduling [  0.00s]
+20:31:51.501868 [debug]: Compilation - 0 nodes selected: {}
+20:31:51.501880 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+20:31:51.501889 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:31:51.501895 [info ]: Started scheduling
+20:31:51.501928 [info ]: Finished scheduling [  0.00s]
+20:31:51.501968 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:31:51.501978 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:31:51.543440 [info ]: Started building task graph
+20:31:51.543474 [info ]: Finished building task graph [  0.00s]
+20:31:51.558220 [info ]: Started scheduling
+20:31:51.558258 [info ]: Finished scheduling [  0.00s]
+20:31:51.558577 [info ]: Cached model count updated: 5 models (accurate)
+20:31:52.756271 [info ]: Started loading project
+20:31:52.756806 [info ]: Loading ~/.dbt/profiles.yml
+20:31:52.780670 [info ]: Cached model count updated: 5 models (estimate)
+20:31:52.780694 [info ]: Cached model count updated: 5 models (accurate)
+20:31:52.780715 [info ]: Started scheduling
+20:31:52.780777 [info ]: Finished scheduling [  0.00s]
+20:31:52.780786 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:31:52.827486 [info ]: Started building task graph
+20:31:52.827559 [info ]: Finished building task graph [  0.00s]
+20:31:52.834141 [info ]: Started rendering (5 nodes)
+20:31:52.834164 [info ]: Started model dbt_eelikem.dim_customers
+20:31:52.834172 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:31:52.834191 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:31:52.834196 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:31:52.834202 [info ]: Started model dbt_eelikem.fct_orders
+20:31:52.834206 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:31:52.834213 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:31:52.834214 [info ]: Finished loading project [  0.08s]
+20:31:52.834221 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:31:52.834229 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:31:52.834233 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:31:52.837505 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:31:52.837509 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:31:52.837556 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:31:52.837586 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:31:52.837591 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:31:52.837609 [info ]: Started analyzing (5 nodes)
+20:31:52.837614 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:31:52.837623 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:31:52.837628 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:31:52.837635 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:31:52.837635 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:31:52.837642 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:31:52.837655 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:31:52.837665 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:31:52.837726 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:31:52.837737 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:31:52.837748 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:31:52.837863 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:31:52.837876 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:31:52.837889 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:31:52.837892 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_stripe_payment (view)
+20:31:52.837898 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:31:52.837902 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:31:52.838030 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:31:52.838038 [info ]:  Succeeded [  0.00s] model dbt_eelikem.dim_customers (table)
+20:31:52.838095 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:31:52.838102 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:31:52.838105 [info ]:  Succeeded [  0.00s] model dbt_eelikem.fct_orders (table)
+20:31:52.840169 [info ]: Started scheduling
+20:31:52.840198 [info ]: Finished scheduling [  0.00s]
+20:31:52.840625 [info ]: Cached model count updated: 5 models (accurate)
+20:39:41.766678 [info ]: Started loading project
+20:39:41.767275 [info ]: Loading ~/.dbt/profiles.yml
+20:39:41.771210 [info ]: Started loading project
+20:39:41.771398 [info ]: Loading ~/.dbt/profiles.yml
+20:39:41.771420 [info ]: Finished loading project [  0.00s]
+20:39:41.921469 [info ]: Loading packages.yml
+20:39:41.921588 [debug]:    Started loading packages
+20:39:41.923808 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:39:41.925317 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:39:41.925926 [info ]: Started parsing
+20:39:41.949683 [debug]:     Loaded [  0.03s] packages
+20:39:41.949701 [info ]: Finished loading project [  0.18s]
+20:39:41.951867 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:39:41.951943 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:39:41.952680 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+20:39:41.953078 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:39:41.953361 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:39:41.953636 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:39:41.953911 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:39:41.956343 [info ]: Finished parsing [  0.03s]
+20:39:41.956587 [info ]: Cached model count updated: 5 models (estimate)
+20:39:41.956597 [info ]: Cached model count updated: 5 models (accurate)
+20:39:41.956615 [info ]: Started scheduling
+20:39:41.956639 [info ]: Finished scheduling [  0.00s]
+20:39:41.956645 [debug]: Compilation - 0 nodes selected: {}
+20:39:41.956656 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+20:39:41.956666 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:39:41.956671 [info ]: Started scheduling
+20:39:41.956704 [info ]: Finished scheduling [  0.00s]
+20:39:41.956754 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:39:41.956771 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:39:41.999493 [info ]: Started building task graph
+20:39:41.999520 [info ]: Finished building task graph [  0.00s]
+20:39:42.012210 [info ]: Started scheduling
+20:39:42.012253 [info ]: Finished scheduling [  0.00s]
+20:39:42.013472 [info ]: Cached model count updated: 5 models (accurate)
+20:39:42.073313 [info ]: Waiting for lease on 'target' directory
+20:39:42.296665 [info ]: Started loading project
+20:39:42.297353 [info ]: Loading ~/.dbt/profiles.yml
+20:39:42.322080 [info ]: Finished loading project [  0.03s]
+20:39:42.322321 [info ]: Cached model count updated: 5 models (accurate)
+20:39:43.510665 [info ]: Started loading project
+20:39:43.511182 [info ]: Loading ~/.dbt/profiles.yml
+20:39:43.531862 [info ]: Cached model count updated: 5 models (estimate)
+20:39:43.531882 [info ]: Cached model count updated: 5 models (accurate)
+20:39:43.531904 [info ]: Started scheduling
+20:39:43.531958 [info ]: Finished scheduling [  0.00s]
+20:39:43.531970 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:39:43.577638 [info ]: Started building task graph
+20:39:43.577688 [info ]: Finished building task graph [  0.00s]
+20:39:43.584423 [info ]: Started rendering (5 nodes)
+20:39:43.584439 [info ]: Started model dbt_eelikem.dim_customers
+20:39:43.584447 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:39:43.584468 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:39:43.584472 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:39:43.584478 [info ]: Started model dbt_eelikem.fct_orders
+20:39:43.584482 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:39:43.584488 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:39:43.584493 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:39:43.584501 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:39:43.584503 [info ]: Finished loading project [  0.07s]
+20:39:43.584505 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:39:43.585485 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:39:43.585572 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:39:43.585590 [info ]: Started analyzing (5 nodes)
+20:39:43.585594 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:39:43.585868 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:39:43.585863 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:39:43.585950 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:39:43.585958 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:39:43.585976 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:39:43.585987 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:39:43.585993 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:39:43.586002 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:39:43.586012 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:39:43.586094 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:39:43.586103 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:39:43.586115 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:39:43.586119 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_stripe_payment (view)
+20:39:43.586155 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:39:43.586163 [info ]:  Succeeded [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:39:43.586207 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:39:43.586213 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:39:43.586222 [info ]:  Succeeded [  0.00s] model dbt_eelikem.dim_customers (table)
+20:39:43.586265 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:39:43.586270 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:39:43.586277 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:39:43.586559 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:39:43.586566 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:39:43.586569 [info ]:  Succeeded [  0.00s] model dbt_eelikem.fct_orders (table)
+20:39:43.588403 [info ]: Started scheduling
+20:39:43.588434 [info ]: Finished scheduling [  0.00s]
+20:39:43.588800 [info ]: Cached model count updated: 5 models (accurate)
+20:39:44.424610 [info ]: Started loading project
+20:39:44.425047 [info ]: Loading ~/.dbt/profiles.yml
+20:39:44.448837 [info ]: Finished loading project [  0.02s]
+20:39:44.449107 [info ]: Cached model count updated: 5 models (accurate)
+20:39:45.633101 [info ]: Started loading project
+20:39:45.634855 [info ]: Loading ~/.dbt/profiles.yml
+20:39:45.656080 [info ]: Cached model count updated: 5 models (estimate)
+20:39:45.656107 [info ]: Cached model count updated: 5 models (accurate)
+20:39:45.656135 [info ]: Started scheduling
+20:39:45.656199 [info ]: Finished scheduling [  0.00s]
+20:39:45.656214 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:39:45.703857 [info ]: Started building task graph
+20:39:45.703909 [info ]: Finished building task graph [  0.00s]
+20:39:45.710041 [info ]: Started rendering (5 nodes)
+20:39:45.710053 [info ]: Started model dbt_eelikem.dim_customers
+20:39:45.710059 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:39:45.710071 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:39:45.710075 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:39:45.710081 [info ]: Started model dbt_eelikem.fct_orders
+20:39:45.710084 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:39:45.710089 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:39:45.710093 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:39:45.710099 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:39:45.710103 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:39:45.710113 [info ]: Finished loading project [  0.08s]
+20:39:45.710323 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:39:45.710377 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:39:45.710389 [info ]: Started analyzing (5 nodes)
+20:39:45.710392 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:39:45.710396 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:39:45.710432 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:39:45.710446 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:39:45.710446 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:39:45.710504 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:39:45.710519 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:39:45.710533 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:39:45.710543 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:39:45.710553 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:39:45.710561 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:39:45.710571 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:39:45.710578 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:39:45.710583 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:39:45.710595 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:39:45.710601 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:39:45.710686 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:39:45.710696 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:39:45.710706 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:39:45.710709 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:39:45.710847 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:39:45.710856 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:39:45.710866 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:39:45.710869 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:39:45.710872 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:39:45.712843 [info ]: Started scheduling
+20:39:45.712878 [info ]: Finished scheduling [  0.00s]
+20:39:45.713260 [info ]: Cached model count updated: 5 models (accurate)
+20:41:45.360100 [info ]: Started loading project
+20:41:45.360429 [info ]: Loading ~/.dbt/profiles.yml
+20:41:45.368579 [info ]: Started parsing
+20:41:45.394420 [info ]: Finished loading project [  0.03s]
+20:41:45.397846 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"source"`. YAML path: `source`.
+  --> models/staging/stripe/_src_stripe.yml:1:1
+20:41:45.398775 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:41:45.399818 [info ]: Finished parsing [  0.03s]
+20:41:45.401255 [info ]: Cached model count updated: 5 models (estimate)
+20:41:45.401268 [info ]: Cached model count updated: 5 models (accurate)
+20:41:45.401286 [info ]: Started scheduling
+20:41:45.401308 [info ]: Finished scheduling [  0.00s]
+20:41:45.401313 [debug]: Compilation - 0 nodes selected: {}
+20:41:45.401323 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+20:41:45.401333 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:41:45.445604 [info ]: Started building task graph
+20:41:45.445624 [info ]: Finished building task graph [  0.00s]
+20:41:45.453147 [info ]: Started scheduling
+20:41:45.453182 [info ]: Finished scheduling [  0.00s]
+20:41:45.453854 [info ]: Cached model count updated: 5 models (accurate)
+20:41:46.651541 [info ]: Started loading project
+20:41:46.652145 [info ]: Loading ~/.dbt/profiles.yml
+20:41:46.681732 [info ]: Cached model count updated: 5 models (estimate)
+20:41:46.681786 [info ]: Cached model count updated: 5 models (accurate)
+20:41:46.681825 [info ]: Started scheduling
+20:41:46.681927 [info ]: Finished scheduling [  0.00s]
+20:41:46.681948 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:41:46.731584 [info ]: Started building task graph
+20:41:46.731634 [info ]: Finished building task graph [  0.00s]
+20:41:46.737479 [info ]: Started rendering (5 nodes)
+20:41:46.737498 [info ]: Started model dbt_eelikem.dim_customers
+20:41:46.737505 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:41:46.737521 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:41:46.737526 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:41:46.737533 [info ]: Started model dbt_eelikem.fct_orders
+20:41:46.737537 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:41:46.737540 [info ]: Finished loading project [  0.09s]
+20:41:46.737544 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:41:46.737550 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:41:46.737559 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:41:46.737563 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:41:46.738277 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:41:46.738317 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:41:46.738348 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:46.738327 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:41:46.738366 [info ]: Started analyzing (5 nodes)
+20:41:46.738370 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:41:46.738382 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:46.738388 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:41:46.738396 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:46.738402 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:41:46.738419 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:41:46.738447 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:41:46.738472 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:46.738484 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:41:46.738529 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:46.738534 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:41:46.738549 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:46.738553 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:46.738557 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:41:46.738563 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:46.738567 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:41:46.738623 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:46.738629 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:41:46.738735 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:46.738750 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:41:46.738764 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:46.738768 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:46.738772 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:41:46.740711 [info ]: Started scheduling
+20:41:46.740743 [info ]: Finished scheduling [  0.00s]
+20:41:46.741161 [info ]: Cached model count updated: 5 models (accurate)
+20:41:51.816053 [info ]: Started loading project
+20:41:51.816309 [info ]: Loading ~/.dbt/profiles.yml
+20:41:51.835710 [info ]: Finished loading project [  0.02s]
+20:41:51.835938 [info ]: Cached model count updated: 5 models (accurate)
+20:41:53.031328 [info ]: Started loading project
+20:41:53.031897 [info ]: Loading ~/.dbt/profiles.yml
+20:41:53.059037 [info ]: Cached model count updated: 5 models (estimate)
+20:41:53.059087 [info ]: Cached model count updated: 5 models (accurate)
+20:41:53.059124 [info ]: Started scheduling
+20:41:53.059228 [info ]: Finished scheduling [  0.00s]
+20:41:53.059251 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:41:53.103364 [info ]: Started building task graph
+20:41:53.103419 [info ]: Finished building task graph [  0.00s]
+20:41:53.109007 [info ]: Started rendering (5 nodes)
+20:41:53.109019 [info ]: Started model dbt_eelikem.dim_customers
+20:41:53.109025 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:41:53.109045 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:41:53.109048 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:41:53.109054 [info ]: Started model dbt_eelikem.fct_orders
+20:41:53.109057 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:41:53.109063 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:41:53.109069 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:41:53.109074 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:41:53.109077 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:41:53.109087 [info ]: Finished loading project [  0.08s]
+20:41:53.109256 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:41:53.109304 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:41:53.109305 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:53.109317 [info ]: Started analyzing (5 nodes)
+20:41:53.109321 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:41:53.109328 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:53.109333 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:41:53.109374 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:41:53.109373 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:41:53.109376 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:41:53.109416 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:53.109432 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:41:53.109441 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:53.109446 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:41:53.109453 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:53.109457 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:53.109461 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:41:53.109481 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:53.109539 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:41:53.109583 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:53.109592 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:41:53.109603 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:53.109607 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:41:53.109693 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:53.109706 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:41:53.109852 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:53.109861 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:53.109864 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:41:53.111819 [info ]: Started scheduling
+20:41:53.111846 [info ]: Finished scheduling [  0.00s]
+20:41:53.112265 [info ]: Cached model count updated: 5 models (accurate)
+20:41:53.169937 [info ]: Waiting for lease on 'target' directory
+20:41:53.584804 [info ]: Started loading project
+20:41:53.585068 [info ]: Loading ~/.dbt/profiles.yml
+20:41:53.588875 [info ]: Started parsing
+20:41:53.616502 [info ]: Finished loading project [  0.03s]
+20:41:53.618360 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:41:53.619784 [info ]: Finished parsing [  0.03s]
+20:41:53.621171 [info ]: Cached model count updated: 5 models (estimate)
+20:41:53.621184 [info ]: Cached model count updated: 5 models (accurate)
+20:41:53.621212 [info ]: Started scheduling
+20:41:53.621251 [info ]: Finished scheduling [  0.00s]
+20:41:53.621259 [debug]: Compilation - 0 nodes selected: {}
+20:41:53.621273 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:41:53.621281 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:41:53.662584 [info ]: Started building task graph
+20:41:53.662605 [info ]: Finished building task graph [  0.00s]
+20:41:53.669321 [info ]: Started scheduling
+20:41:53.669370 [info ]: Finished scheduling [  0.00s]
+20:41:53.669988 [info ]: Cached model count updated: 5 models (accurate)
+20:41:54.863273 [info ]: Started loading project
+20:41:54.863907 [info ]: Loading ~/.dbt/profiles.yml
+20:41:54.893012 [info ]: Cached model count updated: 5 models (estimate)
+20:41:54.893060 [info ]: Cached model count updated: 5 models (accurate)
+20:41:54.893100 [info ]: Started scheduling
+20:41:54.893194 [info ]: Finished scheduling [  0.00s]
+20:41:54.893210 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:41:54.942214 [info ]: Started building task graph
+20:41:54.942287 [info ]: Finished building task graph [  0.00s]
+20:41:54.948221 [info ]: Started rendering (5 nodes)
+20:41:54.948238 [info ]: Started model dbt_eelikem.dim_customers
+20:41:54.948245 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:41:54.948261 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:41:54.948265 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:41:54.948271 [info ]: Started model dbt_eelikem.fct_orders
+20:41:54.948274 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:41:54.948279 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:41:54.948284 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:41:54.948283 [info ]: Finished loading project [  0.09s]
+20:41:54.948291 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:41:54.948296 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:41:54.948496 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:41:54.948542 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:41:54.948551 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:54.948564 [info ]: Started analyzing (5 nodes)
+20:41:54.948568 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:41:54.948596 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:54.948604 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:41:54.948566 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:41:54.948642 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:41:54.948689 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:54.948708 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:41:54.948723 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:54.948722 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:41:54.948731 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:41:54.948744 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:54.948749 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:41:54.948756 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:54.948761 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:41:54.948775 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:54.948779 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:54.948784 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:41:54.948869 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:54.948879 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:41:54.948981 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:54.948990 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:41:54.949169 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:54.949177 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:54.949183 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:41:54.951239 [info ]: Started scheduling
+20:41:54.951265 [info ]: Finished scheduling [  0.00s]
+20:41:54.951655 [info ]: Cached model count updated: 5 models (accurate)
+20:41:57.683191 [info ]: Started loading project
+20:41:57.683695 [info ]: Loading ~/.dbt/profiles.yml
+20:41:57.707761 [info ]: Finished loading project [  0.02s]
+20:41:57.707988 [info ]: Cached model count updated: 5 models (accurate)
+20:41:58.898037 [info ]: Started loading project
+20:41:58.898379 [info ]: Loading ~/.dbt/profiles.yml
+20:41:58.925290 [info ]: Cached model count updated: 5 models (estimate)
+20:41:58.925319 [info ]: Cached model count updated: 5 models (accurate)
+20:41:58.925345 [info ]: Started scheduling
+20:41:58.925411 [info ]: Finished scheduling [  0.00s]
+20:41:58.925421 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:41:58.972925 [info ]: Started building task graph
+20:41:58.972974 [info ]: Finished building task graph [  0.00s]
+20:41:58.978829 [info ]: Started rendering (5 nodes)
+20:41:58.978843 [info ]: Started model dbt_eelikem.dim_customers
+20:41:58.978850 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:41:58.978864 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:41:58.978868 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:41:58.978873 [info ]: Started model dbt_eelikem.fct_orders
+20:41:58.978876 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:41:58.978883 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:41:58.978887 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:41:58.978893 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:41:58.978897 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:41:58.978904 [info ]: Finished loading project [  0.08s]
+20:41:58.979060 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:41:58.979096 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:41:58.979101 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:58.979113 [info ]: Started analyzing (5 nodes)
+20:41:58.979116 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:41:58.979155 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:58.979167 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:41:58.979195 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:41:58.979206 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:41:58.979206 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:41:58.979231 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:58.979240 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:41:58.979250 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:58.979257 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:41:58.979268 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:58.979278 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:58.979284 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:41:58.979293 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:41:58.979299 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:41:58.979344 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:41:58.979354 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:41:58.979366 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:41:58.979371 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:41:58.979533 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:41:58.979541 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:41:58.979550 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:41:58.979556 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:41:58.979559 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:41:58.981518 [info ]: Started scheduling
+20:41:58.981550 [info ]: Finished scheduling [  0.00s]
+20:41:58.981946 [info ]: Cached model count updated: 5 models (accurate)
+20:47:25.877527 [info ]: Started loading project
+20:47:25.877835 [info ]: Loading ~/.dbt/profiles.yml
+20:47:25.883704 [info ]: Started parsing
+20:47:25.922585 [info ]: Finished loading project [  0.05s]
+20:47:25.925037 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:47:25.926515 [info ]: Finished parsing [  0.04s]
+20:47:25.927793 [info ]: Cached model count updated: 5 models (estimate)
+20:47:25.927804 [info ]: Cached model count updated: 5 models (accurate)
+20:47:25.927821 [info ]: Started scheduling
+20:47:25.927862 [info ]: Finished scheduling [  0.00s]
+20:47:25.927877 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:47:25.970252 [info ]: Started building task graph
+20:47:25.970287 [info ]: Finished building task graph [  0.00s]
+20:47:25.975877 [info ]: Started rendering (1 nodes)
+20:47:25.975894 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:47:25.975901 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:47:25.976488 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:47:25.976543 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:25.976554 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:47:25.976563 [info ]: Started analyzing (1 nodes)
+20:47:25.976566 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:47:25.976733 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:25.976741 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:47:25.976743 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:47:25.978899 [info ]: Started scheduling
+20:47:25.978960 [info ]: Finished scheduling [  0.00s]
+20:47:25.979572 [info ]: Cached model count updated: 5 models (accurate)
+20:47:27.162263 [info ]: Started loading project
+20:47:27.162879 [info ]: Loading ~/.dbt/profiles.yml
+20:47:27.191977 [info ]: Cached model count updated: 5 models (estimate)
+20:47:27.192015 [info ]: Cached model count updated: 5 models (accurate)
+20:47:27.192049 [info ]: Started scheduling
+20:47:27.192134 [info ]: Finished scheduling [  0.00s]
+20:47:27.192149 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:47:27.240395 [info ]: Started building task graph
+20:47:27.240451 [info ]: Finished building task graph [  0.00s]
+20:47:27.246347 [info ]: Started rendering (5 nodes)
+20:47:27.246362 [info ]: Started model dbt_eelikem.dim_customers
+20:47:27.246368 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:47:27.246384 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:47:27.246388 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:47:27.246393 [info ]: Started model dbt_eelikem.fct_orders
+20:47:27.246397 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:47:27.246402 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:47:27.246406 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:47:27.246413 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:47:27.246416 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:47:27.246430 [info ]: Finished loading project [  0.08s]
+20:47:27.246720 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:47:27.246776 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:47:27.246795 [info ]: Started analyzing (5 nodes)
+20:47:27.246802 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:47:27.246820 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:47:27.246844 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:47:27.246877 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:47:27.246888 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:47:27.246926 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:47:27.246933 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:47:27.246940 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:47:27.246956 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:47:27.246962 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:47:27.246972 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:47:27.246976 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:47:27.246983 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:27.246989 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:47:27.247014 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:47:27.247043 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:47:27.247069 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:27.247058 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:47:27.247076 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:47:27.247085 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:47:27.247310 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:47:27.247318 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:47:27.247336 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:47:27.247342 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:47:27.247345 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:47:27.249264 [info ]: Started scheduling
+20:47:27.249295 [info ]: Finished scheduling [  0.00s]
+20:47:27.249670 [info ]: Cached model count updated: 5 models (accurate)
+20:47:31.975819 [info ]: Started loading project
+20:47:31.976163 [info ]: Loading ~/.dbt/profiles.yml
+20:47:31.996746 [info ]: Finished loading project [  0.02s]
+20:47:31.996916 [info ]: Cached model count updated: 5 models (accurate)
+20:47:33.188952 [info ]: Started loading project
+20:47:33.189628 [info ]: Loading ~/.dbt/profiles.yml
+20:47:33.220785 [info ]: Cached model count updated: 5 models (estimate)
+20:47:33.220831 [info ]: Cached model count updated: 5 models (accurate)
+20:47:33.220870 [info ]: Started scheduling
+20:47:33.220981 [info ]: Finished scheduling [  0.00s]
+20:47:33.221000 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:47:33.269760 [info ]: Started building task graph
+20:47:33.269814 [info ]: Finished building task graph [  0.00s]
+20:47:33.275453 [info ]: Started rendering (5 nodes)
+20:47:33.275471 [info ]: Started model dbt_eelikem.dim_customers
+20:47:33.275480 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:47:33.275494 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:47:33.275499 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:47:33.275504 [info ]: Started model dbt_eelikem.fct_orders
+20:47:33.275507 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:47:33.275512 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:47:33.275516 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:47:33.275521 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:47:33.275525 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:47:33.275542 [info ]: Finished loading project [  0.09s]
+20:47:33.275813 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:47:33.275813 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:47:33.275882 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:47:33.275898 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:47:33.275904 [info ]: Started analyzing (5 nodes)
+20:47:33.275909 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:47:33.275919 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:47:33.275916 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:47:33.275916 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:47:33.275928 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:47:33.275936 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:47:33.275942 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:47:33.275949 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:47:33.275956 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:47:33.275958 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:47:33.275977 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:33.275982 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:47:33.276062 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:47:33.276071 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:47:33.276082 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:47:33.276086 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:47:33.276100 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:47:33.276105 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:47:33.276279 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:47:33.276286 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:47:33.276320 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:47:33.276329 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:47:33.276333 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:47:33.278408 [info ]: Started scheduling
+20:47:33.278451 [info ]: Finished scheduling [  0.00s]
+20:47:33.278859 [info ]: Cached model count updated: 5 models (accurate)
+20:48:09.591344 [info ]: Started loading project
+20:48:09.591590 [info ]: Loading ~/.dbt/profiles.yml
+20:48:09.624948 [info ]: Cached model count updated: 5 models (estimate)
+20:48:09.624972 [info ]: Cached model count updated: 5 models (accurate)
+20:48:09.624995 [info ]: Started scheduling
+20:48:09.625094 [info ]: Finished scheduling [  0.00s]
+20:48:09.625182 [debug]: Compilation - 0 nodes selected: {}
+20:48:09.625228 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:48:09.625238 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:48:09.674933 [info ]: Started building task graph
+20:48:09.674955 [info ]: Finished building task graph [  0.00s]
+20:48:09.682747 [info ]: Started scheduling
+20:48:09.682783 [info ]: Finished scheduling [  0.00s]
+20:48:09.682872 [info ]: Finished loading project [  0.09s]
+20:48:09.683047 [info ]: Cached model count updated: 5 models (accurate)
+20:48:10.882140 [info ]: Started loading project
+20:48:10.882664 [info ]: Loading ~/.dbt/profiles.yml
+20:48:10.911852 [info ]: Cached model count updated: 5 models (estimate)
+20:48:10.911882 [info ]: Cached model count updated: 5 models (accurate)
+20:48:10.911906 [info ]: Started scheduling
+20:48:10.911976 [info ]: Finished scheduling [  0.00s]
+20:48:10.911986 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:48:10.960560 [info ]: Started building task graph
+20:48:10.960635 [info ]: Finished building task graph [  0.00s]
+20:48:10.966713 [info ]: Started rendering (5 nodes)
+20:48:10.966727 [info ]: Started model dbt_eelikem.dim_customers
+20:48:10.966734 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:48:10.966747 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:48:10.966751 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:48:10.966757 [info ]: Started model dbt_eelikem.fct_orders
+20:48:10.966762 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:48:10.966767 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:48:10.966772 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:48:10.966778 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:48:10.966781 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:48:10.966789 [info ]: Finished loading project [  0.08s]
+20:48:10.967592 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:48:10.967604 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:48:10.967638 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:48:10.967638 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:48:10.967662 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:48:10.967683 [info ]: Started analyzing (5 nodes)
+20:48:10.967689 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:48:10.967707 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:48:10.967715 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:48:10.967722 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:48:10.967722 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:48:10.967728 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:48:10.967735 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:48:10.967740 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:48:10.967824 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:48:10.967838 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:48:10.967849 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:48:10.967864 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:48:10.967870 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:48:10.967880 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:48:10.967885 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:48:10.967892 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:48:10.967896 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:48:10.968026 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:48:10.968034 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:48:10.968162 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:48:10.968169 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:48:10.968173 [info ]:  Succeeded [  0.00s] model dbt_eelikem.fct_orders (table)
+20:48:10.970155 [info ]: Started scheduling
+20:48:10.970186 [info ]: Finished scheduling [  0.00s]
+20:48:10.970566 [info ]: Cached model count updated: 5 models (accurate)
+20:49:03.503253 [info ]: Started loading project
+20:49:03.503483 [info ]: Loading ~/.dbt/profiles.yml
+20:49:03.545872 [info ]: Cached model count updated: 5 models (estimate)
+20:49:03.545897 [info ]: Cached model count updated: 5 models (accurate)
+20:49:03.545918 [info ]: Started scheduling
+20:49:03.545961 [info ]: Finished scheduling [  0.00s]
+20:49:03.545969 [debug]: Compilation - 0 nodes selected: {}
+20:49:03.545983 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:03.545991 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:03.588589 [info ]: Started building task graph
+20:49:03.588612 [info ]: Finished building task graph [  0.00s]
+20:49:03.596758 [info ]: Started scheduling
+20:49:03.596795 [info ]: Finished scheduling [  0.00s]
+20:49:03.596922 [info ]: Finished loading project [  0.09s]
+20:49:03.597078 [info ]: Cached model count updated: 5 models (accurate)
+20:49:04.786262 [info ]: Started loading project
+20:49:04.786904 [info ]: Loading ~/.dbt/profiles.yml
+20:49:04.817258 [info ]: Cached model count updated: 5 models (estimate)
+20:49:04.817295 [info ]: Cached model count updated: 5 models (accurate)
+20:49:04.817326 [info ]: Started scheduling
+20:49:04.817406 [info ]: Finished scheduling [  0.00s]
+20:49:04.817423 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:49:04.864475 [info ]: Started building task graph
+20:49:04.864530 [info ]: Finished building task graph [  0.00s]
+20:49:04.870300 [info ]: Started rendering (5 nodes)
+20:49:04.870319 [info ]: Started model dbt_eelikem.dim_customers
+20:49:04.870326 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:49:04.870342 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:49:04.870346 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:49:04.870352 [info ]: Started model dbt_eelikem.fct_orders
+20:49:04.870355 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:49:04.870362 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:49:04.870366 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:49:04.870372 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:49:04.870376 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:49:04.870400 [info ]: Finished loading project [  0.08s]
+20:49:04.870534 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:49:04.870574 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:49:04.870590 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:04.870608 [info ]: Started analyzing (5 nodes)
+20:49:04.870613 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:49:04.870626 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:04.870633 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:49:04.870645 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:49:04.870673 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:49:04.870687 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:04.870699 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:49:04.870708 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:04.870713 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:49:04.870736 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:49:04.870754 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:04.870763 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:49:04.870783 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:04.870787 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:04.870792 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:49:04.870799 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:04.870804 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:49:04.870810 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:04.870813 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:49:04.871020 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:04.871028 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:49:04.871036 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:04.871039 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:04.871042 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:49:04.872978 [info ]: Started scheduling
+20:49:04.873017 [info ]: Finished scheduling [  0.00s]
+20:49:04.873393 [info ]: Cached model count updated: 5 models (accurate)
+20:49:44.190465 [info ]: Started loading project
+20:49:44.190763 [info ]: Loading ~/.dbt/profiles.yml
+20:49:44.209500 [info ]: Cached model count updated: 5 models (estimate)
+20:49:44.209534 [info ]: Cached model count updated: 5 models (accurate)
+20:49:44.209556 [info ]: Started scheduling
+20:49:44.209618 [info ]: Finished scheduling [  0.00s]
+20:49:44.209636 [debug]: Compilation - 0 nodes selected: {}
+20:49:44.209663 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:44.209673 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:44.252250 [info ]: Started building task graph
+20:49:44.252271 [info ]: Finished building task graph [  0.00s]
+20:49:44.259458 [info ]: Started scheduling
+20:49:44.259490 [info ]: Finished scheduling [  0.00s]
+20:49:44.259581 [info ]: Finished loading project [  0.07s]
+20:49:44.259751 [info ]: Cached model count updated: 5 models (accurate)
+20:49:45.442659 [info ]: Started loading project
+20:49:45.443019 [info ]: Loading ~/.dbt/profiles.yml
+20:49:45.466626 [info ]: Cached model count updated: 5 models (estimate)
+20:49:45.466651 [info ]: Cached model count updated: 5 models (accurate)
+20:49:45.466677 [info ]: Started scheduling
+20:49:45.466743 [info ]: Finished scheduling [  0.00s]
+20:49:45.466757 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:49:45.513716 [info ]: Started building task graph
+20:49:45.513776 [info ]: Finished building task graph [  0.00s]
+20:49:45.519555 [info ]: Started rendering (5 nodes)
+20:49:45.519571 [info ]: Started model dbt_eelikem.dim_customers
+20:49:45.519577 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:49:45.519592 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:49:45.519596 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:49:45.519602 [info ]: Started model dbt_eelikem.fct_orders
+20:49:45.519605 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:49:45.519611 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:49:45.519614 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:49:45.519620 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:49:45.519624 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:49:45.519632 [info ]: Finished loading project [  0.08s]
+20:49:45.519836 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:49:45.519836 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:49:45.519904 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:49:45.519904 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:49:45.519917 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:45.519933 [info ]: Started analyzing (5 nodes)
+20:49:45.519936 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:49:45.519947 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:45.519953 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:49:45.519965 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:45.519967 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:49:45.519970 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:49:45.519978 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:45.519982 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:49:45.519991 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:45.519999 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:45.520003 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:49:45.520092 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:45.520098 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:49:45.520108 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:45.520111 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:49:45.520117 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:45.520120 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:49:45.520272 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:45.520282 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:49:45.520290 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:45.520294 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:45.520297 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:49:45.522184 [info ]: Started scheduling
+20:49:45.522217 [info ]: Finished scheduling [  0.00s]
+20:49:45.522589 [info ]: Cached model count updated: 5 models (accurate)
+20:49:46.105444 [info ]: Started loading project
+20:49:46.105739 [info ]: Loading ~/.dbt/profiles.yml
+20:49:46.122481 [info ]: Cached model count updated: 5 models (estimate)
+20:49:46.122505 [info ]: Cached model count updated: 5 models (accurate)
+20:49:46.122527 [info ]: Started scheduling
+20:49:46.122563 [info ]: Finished scheduling [  0.00s]
+20:49:46.122570 [debug]: Compilation - 0 nodes selected: {}
+20:49:46.122585 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:46.122596 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:46.165428 [info ]: Started building task graph
+20:49:46.165449 [info ]: Finished building task graph [  0.00s]
+20:49:46.173467 [info ]: Started scheduling
+20:49:46.173505 [info ]: Finished scheduling [  0.00s]
+20:49:46.173605 [info ]: Finished loading project [  0.07s]
+20:49:46.173779 [info ]: Cached model count updated: 5 models (accurate)
+20:49:46.268808 [info ]: Waiting for lease on 'target' directory
+20:49:46.685625 [info ]: Started loading project
+20:49:46.685873 [info ]: Loading ~/.dbt/profiles.yml
+20:49:46.702747 [info ]: Cached model count updated: 5 models (estimate)
+20:49:46.702779 [info ]: Cached model count updated: 5 models (accurate)
+20:49:46.702801 [info ]: Started scheduling
+20:49:46.702836 [info ]: Finished scheduling [  0.00s]
+20:49:46.702844 [debug]: Compilation - 0 nodes selected: {}
+20:49:46.702861 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:46.702869 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:46.743920 [info ]: Started building task graph
+20:49:46.743941 [info ]: Finished building task graph [  0.00s]
+20:49:46.750055 [info ]: Started scheduling
+20:49:46.750086 [info ]: Finished scheduling [  0.00s]
+20:49:46.750175 [info ]: Finished loading project [  0.06s]
+20:49:46.750344 [info ]: Cached model count updated: 5 models (accurate)
+20:49:47.936668 [info ]: Started loading project
+20:49:47.937001 [info ]: Loading ~/.dbt/profiles.yml
+20:49:47.958951 [info ]: Cached model count updated: 5 models (estimate)
+20:49:47.958980 [info ]: Cached model count updated: 5 models (accurate)
+20:49:47.959001 [info ]: Started scheduling
+20:49:47.959059 [info ]: Finished scheduling [  0.00s]
+20:49:47.959071 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:49:48.005450 [info ]: Started building task graph
+20:49:48.005496 [info ]: Finished building task graph [  0.00s]
+20:49:48.009375 [info ]: Started rendering (5 nodes)
+20:49:48.009386 [info ]: Started model dbt_eelikem.dim_customers
+20:49:48.009392 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:49:48.009406 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:49:48.009412 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:49:48.009417 [info ]: Started model dbt_eelikem.fct_orders
+20:49:48.009421 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:49:48.009427 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:49:48.009432 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:49:48.009439 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:49:48.009443 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:49:48.009442 [info ]: Finished loading project [  0.07s]
+20:49:48.009696 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:49:48.009697 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:49:48.009696 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:49:48.009749 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:49:48.009760 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:49:48.009773 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:48.009788 [info ]: Started analyzing (5 nodes)
+20:49:48.009795 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:49:48.009809 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:48.009817 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:49:48.009825 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:48.009830 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:49:48.009837 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:48.009843 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:49:48.009852 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:48.009856 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:48.009860 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:49:48.009956 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:49:48.009964 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:49:48.009973 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:49:48.009976 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:49:48.010020 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:49:48.010028 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:49:48.010130 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:49:48.010139 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:49:48.010195 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:49:48.010204 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:49:48.010207 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:49:48.012108 [info ]: Started scheduling
+20:49:48.012140 [info ]: Finished scheduling [  0.00s]
+20:49:48.012509 [info ]: Cached model count updated: 5 models (accurate)
+20:49:57.647756 [info ]: Started loading project
+20:49:57.648017 [info ]: Loading ~/.dbt/profiles.yml
+20:49:57.664712 [info ]: Cached model count updated: 5 models (estimate)
+20:49:57.664737 [info ]: Cached model count updated: 5 models (accurate)
+20:49:57.664757 [info ]: Started scheduling
+20:49:57.664792 [info ]: Finished scheduling [  0.00s]
+20:49:57.664799 [debug]: Compilation - 0 nodes selected: {}
+20:49:57.664812 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:57.664822 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:57.705840 [info ]: Started building task graph
+20:49:57.705857 [info ]: Finished building task graph [  0.00s]
+20:49:57.712215 [info ]: Started scheduling
+20:49:57.712248 [info ]: Finished scheduling [  0.00s]
+20:49:57.712336 [info ]: Finished loading project [  0.06s]
+20:49:57.712554 [info ]: Cached model count updated: 5 models (accurate)
+20:49:58.017559 [info ]: Waiting for lease on 'target' directory
+20:49:58.233640 [info ]: Started loading project
+20:49:58.233889 [info ]: Loading ~/.dbt/profiles.yml
+20:49:58.249792 [info ]: Cached model count updated: 5 models (estimate)
+20:49:58.249813 [info ]: Cached model count updated: 5 models (accurate)
+20:49:58.249833 [info ]: Started scheduling
+20:49:58.249867 [info ]: Finished scheduling [  0.00s]
+20:49:58.249874 [debug]: Compilation - 0 nodes selected: {}
+20:49:58.249890 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:58.249898 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:58.291836 [info ]: Started building task graph
+20:49:58.291856 [info ]: Finished building task graph [  0.00s]
+20:49:58.299654 [info ]: Started scheduling
+20:49:58.299691 [info ]: Finished scheduling [  0.00s]
+20:49:58.299777 [info ]: Finished loading project [  0.07s]
+20:49:58.299957 [info ]: Cached model count updated: 5 models (accurate)
+20:49:58.681577 [info ]: Waiting for lease on 'target' directory
+20:49:58.794591 [info ]: Started loading project
+20:49:58.794864 [info ]: Loading ~/.dbt/profiles.yml
+20:49:58.812505 [info ]: Cached model count updated: 5 models (estimate)
+20:49:58.812531 [info ]: Cached model count updated: 5 models (accurate)
+20:49:58.812559 [info ]: Started scheduling
+20:49:58.812597 [info ]: Finished scheduling [  0.00s]
+20:49:58.812609 [debug]: Compilation - 0 nodes selected: {}
+20:49:58.812623 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:49:58.812635 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:49:58.854373 [info ]: Started building task graph
+20:49:58.854406 [info ]: Finished building task graph [  0.00s]
+20:49:58.861947 [info ]: Started scheduling
+20:49:58.861992 [info ]: Finished scheduling [  0.00s]
+20:49:58.862090 [info ]: Finished loading project [  0.07s]
+20:49:58.862256 [info ]: Cached model count updated: 5 models (accurate)
+20:50:00.055051 [info ]: Started loading project
+20:50:00.055723 [info ]: Loading ~/.dbt/profiles.yml
+20:50:00.084156 [info ]: Cached model count updated: 5 models (estimate)
+20:50:00.084183 [info ]: Cached model count updated: 5 models (accurate)
+20:50:00.084208 [info ]: Started scheduling
+20:50:00.084274 [info ]: Finished scheduling [  0.00s]
+20:50:00.084288 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:50:00.131361 [info ]: Started building task graph
+20:50:00.131410 [info ]: Finished building task graph [  0.00s]
+20:50:00.137305 [info ]: Started rendering (5 nodes)
+20:50:00.137317 [info ]: Started model dbt_eelikem.dim_customers
+20:50:00.137323 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:50:00.137340 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:50:00.137344 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:50:00.137349 [info ]: Started model dbt_eelikem.fct_orders
+20:50:00.137352 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:50:00.137357 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:50:00.137361 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:50:00.137367 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:50:00.137370 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:50:00.137393 [info ]: Finished loading project [  0.08s]
+20:50:00.137598 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:50:00.137598 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:50:00.137640 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:50:00.137651 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:00.137670 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:50:00.137674 [info ]: Started analyzing (5 nodes)
+20:50:00.137680 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:50:00.137694 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:00.137701 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:50:00.137713 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:00.137718 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:50:00.137727 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:50:00.137737 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:00.137743 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:50:00.137753 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:00.137758 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:00.137762 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:50:00.137818 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:00.137828 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:50:00.137923 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:00.137934 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:50:00.138003 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:00.138010 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:50:00.138055 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:00.138062 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:50:00.138071 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:00.138075 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:00.138078 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:50:00.139943 [info ]: Started scheduling
+20:50:00.139987 [info ]: Finished scheduling [  0.00s]
+20:50:00.140357 [info ]: Cached model count updated: 5 models (accurate)
+20:50:01.089681 [info ]: Started loading project
+20:50:01.089952 [info ]: Loading ~/.dbt/profiles.yml
+20:50:01.107175 [info ]: Cached model count updated: 5 models (estimate)
+20:50:01.107201 [info ]: Cached model count updated: 5 models (accurate)
+20:50:01.107225 [info ]: Started scheduling
+20:50:01.107265 [info ]: Finished scheduling [  0.00s]
+20:50:01.107276 [debug]: Compilation - 0 nodes selected: {}
+20:50:01.107290 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:50:01.107299 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:50:01.150045 [info ]: Started building task graph
+20:50:01.150065 [info ]: Finished building task graph [  0.00s]
+20:50:01.156852 [info ]: Started scheduling
+20:50:01.156884 [info ]: Finished scheduling [  0.00s]
+20:50:01.156979 [info ]: Finished loading project [  0.07s]
+20:50:01.157195 [info ]: Cached model count updated: 5 models (accurate)
+20:50:01.228159 [info ]: Waiting for lease on 'target' directory
+20:50:01.650846 [info ]: Started loading project
+20:50:01.651118 [info ]: Loading ~/.dbt/profiles.yml
+20:50:01.671224 [info ]: Cached model count updated: 5 models (estimate)
+20:50:01.671259 [info ]: Cached model count updated: 5 models (accurate)
+20:50:01.671284 [info ]: Started scheduling
+20:50:01.671328 [info ]: Finished scheduling [  0.00s]
+20:50:01.671340 [debug]: Compilation - 0 nodes selected: {}
+20:50:01.671355 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:50:01.671364 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:50:01.717455 [info ]: Started building task graph
+20:50:01.717476 [info ]: Finished building task graph [  0.00s]
+20:50:01.723919 [info ]: Started scheduling
+20:50:01.723947 [info ]: Finished scheduling [  0.00s]
+20:50:01.724036 [info ]: Finished loading project [  0.07s]
+20:50:01.724220 [info ]: Cached model count updated: 5 models (accurate)
+20:50:02.128330 [info ]: Waiting for lease on 'target' directory
+20:50:02.239141 [info ]: Started loading project
+20:50:02.239379 [info ]: Loading ~/.dbt/profiles.yml
+20:50:02.254941 [info ]: Cached model count updated: 5 models (estimate)
+20:50:02.254967 [info ]: Cached model count updated: 5 models (accurate)
+20:50:02.254988 [info ]: Started scheduling
+20:50:02.255025 [info ]: Finished scheduling [  0.00s]
+20:50:02.255032 [debug]: Compilation - 0 nodes selected: {}
+20:50:02.255046 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:50:02.255055 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:50:02.296062 [info ]: Started building task graph
+20:50:02.296085 [info ]: Finished building task graph [  0.00s]
+20:50:02.302319 [info ]: Started scheduling
+20:50:02.302353 [info ]: Finished scheduling [  0.00s]
+20:50:02.302478 [info ]: Finished loading project [  0.06s]
+20:50:02.302668 [info ]: Cached model count updated: 5 models (accurate)
+20:50:03.490211 [info ]: Started loading project
+20:50:03.490679 [info ]: Loading ~/.dbt/profiles.yml
+20:50:03.518410 [info ]: Cached model count updated: 5 models (estimate)
+20:50:03.518434 [info ]: Cached model count updated: 5 models (accurate)
+20:50:03.518459 [info ]: Started scheduling
+20:50:03.518529 [info ]: Finished scheduling [  0.00s]
+20:50:03.518541 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:50:03.565654 [info ]: Started building task graph
+20:50:03.565711 [info ]: Finished building task graph [  0.00s]
+20:50:03.570013 [info ]: Started rendering (5 nodes)
+20:50:03.570039 [info ]: Started model dbt_eelikem.dim_customers
+20:50:03.570046 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:50:03.570065 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:50:03.570069 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:50:03.570076 [info ]: Started model dbt_eelikem.fct_orders
+20:50:03.570080 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:50:03.570087 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:50:03.570092 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:50:03.570100 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:50:03.570104 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:50:03.570104 [info ]: Finished loading project [  0.08s]
+20:50:03.570318 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:50:03.570322 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:50:03.570322 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:50:03.570334 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:50:03.570378 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:03.570398 [info ]: Started analyzing (5 nodes)
+20:50:03.570402 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:50:03.570415 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:03.570421 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:50:03.570429 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:03.570435 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:50:03.570442 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:03.570449 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:50:03.570559 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:03.570567 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:50:03.570577 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:03.570581 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:50:03.570579 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:50:03.570627 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:03.570631 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:03.570636 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:50:03.570711 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:03.570717 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:50:03.570756 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:03.570769 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:50:03.570803 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:03.570811 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:03.570815 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:50:03.573031 [info ]: Started scheduling
+20:50:03.573066 [info ]: Finished scheduling [  0.00s]
+20:50:03.573483 [info ]: Cached model count updated: 5 models (accurate)
+20:50:14.941735 [info ]: Started loading project
+20:50:14.942031 [info ]: Loading ~/.dbt/profiles.yml
+20:50:14.947644 [info ]: Started parsing
+20:50:14.988923 [info ]: Finished loading project [  0.05s]
+20:50:14.991133 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:50:14.991650 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:50:14.993066 [info ]: Finished parsing [  0.05s]
+20:50:14.994283 [info ]: Cached model count updated: 5 models (estimate)
+20:50:14.994292 [info ]: Cached model count updated: 5 models (accurate)
+20:50:14.994310 [info ]: Started scheduling
+20:50:14.994356 [info ]: Finished scheduling [  0.00s]
+20:50:14.994361 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:50:15.036120 [info ]: Started building task graph
+20:50:15.036157 [info ]: Finished building task graph [  0.00s]
+20:50:15.040463 [info ]: Started rendering (1 nodes)
+20:50:15.040478 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:50:15.040485 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:50:15.041022 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:50:15.041088 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:15.041098 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:50:15.041106 [info ]: Started analyzing (1 nodes)
+20:50:15.041109 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:50:15.041241 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:15.041248 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:50:15.041251 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:50:15.043205 [info ]: Started scheduling
+20:50:15.043267 [info ]: Finished scheduling [  0.00s]
+20:50:15.043879 [info ]: Cached model count updated: 5 models (accurate)
+20:50:16.226015 [info ]: Started loading project
+20:50:16.226756 [info ]: Loading ~/.dbt/profiles.yml
+20:50:16.247999 [info ]: Cached model count updated: 5 models (estimate)
+20:50:16.248025 [info ]: Cached model count updated: 5 models (accurate)
+20:50:16.248050 [info ]: Started scheduling
+20:50:16.248116 [info ]: Finished scheduling [  0.00s]
+20:50:16.248127 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:50:16.299784 [info ]: Started building task graph
+20:50:16.299839 [info ]: Finished building task graph [  0.00s]
+20:50:16.305709 [info ]: Started rendering (5 nodes)
+20:50:16.305724 [info ]: Started model dbt_eelikem.dim_customers
+20:50:16.305730 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:50:16.305746 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:50:16.305750 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:50:16.305755 [info ]: Started model dbt_eelikem.fct_orders
+20:50:16.305758 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:50:16.305763 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:50:16.305767 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:50:16.305772 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:50:16.305776 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:50:16.305804 [info ]: Finished loading project [  0.08s]
+20:50:16.305955 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:50:16.305975 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:50:16.305977 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:50:16.306009 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:16.306023 [info ]: Started analyzing (5 nodes)
+20:50:16.306028 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:50:16.306038 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:16.306045 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:50:16.306051 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:16.306055 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:50:16.306063 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:50:16.306170 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:16.306187 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:50:16.306203 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:16.306211 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:50:16.306223 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:16.306227 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:50:16.306332 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:16.306342 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:50:16.306471 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:16.306479 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:50:16.306628 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:50:16.306668 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:16.306677 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:16.306685 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:50:16.306845 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:16.306854 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:16.306858 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:50:16.309035 [info ]: Started scheduling
+20:50:16.309065 [info ]: Finished scheduling [  0.00s]
+20:50:16.309442 [info ]: Cached model count updated: 5 models (accurate)
+20:50:20.279996 [info ]: Started loading project
+20:50:20.280554 [info ]: Loading ~/.dbt/profiles.yml
+20:50:20.306921 [info ]: Finished loading project [  0.03s]
+20:50:20.307156 [info ]: Cached model count updated: 5 models (accurate)
+20:50:21.489724 [info ]: Started loading project
+20:50:21.490294 [info ]: Loading ~/.dbt/profiles.yml
+20:50:21.521268 [info ]: Cached model count updated: 5 models (estimate)
+20:50:21.521311 [info ]: Cached model count updated: 5 models (accurate)
+20:50:21.521344 [info ]: Started scheduling
+20:50:21.521434 [info ]: Finished scheduling [  0.00s]
+20:50:21.521448 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:50:21.570160 [info ]: Started building task graph
+20:50:21.570218 [info ]: Finished building task graph [  0.00s]
+20:50:21.576041 [info ]: Started rendering (5 nodes)
+20:50:21.576057 [info ]: Started model dbt_eelikem.dim_customers
+20:50:21.576063 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:50:21.576078 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:50:21.576082 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:50:21.576087 [info ]: Started model dbt_eelikem.fct_orders
+20:50:21.576090 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:50:21.576096 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:50:21.576099 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:50:21.576105 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:50:21.576108 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:50:21.576133 [info ]: Finished loading project [  0.09s]
+20:50:21.576370 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:50:21.576376 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:50:21.576396 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:50:21.576412 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:50:21.576418 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:50:21.576450 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:21.576466 [info ]: Started analyzing (5 nodes)
+20:50:21.576472 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:50:21.576487 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:21.576492 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:50:21.576497 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:21.576502 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:50:21.576507 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:21.576512 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:50:21.576520 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:21.576525 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:21.576529 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:50:21.576663 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:50:21.576676 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:50:21.576688 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:50:21.576693 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:50:21.576699 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:50:21.576704 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:50:21.576888 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:50:21.576898 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:50:21.576913 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:50:21.576917 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:50:21.576920 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:50:21.578855 [info ]: Started scheduling
+20:50:21.578886 [info ]: Finished scheduling [  0.00s]
+20:50:21.579259 [info ]: Cached model count updated: 5 models (accurate)
+20:51:38.452695 [info ]: Started loading project
+20:51:38.452961 [info ]: Loading ~/.dbt/profiles.yml
+20:51:38.470242 [info ]: Cached model count updated: 5 models (estimate)
+20:51:38.470261 [info ]: Cached model count updated: 5 models (accurate)
+20:51:38.470282 [info ]: Started scheduling
+20:51:38.470317 [info ]: Finished scheduling [  0.00s]
+20:51:38.470324 [debug]: Compilation - 0 nodes selected: {}
+20:51:38.470337 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:38.470347 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:38.514223 [info ]: Started building task graph
+20:51:38.514245 [info ]: Finished building task graph [  0.00s]
+20:51:38.522025 [info ]: Started scheduling
+20:51:38.522063 [info ]: Finished scheduling [  0.00s]
+20:51:38.522187 [info ]: Finished loading project [  0.07s]
+20:51:38.522365 [info ]: Cached model count updated: 5 models (accurate)
+20:51:38.629508 [info ]: Waiting for lease on 'target' directory
+20:51:39.059762 [info ]: Started loading project
+20:51:39.060348 [info ]: Loading ~/.dbt/profiles.yml
+20:51:39.086554 [info ]: Cached model count updated: 5 models (estimate)
+20:51:39.086577 [info ]: Cached model count updated: 5 models (accurate)
+20:51:39.086602 [info ]: Started scheduling
+20:51:39.086643 [info ]: Finished scheduling [  0.00s]
+20:51:39.086652 [debug]: Compilation - 0 nodes selected: {}
+20:51:39.086667 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:39.086676 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:39.132958 [info ]: Started building task graph
+20:51:39.132979 [info ]: Finished building task graph [  0.00s]
+20:51:39.139286 [info ]: Started scheduling
+20:51:39.139331 [info ]: Finished scheduling [  0.00s]
+20:51:39.139426 [info ]: Finished loading project [  0.08s]
+20:51:39.139622 [info ]: Cached model count updated: 5 models (accurate)
+20:51:39.272211 [info ]: Waiting for lease on 'target' directory
+20:51:39.591548 [info ]: Started loading project
+20:51:39.591966 [info ]: Loading ~/.dbt/profiles.yml
+20:51:39.616805 [info ]: Cached model count updated: 5 models (estimate)
+20:51:39.616838 [info ]: Cached model count updated: 5 models (accurate)
+20:51:39.616862 [info ]: Started scheduling
+20:51:39.616902 [info ]: Finished scheduling [  0.00s]
+20:51:39.616910 [debug]: Compilation - 0 nodes selected: {}
+20:51:39.616924 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:39.616936 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:39.665952 [info ]: Started building task graph
+20:51:39.665967 [info ]: Finished building task graph [  0.00s]
+20:51:39.673153 [info ]: Started scheduling
+20:51:39.673191 [info ]: Finished scheduling [  0.00s]
+20:51:39.673282 [info ]: Finished loading project [  0.08s]
+20:51:39.673466 [info ]: Cached model count updated: 5 models (accurate)
+20:51:40.066200 [info ]: Waiting for lease on 'target' directory
+20:51:40.178389 [info ]: Started loading project
+20:51:40.178676 [info ]: Loading ~/.dbt/profiles.yml
+20:51:40.194820 [info ]: Cached model count updated: 5 models (estimate)
+20:51:40.194843 [info ]: Cached model count updated: 5 models (accurate)
+20:51:40.194864 [info ]: Started scheduling
+20:51:40.194899 [info ]: Finished scheduling [  0.00s]
+20:51:40.194906 [debug]: Compilation - 0 nodes selected: {}
+20:51:40.194918 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:40.194928 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:40.238086 [info ]: Started building task graph
+20:51:40.238105 [info ]: Finished building task graph [  0.00s]
+20:51:40.244255 [info ]: Started scheduling
+20:51:40.244291 [info ]: Finished scheduling [  0.00s]
+20:51:40.244398 [info ]: Finished loading project [  0.07s]
+20:51:40.244553 [info ]: Cached model count updated: 5 models (accurate)
+20:51:41.429634 [info ]: Started loading project
+20:51:41.430138 [info ]: Loading ~/.dbt/profiles.yml
+20:51:41.455795 [info ]: Cached model count updated: 5 models (estimate)
+20:51:41.455824 [info ]: Cached model count updated: 5 models (accurate)
+20:51:41.455850 [info ]: Started scheduling
+20:51:41.455921 [info ]: Finished scheduling [  0.00s]
+20:51:41.455935 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:51:41.505966 [info ]: Started building task graph
+20:51:41.506021 [info ]: Finished building task graph [  0.00s]
+20:51:41.511834 [info ]: Started rendering (5 nodes)
+20:51:41.511848 [info ]: Started model dbt_eelikem.dim_customers
+20:51:41.511859 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:51:41.511874 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:51:41.511878 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:51:41.511884 [info ]: Started model dbt_eelikem.fct_orders
+20:51:41.511888 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:51:41.511894 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:51:41.511898 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:51:41.511903 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:51:41.511907 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:51:41.511916 [info ]: Finished loading project [  0.08s]
+20:51:41.512071 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:51:41.512118 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:41.512140 [info ]: Started analyzing (5 nodes)
+20:51:41.512145 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:51:41.512217 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:51:41.512235 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:51:41.512252 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:41.512264 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:51:41.512264 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:51:41.512281 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:41.512281 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:51:41.512288 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:51:41.512300 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:41.512305 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:51:41.512312 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:41.512317 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:51:41.512324 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:41.512335 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:41.512340 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:51:41.512349 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:41.512354 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:51:41.512436 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:41.512442 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:51:41.512591 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:41.512602 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:51:41.512679 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:41.512684 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:41.512688 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:51:41.514688 [info ]: Started scheduling
+20:51:41.514721 [info ]: Finished scheduling [  0.00s]
+20:51:41.515101 [info ]: Cached model count updated: 5 models (accurate)
+20:51:41.992073 [info ]: Started loading project
+20:51:41.992313 [info ]: Loading ~/.dbt/profiles.yml
+20:51:42.009252 [info ]: Cached model count updated: 5 models (estimate)
+20:51:42.009278 [info ]: Cached model count updated: 5 models (accurate)
+20:51:42.009302 [info ]: Started scheduling
+20:51:42.009340 [info ]: Finished scheduling [  0.00s]
+20:51:42.009351 [debug]: Compilation - 0 nodes selected: {}
+20:51:42.009365 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:42.009377 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:42.056248 [info ]: Started building task graph
+20:51:42.056272 [info ]: Finished building task graph [  0.00s]
+20:51:42.062786 [info ]: Started scheduling
+20:51:42.062831 [info ]: Finished scheduling [  0.00s]
+20:51:42.062925 [info ]: Finished loading project [  0.07s]
+20:51:42.063117 [info ]: Cached model count updated: 5 models (accurate)
+20:51:42.146403 [info ]: Waiting for lease on 'target' directory
+20:51:42.565462 [info ]: Started loading project
+20:51:42.565727 [info ]: Loading ~/.dbt/profiles.yml
+20:51:42.582900 [info ]: Cached model count updated: 5 models (estimate)
+20:51:42.582925 [info ]: Cached model count updated: 5 models (accurate)
+20:51:42.582951 [info ]: Started scheduling
+20:51:42.582990 [info ]: Finished scheduling [  0.00s]
+20:51:42.583000 [debug]: Compilation - 0 nodes selected: {}
+20:51:42.583016 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:42.583025 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:42.625418 [info ]: Started building task graph
+20:51:42.625438 [info ]: Finished building task graph [  0.00s]
+20:51:42.631258 [info ]: Started scheduling
+20:51:42.631299 [info ]: Finished scheduling [  0.00s]
+20:51:42.631407 [info ]: Finished loading project [  0.07s]
+20:51:42.631578 [info ]: Cached model count updated: 5 models (accurate)
+20:51:43.044765 [info ]: Waiting for lease on 'target' directory
+20:51:43.154915 [info ]: Started loading project
+20:51:43.155152 [info ]: Loading ~/.dbt/profiles.yml
+20:51:43.171096 [info ]: Cached model count updated: 5 models (estimate)
+20:51:43.171123 [info ]: Cached model count updated: 5 models (accurate)
+20:51:43.171145 [info ]: Started scheduling
+20:51:43.171180 [info ]: Finished scheduling [  0.00s]
+20:51:43.171189 [debug]: Compilation - 0 nodes selected: {}
+20:51:43.171202 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:43.171213 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:43.215165 [info ]: Started building task graph
+20:51:43.215203 [info ]: Finished building task graph [  0.00s]
+20:51:43.221408 [info ]: Started scheduling
+20:51:43.221442 [info ]: Finished scheduling [  0.00s]
+20:51:43.221542 [info ]: Finished loading project [  0.07s]
+20:51:43.221712 [info ]: Cached model count updated: 5 models (accurate)
+20:51:43.258785 [info ]: Waiting for lease on 'target' directory
+20:51:43.687924 [info ]: Started loading project
+20:51:43.688569 [info ]: Loading ~/.dbt/profiles.yml
+20:51:43.715300 [info ]: Cached model count updated: 5 models (estimate)
+20:51:43.715322 [info ]: Cached model count updated: 5 models (accurate)
+20:51:43.715347 [info ]: Started scheduling
+20:51:43.715386 [info ]: Finished scheduling [  0.00s]
+20:51:43.715394 [debug]: Compilation - 0 nodes selected: {}
+20:51:43.715408 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:43.715421 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:43.760782 [info ]: Started building task graph
+20:51:43.760804 [info ]: Finished building task graph [  0.00s]
+20:51:43.766500 [info ]: Started scheduling
+20:51:43.766533 [info ]: Finished scheduling [  0.00s]
+20:51:43.766623 [info ]: Finished loading project [  0.08s]
+20:51:43.766791 [info ]: Cached model count updated: 5 models (accurate)
+20:51:44.927375 [info ]: Started loading project
+20:51:44.927649 [info ]: Loading ~/.dbt/profiles.yml
+20:51:44.945431 [info ]: Cached model count updated: 5 models (estimate)
+20:51:44.945455 [info ]: Cached model count updated: 5 models (accurate)
+20:51:44.945478 [info ]: Started scheduling
+20:51:44.945515 [info ]: Finished scheduling [  0.00s]
+20:51:44.945523 [debug]: Compilation - 0 nodes selected: {}
+20:51:44.945538 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:44.945549 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:44.988367 [info ]: Started building task graph
+20:51:44.988388 [info ]: Finished building task graph [  0.00s]
+20:51:44.994437 [info ]: Started scheduling
+20:51:44.994468 [info ]: Finished scheduling [  0.00s]
+20:51:44.994561 [info ]: Finished loading project [  0.07s]
+20:51:44.994738 [info ]: Cached model count updated: 5 models (accurate)
+20:51:45.306098 [info ]: Waiting for lease on 'target' directory
+20:51:45.518678 [info ]: Started loading project
+20:51:45.518991 [info ]: Loading ~/.dbt/profiles.yml
+20:51:45.533528 [info ]: Cached model count updated: 5 models (estimate)
+20:51:45.533549 [info ]: Cached model count updated: 5 models (accurate)
+20:51:45.533569 [info ]: Started scheduling
+20:51:45.533602 [info ]: Finished scheduling [  0.00s]
+20:51:45.533611 [debug]: Compilation - 0 nodes selected: {}
+20:51:45.533623 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:45.533632 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:45.575793 [info ]: Started building task graph
+20:51:45.575808 [info ]: Finished building task graph [  0.00s]
+20:51:45.582128 [info ]: Started scheduling
+20:51:45.582158 [info ]: Finished scheduling [  0.00s]
+20:51:45.582277 [info ]: Finished loading project [  0.06s]
+20:51:45.582434 [info ]: Cached model count updated: 5 models (accurate)
+20:51:46.763815 [info ]: Started loading project
+20:51:46.764119 [info ]: Loading ~/.dbt/profiles.yml
+20:51:46.783450 [info ]: Cached model count updated: 5 models (estimate)
+20:51:46.783482 [info ]: Cached model count updated: 5 models (accurate)
+20:51:46.783506 [info ]: Started scheduling
+20:51:46.783577 [info ]: Finished scheduling [  0.00s]
+20:51:46.783587 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:51:46.828042 [info ]: Started building task graph
+20:51:46.828099 [info ]: Finished building task graph [  0.00s]
+20:51:46.831984 [info ]: Started rendering (5 nodes)
+20:51:46.831998 [info ]: Started model dbt_eelikem.dim_customers
+20:51:46.832004 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:51:46.832018 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:51:46.832024 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:51:46.832030 [info ]: Started model dbt_eelikem.fct_orders
+20:51:46.832033 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:51:46.832039 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:51:46.832043 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:51:46.832050 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:51:46.832054 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:51:46.832055 [info ]: Finished loading project [  0.07s]
+20:51:46.832229 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:51:46.832259 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:51:46.832264 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:51:46.832292 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:46.832305 [info ]: Started analyzing (5 nodes)
+20:51:46.832308 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:51:46.832316 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:46.832321 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:51:46.832328 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:46.832332 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:51:46.832329 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:51:46.832329 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:51:46.832370 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:46.832379 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:51:46.832391 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:46.832395 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:46.832400 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:51:46.832483 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:46.832492 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:51:46.832504 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:46.832509 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:51:46.832515 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:46.832519 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:51:46.832637 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:46.832645 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:51:46.832685 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:46.832690 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:46.832693 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:51:46.834705 [info ]: Started scheduling
+20:51:46.834735 [info ]: Finished scheduling [  0.00s]
+20:51:46.835104 [info ]: Cached model count updated: 5 models (accurate)
+20:51:48.170374 [info ]: Started loading project
+20:51:48.170648 [info ]: Loading ~/.dbt/profiles.yml
+20:51:48.187992 [info ]: Cached model count updated: 5 models (estimate)
+20:51:48.188021 [info ]: Cached model count updated: 5 models (accurate)
+20:51:48.188044 [info ]: Started scheduling
+20:51:48.188080 [info ]: Finished scheduling [  0.00s]
+20:51:48.188087 [debug]: Compilation - 0 nodes selected: {}
+20:51:48.188100 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:48.188111 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:48.229535 [info ]: Started building task graph
+20:51:48.229561 [info ]: Finished building task graph [  0.00s]
+20:51:48.235766 [info ]: Started scheduling
+20:51:48.235797 [info ]: Finished scheduling [  0.00s]
+20:51:48.235897 [info ]: Finished loading project [  0.07s]
+20:51:48.236061 [info ]: Cached model count updated: 5 models (accurate)
+20:51:48.744407 [info ]: Started loading project
+20:51:48.744696 [info ]: Loading ~/.dbt/profiles.yml
+20:51:48.761958 [info ]: Cached model count updated: 5 models (estimate)
+20:51:48.761979 [info ]: Cached model count updated: 5 models (accurate)
+20:51:48.762010 [info ]: Started scheduling
+20:51:48.762057 [info ]: Finished scheduling [  0.00s]
+20:51:48.762066 [debug]: Compilation - 0 nodes selected: {}
+20:51:48.762081 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:48.762091 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:48.803150 [info ]: Started building task graph
+20:51:48.803171 [info ]: Finished building task graph [  0.00s]
+20:51:48.809631 [info ]: Started scheduling
+20:51:48.809662 [info ]: Finished scheduling [  0.00s]
+20:51:48.809752 [info ]: Finished loading project [  0.07s]
+20:51:48.809924 [info ]: Cached model count updated: 5 models (accurate)
+20:51:48.868847 [info ]: Waiting for lease on 'target' directory
+20:51:49.284588 [info ]: Started loading project
+20:51:49.284856 [info ]: Loading ~/.dbt/profiles.yml
+20:51:49.325310 [info ]: Cached model count updated: 5 models (estimate)
+20:51:49.325334 [info ]: Cached model count updated: 5 models (accurate)
+20:51:49.325358 [info ]: Started scheduling
+20:51:49.325396 [info ]: Finished scheduling [  0.00s]
+20:51:49.325404 [debug]: Compilation - 0 nodes selected: {}
+20:51:49.325418 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:49.325426 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:49.366939 [info ]: Started building task graph
+20:51:49.366961 [info ]: Finished building task graph [  0.00s]
+20:51:49.373750 [info ]: Started scheduling
+20:51:49.373791 [info ]: Finished scheduling [  0.00s]
+20:51:49.373923 [info ]: Finished loading project [  0.09s]
+20:51:49.374085 [info ]: Cached model count updated: 5 models (accurate)
+20:51:49.468194 [info ]: Waiting for lease on 'target' directory
+20:51:49.887077 [info ]: Started loading project
+20:51:49.887410 [info ]: Loading ~/.dbt/profiles.yml
+20:51:49.906563 [info ]: Cached model count updated: 5 models (estimate)
+20:51:49.906593 [info ]: Cached model count updated: 5 models (accurate)
+20:51:49.906620 [info ]: Started scheduling
+20:51:49.906670 [info ]: Finished scheduling [  0.00s]
+20:51:49.906681 [debug]: Compilation - 0 nodes selected: {}
+20:51:49.906723 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:49.906747 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:49.949474 [info ]: Started building task graph
+20:51:49.949492 [info ]: Finished building task graph [  0.00s]
+20:51:49.955263 [info ]: Started scheduling
+20:51:49.955298 [info ]: Finished scheduling [  0.00s]
+20:51:49.955397 [info ]: Finished loading project [  0.07s]
+20:51:49.955567 [info ]: Cached model count updated: 5 models (accurate)
+20:51:50.348829 [info ]: Waiting for lease on 'target' directory
+20:51:50.464875 [info ]: Started loading project
+20:51:50.465196 [info ]: Loading ~/.dbt/profiles.yml
+20:51:50.481043 [info ]: Cached model count updated: 5 models (estimate)
+20:51:50.481065 [info ]: Cached model count updated: 5 models (accurate)
+20:51:50.481086 [info ]: Started scheduling
+20:51:50.481118 [info ]: Finished scheduling [  0.00s]
+20:51:50.481127 [debug]: Compilation - 0 nodes selected: {}
+20:51:50.481139 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:50.481148 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:50.521944 [info ]: Started building task graph
+20:51:50.521968 [info ]: Finished building task graph [  0.00s]
+20:51:50.528619 [info ]: Started scheduling
+20:51:50.528662 [info ]: Finished scheduling [  0.00s]
+20:51:50.528766 [info ]: Finished loading project [  0.06s]
+20:51:50.528937 [info ]: Cached model count updated: 5 models (accurate)
+20:51:51.715830 [info ]: Started loading project
+20:51:51.716503 [info ]: Loading ~/.dbt/profiles.yml
+20:51:51.745474 [info ]: Cached model count updated: 5 models (estimate)
+20:51:51.745500 [info ]: Cached model count updated: 5 models (accurate)
+20:51:51.745526 [info ]: Started scheduling
+20:51:51.745591 [info ]: Finished scheduling [  0.00s]
+20:51:51.745605 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:51:51.794573 [info ]: Started building task graph
+20:51:51.794733 [info ]: Finished building task graph [  0.00s]
+20:51:51.798791 [info ]: Started rendering (5 nodes)
+20:51:51.798803 [info ]: Started model dbt_eelikem.dim_customers
+20:51:51.798809 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:51:51.798824 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:51:51.798827 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:51:51.798834 [info ]: Started model dbt_eelikem.fct_orders
+20:51:51.798838 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:51:51.798844 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:51:51.798845 [info ]: Finished loading project [  0.08s]
+20:51:51.798852 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:51:51.798860 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:51:51.798866 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:51:51.799123 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:51:51.799123 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:51:51.799136 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:51:51.799153 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:51:51.799174 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:51.799187 [info ]: Started analyzing (5 nodes)
+20:51:51.799191 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:51:51.799202 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:51.799208 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:51:51.799213 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:51.799217 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:51:51.799222 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:51.799227 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:51:51.799274 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:51:51.799337 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:51.799342 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:51.799348 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:51:51.799357 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:51.799361 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:51:51.799369 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:51.799372 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:51:51.799436 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:51.799441 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:51:51.799611 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:51.799618 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:51:51.799690 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:51.799700 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:51.799705 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:51:51.801938 [info ]: Started scheduling
+20:51:51.801974 [info ]: Finished scheduling [  0.00s]
+20:51:51.802346 [info ]: Cached model count updated: 5 models (accurate)
+20:51:53.311390 [info ]: Started loading project
+20:51:53.311657 [info ]: Loading ~/.dbt/profiles.yml
+20:51:53.338194 [info ]: Cached model count updated: 5 models (estimate)
+20:51:53.338216 [info ]: Cached model count updated: 5 models (accurate)
+20:51:53.338238 [info ]: Started scheduling
+20:51:53.338273 [info ]: Finished scheduling [  0.00s]
+20:51:53.338280 [debug]: Compilation - 0 nodes selected: {}
+20:51:53.338293 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:53.338301 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:53.381318 [info ]: Started building task graph
+20:51:53.381341 [info ]: Finished building task graph [  0.00s]
+20:51:53.387542 [info ]: Started scheduling
+20:51:53.387578 [info ]: Finished scheduling [  0.00s]
+20:51:53.387689 [info ]: Finished loading project [  0.08s]
+20:51:53.387867 [info ]: Cached model count updated: 5 models (accurate)
+20:51:53.434643 [info ]: Waiting for lease on 'target' directory
+20:51:53.856049 [info ]: Started loading project
+20:51:53.856425 [info ]: Loading ~/.dbt/profiles.yml
+20:51:53.880891 [info ]: Cached model count updated: 5 models (estimate)
+20:51:53.880916 [info ]: Cached model count updated: 5 models (accurate)
+20:51:53.880943 [info ]: Started scheduling
+20:51:53.880989 [info ]: Finished scheduling [  0.00s]
+20:51:53.881000 [debug]: Compilation - 0 nodes selected: {}
+20:51:53.881018 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:53.881028 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:53.929011 [info ]: Started building task graph
+20:51:53.929037 [info ]: Finished building task graph [  0.00s]
+20:51:53.940376 [info ]: Started scheduling
+20:51:53.940420 [info ]: Finished scheduling [  0.00s]
+20:51:53.941210 [info ]: Cached model count updated: 5 models (accurate)
+20:51:53.941511 [info ]: Finished loading project [  0.09s]
+20:51:54.579528 [info ]: Started loading project
+20:51:54.579816 [info ]: Loading ~/.dbt/profiles.yml
+20:51:54.598296 [info ]: Cached model count updated: 5 models (estimate)
+20:51:54.598323 [info ]: Cached model count updated: 5 models (accurate)
+20:51:54.598346 [info ]: Started scheduling
+20:51:54.598384 [info ]: Finished scheduling [  0.00s]
+20:51:54.598395 [debug]: Compilation - 0 nodes selected: {}
+20:51:54.598409 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:54.598417 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:54.643656 [info ]: Started building task graph
+20:51:54.643676 [info ]: Finished building task graph [  0.00s]
+20:51:54.649843 [info ]: Started scheduling
+20:51:54.649872 [info ]: Finished scheduling [  0.00s]
+20:51:54.649959 [info ]: Finished loading project [  0.07s]
+20:51:54.650133 [info ]: Cached model count updated: 5 models (accurate)
+20:51:54.757374 [info ]: Waiting for lease on 'target' directory
+20:51:55.175145 [info ]: Started loading project
+20:51:55.175537 [info ]: Loading ~/.dbt/profiles.yml
+20:51:55.197581 [info ]: Cached model count updated: 5 models (estimate)
+20:51:55.197604 [info ]: Cached model count updated: 5 models (accurate)
+20:51:55.197627 [info ]: Started scheduling
+20:51:55.197668 [info ]: Finished scheduling [  0.00s]
+20:51:55.197678 [debug]: Compilation - 0 nodes selected: {}
+20:51:55.197694 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:51:55.197704 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:51:55.242793 [info ]: Started building task graph
+20:51:55.242816 [info ]: Finished building task graph [  0.00s]
+20:51:55.248822 [info ]: Started scheduling
+20:51:55.248861 [info ]: Finished scheduling [  0.00s]
+20:51:55.248944 [info ]: Finished loading project [  0.07s]
+20:51:55.249131 [info ]: Cached model count updated: 5 models (accurate)
+20:51:56.435590 [info ]: Started loading project
+20:51:56.436238 [info ]: Loading ~/.dbt/profiles.yml
+20:51:56.467103 [info ]: Cached model count updated: 5 models (estimate)
+20:51:56.467148 [info ]: Cached model count updated: 5 models (accurate)
+20:51:56.467189 [info ]: Started scheduling
+20:51:56.467287 [info ]: Finished scheduling [  0.00s]
+20:51:56.467304 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:51:56.514627 [info ]: Started building task graph
+20:51:56.514679 [info ]: Finished building task graph [  0.00s]
+20:51:56.518844 [info ]: Started rendering (5 nodes)
+20:51:56.518859 [info ]: Started model dbt_eelikem.dim_customers
+20:51:56.518866 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:51:56.518884 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:51:56.518888 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:51:56.518893 [info ]: Started model dbt_eelikem.fct_orders
+20:51:56.518897 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:51:56.518901 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:51:56.518905 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:51:56.518911 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:51:56.518915 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:51:56.518979 [info ]: Finished loading project [  0.08s]
+20:51:56.519074 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:51:56.519172 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:56.519178 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:51:56.519192 [info ]: Started analyzing (5 nodes)
+20:51:56.519197 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:51:56.519213 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:51:56.519213 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:51:56.519241 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:56.519253 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:51:56.519237 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:56.519360 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:51:56.519367 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:51:56.519369 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:51:56.519385 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:56.519391 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:51:56.519473 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:51:56.519520 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:56.519528 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:56.519537 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:51:56.519552 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:56.519557 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:51:56.519567 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:51:56.519573 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:51:56.519588 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:51:56.519592 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:51:56.519609 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:51:56.519619 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:51:56.519622 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:51:56.521597 [info ]: Started scheduling
+20:51:56.521634 [info ]: Finished scheduling [  0.00s]
+20:51:56.522006 [info ]: Cached model count updated: 5 models (accurate)
+20:51:59.530051 [info ]: Started loading project
+20:51:59.530370 [info ]: Loading ~/.dbt/profiles.yml
+20:51:59.536923 [info ]: Started parsing
+20:51:59.585462 [info ]: Finished loading project [  0.06s]
+20:51:59.587634 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:51:59.588099 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:51:59.589545 [info ]: Finished parsing [  0.05s]
+20:51:59.590865 [info ]: Cached model count updated: 5 models (estimate)
+20:51:59.590874 [info ]: Cached model count updated: 5 models (accurate)
+20:51:59.590892 [info ]: Started scheduling
+20:51:59.590936 [info ]: Finished scheduling [  0.00s]
+20:51:59.590943 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:51:59.633339 [info ]: Started building task graph
+20:51:59.633373 [info ]: Finished building task graph [  0.00s]
+20:51:59.638700 [info ]: Started rendering (1 nodes)
+20:51:59.638715 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:51:59.638721 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:51:59.639276 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:51:59.639337 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:59.639354 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:51:59.639367 [info ]: Started analyzing (1 nodes)
+20:51:59.639371 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:51:59.639548 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:51:59.639555 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:51:59.639558 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:51:59.641563 [info ]: Started scheduling
+20:51:59.641624 [info ]: Finished scheduling [  0.00s]
+20:51:59.642235 [info ]: Cached model count updated: 5 models (accurate)
+20:52:00.795711 [info ]: Started loading project
+20:52:00.796146 [info ]: Loading ~/.dbt/profiles.yml
+20:52:00.806717 [info ]: Started parsing
+20:52:00.855730 [info ]: Finished loading project [  0.06s]
+20:52:00.857804 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:52:00.858253 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:52:00.859752 [info ]: Finished parsing [  0.05s]
+20:52:00.861008 [info ]: Cached model count updated: 5 models (estimate)
+20:52:00.861018 [info ]: Cached model count updated: 5 models (accurate)
+20:52:00.861035 [info ]: Started scheduling
+20:52:00.861078 [info ]: Finished scheduling [  0.00s]
+20:52:00.861085 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:52:00.902229 [info ]: Started building task graph
+20:52:00.902260 [info ]: Finished building task graph [  0.00s]
+20:52:00.907774 [info ]: Started rendering (1 nodes)
+20:52:00.907792 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:00.907799 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:00.908412 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:00.908468 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:00.908478 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:00.908489 [info ]: Started analyzing (1 nodes)
+20:52:00.908493 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:00.908639 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:00.908645 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:00.908648 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:00.910599 [info ]: Started scheduling
+20:52:00.910658 [info ]: Finished scheduling [  0.00s]
+20:52:00.911288 [info ]: Cached model count updated: 5 models (accurate)
+20:52:02.107325 [info ]: Started loading project
+20:52:02.107860 [info ]: Loading ~/.dbt/profiles.yml
+20:52:02.136887 [info ]: Cached model count updated: 5 models (estimate)
+20:52:02.136925 [info ]: Cached model count updated: 5 models (accurate)
+20:52:02.136958 [info ]: Started scheduling
+20:52:02.137042 [info ]: Finished scheduling [  0.00s]
+20:52:02.137060 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:02.187148 [info ]: Started building task graph
+20:52:02.187199 [info ]: Finished building task graph [  0.00s]
+20:52:02.192654 [info ]: Started rendering (5 nodes)
+20:52:02.192669 [info ]: Started model dbt_eelikem.dim_customers
+20:52:02.192676 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:02.192690 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:02.192694 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:02.192699 [info ]: Started model dbt_eelikem.fct_orders
+20:52:02.192702 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:02.192709 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:02.192713 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:02.192719 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:02.192722 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:02.192737 [info ]: Finished loading project [  0.09s]
+20:52:02.192911 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:02.192912 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:02.192983 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:02.193005 [info ]: Started analyzing (5 nodes)
+20:52:02.193010 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:02.193021 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:02.193017 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:02.193028 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:02.193041 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:02.193049 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:02.193054 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:02.193060 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:02.193076 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:02.193085 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:02.193108 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:02.193114 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:02.193120 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:02.193168 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:02.193175 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:02.193187 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:02.193191 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:02.193218 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:02.193225 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:02.193372 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:02.193380 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:02.193389 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:02.193392 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:02.193395 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:02.195288 [info ]: Started scheduling
+20:52:02.195318 [info ]: Finished scheduling [  0.00s]
+20:52:02.195682 [info ]: Cached model count updated: 5 models (accurate)
+20:52:02.478769 [info ]: Waiting for lease on 'target' directory
+20:52:02.690487 [info ]: Started loading project
+20:52:02.690836 [info ]: Loading ~/.dbt/profiles.yml
+20:52:02.705551 [info ]: Cached model count updated: 5 models (estimate)
+20:52:02.705574 [info ]: Cached model count updated: 5 models (accurate)
+20:52:02.705596 [info ]: Started scheduling
+20:52:02.705630 [info ]: Finished scheduling [  0.00s]
+20:52:02.705637 [debug]: Compilation - 0 nodes selected: {}
+20:52:02.705651 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:jaffle_shop.stripe.payment' does not match any enabled nodes
+20:52:02.705659 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+20:52:02.746710 [info ]: Started building task graph
+20:52:02.746732 [info ]: Finished building task graph [  0.00s]
+20:52:02.753072 [info ]: Started scheduling
+20:52:02.753100 [info ]: Finished scheduling [  0.00s]
+20:52:02.753194 [info ]: Finished loading project [  0.06s]
+20:52:02.753362 [info ]: Cached model count updated: 5 models (accurate)
+20:52:03.932605 [info ]: Started loading project
+20:52:03.932850 [info ]: Loading ~/.dbt/profiles.yml
+20:52:03.947428 [info ]: Cached model count updated: 5 models (estimate)
+20:52:03.947453 [info ]: Cached model count updated: 5 models (accurate)
+20:52:03.947471 [info ]: Started scheduling
+20:52:03.947519 [info ]: Finished scheduling [  0.00s]
+20:52:03.947529 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:03.987687 [info ]: Started building task graph
+20:52:03.987736 [info ]: Finished building task graph [  0.00s]
+20:52:03.992497 [info ]: Started rendering (5 nodes)
+20:52:03.992513 [info ]: Started model dbt_eelikem.dim_customers
+20:52:03.992520 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:03.992534 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:03.992538 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:03.992544 [info ]: Started model dbt_eelikem.fct_orders
+20:52:03.992547 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:03.992557 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:03.992562 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:03.992568 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:03.992572 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:03.992574 [info ]: Finished loading project [  0.06s]
+20:52:03.992775 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:03.992820 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:03.992820 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:03.992823 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:03.992832 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:03.992852 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:03.992865 [info ]: Started analyzing (5 nodes)
+20:52:03.992869 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:03.992881 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:03.992886 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:03.992892 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:03.992896 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:03.992901 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:03.992906 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:03.992912 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:03.992915 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:03.992918 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:03.993035 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:03.993045 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:03.993056 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:03.993060 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:03.993065 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:03.993069 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:03.993198 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:03.993207 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:03.993317 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:03.993327 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:03.993331 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:03.995222 [info ]: Started scheduling
+20:52:03.995254 [info ]: Finished scheduling [  0.00s]
+20:52:03.995708 [info ]: Cached model count updated: 5 models (accurate)
+20:52:04.292411 [info ]: Waiting for lease on 'target' directory
+20:52:04.510996 [info ]: Started loading project
+20:52:04.511418 [info ]: Loading ~/.dbt/profiles.yml
+20:52:04.534188 [info ]: Finished loading project [  0.02s]
+20:52:04.534417 [info ]: Cached model count updated: 5 models (accurate)
+20:52:05.723733 [info ]: Started loading project
+20:52:05.724473 [info ]: Loading ~/.dbt/profiles.yml
+20:52:05.754394 [info ]: Cached model count updated: 5 models (estimate)
+20:52:05.754442 [info ]: Cached model count updated: 5 models (accurate)
+20:52:05.754481 [info ]: Started scheduling
+20:52:05.754593 [info ]: Finished scheduling [  0.00s]
+20:52:05.754612 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:05.803759 [info ]: Started building task graph
+20:52:05.803822 [info ]: Finished building task graph [  0.00s]
+20:52:05.808270 [info ]: Started rendering (5 nodes)
+20:52:05.808287 [info ]: Started model dbt_eelikem.dim_customers
+20:52:05.808296 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:05.808310 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:05.808315 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:05.808320 [info ]: Started model dbt_eelikem.fct_orders
+20:52:05.808327 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:05.808333 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:05.808338 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:05.808344 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:05.808348 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:05.808349 [info ]: Finished loading project [  0.08s]
+20:52:05.808633 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:05.808633 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:05.808637 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:05.808633 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:05.808705 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:05.808717 [info ]: Started analyzing (5 nodes)
+20:52:05.808722 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:05.808746 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:05.808750 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:05.808768 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:05.808781 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:05.808787 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:05.808794 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:05.808798 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:05.808806 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:05.808811 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:05.808816 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:05.808855 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:05.808863 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:05.808902 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:05.808910 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:05.808919 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:05.808923 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:05.809073 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:05.809084 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:05.809107 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:05.809114 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:05.809118 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:05.811053 [info ]: Started scheduling
+20:52:05.811083 [info ]: Finished scheduling [  0.00s]
+20:52:05.811448 [info ]: Cached model count updated: 5 models (accurate)
+20:52:16.893598 [info ]: Started loading project
+20:52:16.893900 [info ]: Loading ~/.dbt/profiles.yml
+20:52:16.900915 [info ]: Started parsing
+20:52:16.954146 [info ]: Finished loading project [  0.06s]
+20:52:16.956456 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:52:16.957938 [info ]: Finished parsing [  0.06s]
+20:52:16.959284 [info ]: Cached model count updated: 5 models (estimate)
+20:52:16.959295 [info ]: Cached model count updated: 5 models (accurate)
+20:52:16.959312 [info ]: Started scheduling
+20:52:16.959354 [info ]: Finished scheduling [  0.00s]
+20:52:16.959361 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:52:16.999598 [info ]: Started building task graph
+20:52:16.999626 [info ]: Finished building task graph [  0.00s]
+20:52:17.003929 [info ]: Started rendering (1 nodes)
+20:52:17.003947 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:17.003953 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:17.004538 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:17.004613 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:17.004624 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:17.004633 [info ]: Started analyzing (1 nodes)
+20:52:17.004636 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:17.004816 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:17.004823 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:17.004826 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:17.006860 [info ]: Started scheduling
+20:52:17.006927 [info ]: Finished scheduling [  0.00s]
+20:52:17.007633 [info ]: Cached model count updated: 5 models (accurate)
+20:52:18.195059 [info ]: Started loading project
+20:52:18.195343 [info ]: Loading ~/.dbt/profiles.yml
+20:52:18.211989 [info ]: Cached model count updated: 5 models (estimate)
+20:52:18.212011 [info ]: Cached model count updated: 5 models (accurate)
+20:52:18.212030 [info ]: Started scheduling
+20:52:18.212081 [info ]: Finished scheduling [  0.00s]
+20:52:18.212091 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:18.252994 [info ]: Started building task graph
+20:52:18.253046 [info ]: Finished building task graph [  0.00s]
+20:52:18.258588 [info ]: Started rendering (5 nodes)
+20:52:18.258603 [info ]: Started model dbt_eelikem.dim_customers
+20:52:18.258609 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:18.258625 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:18.258628 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:18.258633 [info ]: Started model dbt_eelikem.fct_orders
+20:52:18.258636 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:18.258641 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:18.258648 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:18.258654 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:18.258659 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:18.258676 [info ]: Finished loading project [  0.06s]
+20:52:18.258801 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:18.258845 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:18.258860 [info ]: Started analyzing (5 nodes)
+20:52:18.258863 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:18.258888 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:18.258932 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:18.258942 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:18.258943 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:18.258943 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:18.258943 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:18.258983 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:18.258999 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:18.259013 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:18.259020 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:18.259029 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:18.259034 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:18.259038 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:18.259045 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:18.259050 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:18.259062 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:18.259067 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:18.259144 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:18.259155 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:18.259255 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:18.259264 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:18.259326 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:18.259336 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:18.259340 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:18.261367 [info ]: Started scheduling
+20:52:18.261404 [info ]: Finished scheduling [  0.00s]
+20:52:18.261816 [info ]: Cached model count updated: 5 models (accurate)
+20:52:20.538931 [info ]: Started loading project
+20:52:20.539297 [info ]: Loading ~/.dbt/profiles.yml
+20:52:20.561805 [info ]: Finished loading project [  0.02s]
+20:52:20.562033 [info ]: Cached model count updated: 5 models (accurate)
+20:52:21.753555 [info ]: Started loading project
+20:52:21.754236 [info ]: Loading ~/.dbt/profiles.yml
+20:52:21.785834 [info ]: Cached model count updated: 5 models (estimate)
+20:52:21.785881 [info ]: Cached model count updated: 5 models (accurate)
+20:52:21.785924 [info ]: Started scheduling
+20:52:21.786030 [info ]: Finished scheduling [  0.00s]
+20:52:21.786049 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:21.834989 [info ]: Started building task graph
+20:52:21.835033 [info ]: Finished building task graph [  0.00s]
+20:52:21.839776 [info ]: Started rendering (5 nodes)
+20:52:21.839789 [info ]: Started model dbt_eelikem.dim_customers
+20:52:21.839797 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:21.839810 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:21.839814 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:21.839819 [info ]: Started model dbt_eelikem.fct_orders
+20:52:21.839822 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:21.839826 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:21.839830 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:21.839836 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:21.839839 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:21.839865 [info ]: Finished loading project [  0.09s]
+20:52:21.840004 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:21.840032 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:21.840046 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:21.840064 [info ]: Started analyzing (5 nodes)
+20:52:21.840069 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:21.840085 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:21.840093 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:21.840100 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:21.840119 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:21.840131 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:21.840145 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:21.840119 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:21.840167 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:21.840177 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:21.840188 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:21.840193 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:21.840197 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:21.840233 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:21.840240 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:21.840251 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:21.840261 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:21.840272 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:21.840277 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:21.840478 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:21.840487 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:21.840497 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:21.840501 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:21.840504 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:21.842321 [info ]: Started scheduling
+20:52:21.842353 [info ]: Finished scheduling [  0.00s]
+20:52:21.842714 [info ]: Cached model count updated: 5 models (accurate)
+20:52:22.095843 [info ]: Waiting for lease on 'target' directory
+20:52:22.320274 [info ]: Started loading project
+20:52:22.320766 [info ]: Loading ~/.dbt/profiles.yml
+20:52:22.330100 [info ]: Started parsing
+20:52:22.391273 [info ]: Finished loading project [  0.07s]
+20:52:22.393434 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:52:22.394938 [info ]: Finished parsing [  0.06s]
+20:52:22.396158 [info ]: Cached model count updated: 5 models (estimate)
+20:52:22.396167 [info ]: Cached model count updated: 5 models (accurate)
+20:52:22.396185 [info ]: Started scheduling
+20:52:22.396224 [info ]: Finished scheduling [  0.00s]
+20:52:22.396230 [debug]: Compilation - 1 nodes selected: {"model.jaffle_shop.stg_stripe_payment"}
+20:52:22.437408 [info ]: Started building task graph
+20:52:22.437446 [info ]: Finished building task graph [  0.00s]
+20:52:22.442837 [info ]: Started rendering (1 nodes)
+20:52:22.442848 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:22.442855 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:22.443401 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:22.443455 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:22.443462 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:22.443471 [info ]: Started analyzing (1 nodes)
+20:52:22.443474 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:22.443613 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:22.443620 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+20:52:22.443623 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:22.445613 [info ]: Started scheduling
+20:52:22.445673 [info ]: Finished scheduling [  0.00s]
+20:52:22.446293 [info ]: Cached model count updated: 5 models (accurate)
+20:52:23.642563 [info ]: Started loading project
+20:52:23.643085 [info ]: Loading ~/.dbt/profiles.yml
+20:52:23.672921 [info ]: Cached model count updated: 5 models (estimate)
+20:52:23.672977 [info ]: Cached model count updated: 5 models (accurate)
+20:52:23.673023 [info ]: Started scheduling
+20:52:23.673141 [info ]: Finished scheduling [  0.00s]
+20:52:23.673166 [debug]: Compilation - 5 nodes selected: {"model.jaffle_shop.dim_customers", "model.jaffle_shop.fct_orders", "model.jaffle_shop.stg_jaffle_shop_customers", "model.jaffle_shop.stg_jaffle_shop_orders", "model.jaffle_shop.stg_stripe_payment"}
+20:52:23.722084 [info ]: Started building task graph
+20:52:23.722134 [info ]: Finished building task graph [  0.00s]
+20:52:23.726525 [info ]: Started rendering (5 nodes)
+20:52:23.726539 [info ]: Started model dbt_eelikem.dim_customers
+20:52:23.726545 [debug]: Started rendering model dbt_eelikem.dim_customers
+20:52:23.726561 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+20:52:23.726565 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+20:52:23.726569 [info ]: Started model dbt_eelikem.fct_orders
+20:52:23.726572 [debug]: Started rendering model dbt_eelikem.fct_orders
+20:52:23.726577 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:52:23.726581 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:52:23.726587 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+20:52:23.726591 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+20:52:23.726623 [info ]: Finished loading project [  0.08s]
+20:52:23.726827 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+20:52:23.726928 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/.lsp/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:52:23.726927 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/.lsp/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+20:52:23.726927 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/.lsp/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+20:52:23.726927 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/.lsp/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+20:52:23.726961 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:23.726974 [info ]: Started analyzing (5 nodes)
+20:52:23.726978 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+20:52:23.726988 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:23.726993 [debug]: Started analyzing model dbt_eelikem.dim_customers
+20:52:23.726998 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:23.727002 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:52:23.727008 [debug]: Finished rendering [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:23.727012 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+20:52:23.727017 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:23.727020 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:23.727024 [debug]: Started analyzing model dbt_eelikem.fct_orders
+20:52:23.727141 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+20:52:23.727156 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_orders (view)
+20:52:23.727166 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_stripe_payment [success]
+20:52:23.727170 [info ]:  Succeeded [-------] model dbt_eelikem.stg_stripe_payment (view)
+20:52:23.727176 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+20:52:23.727179 [info ]:  Succeeded [-------] model dbt_eelikem.stg_jaffle_shop_customers (view)
+20:52:23.727334 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+20:52:23.727341 [info ]:  Succeeded [-------] model dbt_eelikem.dim_customers (table)
+20:52:23.727472 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.fct_orders [success]
+20:52:23.727477 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+20:52:23.727480 [info ]:  Succeeded [-------] model dbt_eelikem.fct_orders (table)
+20:52:23.729340 [info ]: Started scheduling
+20:52:23.729372 [info ]: Finished scheduling [  0.00s]
+20:52:23.729816 [info ]: Cached model count updated: 5 models (accurate)

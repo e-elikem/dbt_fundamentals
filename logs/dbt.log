@@ -3312,3 +3312,248 @@ select
 19:31:12.326714 [info ]: 
 ==================== Execution Summary =====================
 Finished 'freshness' with 1 warning for target 'dev' [2.8s]
+==================== 2026-07-16T20:23:48.895466Z | 019f6c99-8791-7522-aa01-106110083d3a ====================
+20:23:48.898112 [info ]: dbt-fusion 2.0.0-preview.199
+20:23:49.069754 [info ]: Loading packages.yml
+20:23:49.069945 [info ]: Installing packages
+20:23:49.093822 [info ]: Installing dbt-labs/dbt_utils
+20:23:49.096388 [info ]: Installing dbt-labs/codegen
+20:23:49.601258 [info ]:  Installed dbt-labs/codegen: 0.14.1
+20:23:49.613120 [info ]:  Installed dbt-labs/dbt_utils: 1.4.1
+20:23:49.613721 [info ]:  Installed 2 packages
+20:23:49.671067 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [775ms]
+==================== 2026-07-16T20:30:04.074554Z | 019f6c9f-4120-72b2-bc9f-76417e6d82ba ====================
+20:30:04.076590 [info ]: dbt-fusion 2.0.0-preview.199
+20:30:04.079498 [info ]: Started loading project
+20:30:04.092506 [info ]: Loading ~/.dbt/profiles.yml
+20:30:04.264113 [info ]: Loading packages.yml
+20:30:04.266308 [debug]:    Started loading packages
+20:30:04.277729 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:30:04.280404 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:30:04.280609 [debug]:     Loaded [  0.01s] packages
+20:30:04.284048 [info ]: Finished loading project [  0.20s]
+20:30:04.286786 [info ]: Started parsing
+20:30:04.340671 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:30:04.350635 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+20:30:04.351005 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:30:04.351434 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:30:04.351734 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:30:04.352019 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:30:04.359670 [info ]: Finished parsing [  0.07s]
+20:30:04.363233 [info ]: Started scheduling
+20:30:04.364883 [info ]: Finished scheduling [  0.00s]
+20:30:04.367294 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:30:04.367404 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:30:04.956444 [debug]: License from file /Users/eliess/.dbt/license.70506183148429 is in refresh window, attempting remote refresh
+20:30:05.088200 [debug]: Requesting license from https://nc356.us1.dbt.com/api/private/accounts/70506183148429/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+20:30:05.417904 [debug]: License successfully retrieved from remote
+20:30:05.418538 [debug]: License loaded from remote server nc356.us1.dbt.com
+20:30:05.419406 [debug]: License cached to file for account 70506183148429
+20:30:09.125884 [debug]: Query executed on node unknown:
+select distinct
+            table_schema as "table_schema",
+            table_name as "table_name",
+            
+            case table_type
+                when 'BASE TABLE' then 'table'
+                when 'EXTERNAL TABLE' then 'external'
+                when 'MATERIALIZED VIEW' then 'materializedview'
+                else lower(table_type)
+            end as "table_type"
+
+        from raw.information_schema.tables
+        where table_schema ilike 'jaffle_shop'
+        and table_name ilike '%'
+        and table_name not ilike ''
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+20:30:09.129241 [info ]: version: 2
+
+sources:
+  - name: jaffle_shop
+    database: raw
+    tables:
+      - name: customers
+      - name: orders
+20:30:09.152052 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+20:30:09.213054 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 2 warnings for target 'dev' [5.1s]
+==================== 2026-07-16T20:36:25.410305Z | 019f6ca5-12b6-7341-b161-f51eacf82ca5 ====================
+20:36:25.412849 [info ]: dbt-fusion 2.0.0-preview.199
+20:36:25.415487 [info ]: Started loading project
+20:36:25.432205 [info ]: Loading ~/.dbt/profiles.yml
+20:36:25.636876 [info ]: Loading packages.yml
+20:36:25.639279 [debug]:    Started loading packages
+20:36:25.653622 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:36:25.656699 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:36:25.656838 [debug]:     Loaded [  0.02s] packages
+20:36:25.661653 [info ]: Finished loading project [  0.25s]
+20:36:25.665234 [info ]: Started parsing
+20:36:25.723733 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:36:25.736390 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+20:36:25.736748 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:36:25.737135 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:36:25.737395 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:36:25.737674 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:36:25.747759 [info ]: Finished parsing [  0.08s]
+20:36:25.752048 [info ]: Started scheduling
+20:36:25.753874 [info ]: Finished scheduling [  0.00s]
+20:36:25.756685 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+20:36:25.756814 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+20:36:25.916137 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+20:36:27.904296 [debug]: Query executed on node unknown:
+describe table raw.jaffle_shop.customers
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+20:36:27.910645 [info ]: 
+
+with source as (
+
+    select * from {{ source('jaffle_shop', 'customers') }}
+
+),
+
+renamed as (
+
+    select
+        id,
+        first_name,
+        last_name
+
+    from source
+
+)
+
+select * from renamed
+
+20:36:27.936544 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+20:36:27.994428 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' with 2 warnings for target 'dev' [2.6s]
+==================== 2026-07-16T20:48:44.228556Z | 019f6cb0-58b4-7910-94eb-0c47370ac0e4 ====================
+20:48:44.232099 [info ]: dbt-fusion 2.0.0-preview.199
+20:48:44.235857 [info ]: Started loading project
+20:48:44.251704 [info ]: Loading ~/.dbt/profiles.yml
+20:48:44.437810 [info ]: Loading packages.yml
+20:48:44.440466 [debug]:    Started loading packages
+20:48:44.452929 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:48:44.455308 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:48:44.455561 [debug]:     Loaded [  0.02s] packages
+20:48:44.461065 [info ]: Finished loading project [  0.23s]
+20:48:44.464778 [info ]: Started parsing
+20:48:44.521399 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:48:44.521619 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:48:44.533820 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+20:48:44.534188 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:48:44.534564 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:48:44.534815 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:48:44.535048 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:48:44.543699 [info ]: Finished parsing [  0.08s]
+20:48:44.547460 [info ]: Started scheduling
+20:48:44.549215 [info ]: Finished scheduling [  0.00s]
+20:48:44.551839 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "STRIPE", table: "PAYMENT" }) and interval: None
+20:48:44.711847 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+20:48:44.755496 [info ]: Started building task graph
+20:48:44.758812 [info ]: Finished building task graph [  0.00s]
+20:48:46.365562 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+20:48:46.372762 [info ]: Started rendering (1 nodes)
+20:48:46.373459 [info ]: Started model dbt_eelikem.stg_stripe_payment
+20:48:46.373846 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+20:48:46.380221 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+20:48:46.381299 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_stripe_payment [success]
+20:48:46.381367 [info ]: Finished rendering [  0.01s] (1 nodes, 0 skipped, 0 errors)
+20:48:46.382603 [info ]: Started analyzing (1 nodes)
+20:48:46.382660 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+20:48:46.402898 [debug]: Finished analyzing [  0.02s] model dbt_eelikem.stg_stripe_payment [success]
+20:48:46.402993 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+20:48:46.403042 [info ]: Started running (1 nodes)
+20:48:46.403093 [info ]: Started running model dbt_eelikem.stg_stripe_payment
+20:48:46.639644 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+20:48:46.642907 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_stripe_payment"
+20:48:46.969376 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+create or replace   view analytics.dbt_eelikem.stg_stripe_payment
+  
+  
+  
+  
+  as (
+    
+select 
+    id as payment_id,
+    orderid as order_id,
+    paymentmethod as payment_method,
+    status,
+    -- amount is stored in cents, so we need to divide by 100 to get dollars
+    amount/100 as amount,
+    created as created_at
+    
+from raw.stripe.payment
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_stripe_payment", "profile_name": "default", "target_name": "dev"} */
+20:48:46.972971 [info ]: Finished running [  0.57s] model dbt_eelikem.stg_stripe_payment [success]
+20:48:46.973086 [info ]: Finished running [  0.57s] (1 nodes, 0 skipped, 0 errors)
+20:48:46.973125 [info ]:  Succeeded [  0.60s] model dbt_eelikem.stg_stripe_payment (view)
+20:48:46.999887 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+20:48:47.055466 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 2 warnings for target 'dev' [2.8s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-07-16T20:50:49.705927Z | 019f6cb2-42e8-7262-bd65-727ae9699c9f ====================
+20:50:49.706018 [info ]: dbt-fusion 2.0.0-preview.199
+20:50:49.706135 [info ]: Started loading project
+20:50:49.706843 [info ]: Loading ~/.dbt/profiles.yml
+20:50:49.854322 [info ]: Loading packages.yml
+20:50:49.854447 [debug]:    Started loading packages
+20:50:49.856477 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+20:50:49.857500 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+20:50:49.857517 [debug]:     Loaded [  0.00s] packages
+20:50:49.858014 [info ]: Finished loading project [  0.15s]
+20:50:49.858428 [info ]: Started parsing
+20:50:49.883602 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+20:50:49.883767 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+20:50:49.884506 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+20:50:49.884692 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+20:50:49.884883 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+20:50:49.885045 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+20:50:49.885194 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+20:50:49.887581 [info ]: Finished parsing [  0.03s]
+20:50:49.887920 [info ]: Started scheduling
+20:50:49.887990 [info ]: Finished scheduling [  0.00s]
+20:50:50.078923 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+20:50:50.079148 [info ]: Started analyzing freshness
+20:50:50.080504 [info ]: Started source jaffle_shop.orders
+20:50:50.080526 [info ]: Started source stripe.payment
+20:50:52.915615 [debug]: Query executed on node unknown:
+SELECT
+                table_schema,
+                table_name,
+                last_altered,
+                (table_type = 'VIEW' OR table_type = 'MATERIALIZED VIEW') AS is_view
+             FROM "RAW".INFORMATION_SCHEMA.TABLES
+             WHERE table_schema = 'STRIPE' and table_name = 'PAYMENT'
+20:50:53.097536 [debug]: Query executed on node source.jaffle_shop.jaffle_shop.orders:
+select
+      max(_etl_loaded_at) as max_loaded_at,
+      convert_timezone('UTC', current_timestamp()) as snapshotted_at
+    from raw.jaffle_shop.orders
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "source.jaffle_shop.jaffle_shop.orders", "profile_name": "default", "target_name": "dev"} */
+20:50:53.098845 [warn ]: [Unexpected (dbt9002)]: Source 'source.jaffle_shop.jaffle_shop.orders' loaded_at_field has a timestamp type without a timezone, we will assume a UTC timezone
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+20:50:53.101115 [error]: [StaleSource (dbt1063)]: Stale source source.jaffle_shop.jaffle_shop.orders
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+20:50:53.101128 [error]: [StaleSource (dbt1063)]: Stale source source.jaffle_shop.stripe.payment
+  --> models/staging/stripe/_src_stripe.yml
+20:50:53.101272 [info ]:      Stale [  3.02s] source stripe.payment (last updated 5days 13h 49m 58s ago)
+20:50:53.101324 [info ]:      Stale [  3.02s] source jaffle_shop.orders (last updated 5days 20h 51m 22s ago)
+20:50:53.101349 [info ]: Finished analyzing freshness [  3.02s]
+20:50:53.102883 [info ]: Successfully wrote sources.json
+20:50:53.113787 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+20:50:53.172500 [info ]: 
+==================== Execution Summary =====================
+Finished 'freshness' with 3 warnings and 2 errors for target 'dev' [3.5s]
