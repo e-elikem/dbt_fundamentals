@@ -2446,3 +2446,869 @@ select * from final
 Finished 'run' successfully for target 'dev' [4.3s]
 Processed: 5 models
 Summary: 5 total | 5 success
+==================== 2026-07-16T03:18:53.892480Z | 019f68ef-30c2-7fd2-9496-e402ad84b966 ====================
+03:18:56.994698 [info ]: 
+==================== Execution Summary =====================
+Finished 'system' successfully [3.1s]
+==================== 2026-07-16T03:27:42.079192Z | 019f68f7-3ffb-74c1-81b7-40085c02b718 ====================
+03:27:42.079624 [info ]: dbt-fusion 2.0.0-preview.199
+03:27:42.080147 [info ]: Started loading project
+03:27:42.082906 [info ]: Loading ~/.dbt/profiles.yml
+03:27:42.236856 [debug]:    Started loading packages
+03:27:42.240924 [debug]:     Loaded [  0.00s] packages
+03:27:42.241998 [info ]: Finished loading project [  0.16s]
+03:27:42.242831 [info ]: Started parsing
+03:27:42.264364 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:27:42.264791 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:27:42.265186 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:27:42.265465 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:27:42.265758 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:27:42.266038 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:27:42.269611 [info ]: Finished parsing [  0.03s]
+03:27:42.270627 [info ]: Started scheduling
+03:27:42.270966 [info ]: Finished scheduling [  0.00s]
+03:27:42.823702 [debug]: License from file /Users/eliess/.dbt/license.70506183148429 is in refresh window, attempting remote refresh
+03:27:42.997307 [debug]: Requesting license from https://nc356.us1.dbt.com/api/private/accounts/70506183148429/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+03:27:43.262621 [debug]: License successfully retrieved from remote
+03:27:43.263733 [debug]: License loaded from remote server nc356.us1.dbt.com
+03:27:43.265006 [debug]: License cached to file for account 70506183148429
+03:27:43.267466 [info ]: Started building task graph
+03:27:43.268909 [info ]: Finished building task graph [  0.00s]
+03:27:46.545336 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:27:46.547435 [info ]: Started rendering (6 nodes)
+03:27:46.547659 [info ]: Started model dbt_eelikem.test
+03:27:46.547744 [debug]: Started rendering model dbt_eelikem.test
+03:27:46.547828 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+03:27:46.547840 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+03:27:46.547855 [info ]: Started model dbt_eelikem.stg_stripe_payment
+03:27:46.547865 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+03:27:46.547878 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+03:27:46.547886 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+03:27:46.551998 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/marts/marketing/test.sql
+03:27:46.552002 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+03:27:46.552167 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+03:27:46.552166 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+03:27:46.552561 [debug]: Finished rendering [  0.00s] model dbt_eelikem.test [success]
+03:27:46.552965 [info ]: Started analyzing (6 nodes)
+03:27:46.553049 [debug]: Started analyzing model dbt_eelikem.test
+03:27:46.553145 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_stripe_payment [success]
+03:27:46.553209 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+03:27:46.553228 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+03:27:46.553269 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+03:27:46.553288 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+03:27:46.553334 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+03:27:46.564014 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.test [success]
+03:27:46.564094 [info ]: Started running (6 nodes)
+03:27:46.564129 [info ]: Started running model dbt_eelikem.test
+03:27:46.564150 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+03:27:46.564190 [info ]: Started running model dbt_eelikem.stg_jaffle_shop_orders
+03:27:46.564206 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.stg_stripe_payment [success]
+03:27:46.564240 [info ]: Started running model dbt_eelikem.stg_stripe_payment
+03:27:46.564254 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+03:27:46.564288 [info ]: Started running model dbt_eelikem.stg_jaffle_shop_customers
+03:27:46.725090 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:27:46.726750 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+03:27:46.859954 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace transient  table analytics.dbt_eelikem.test
+    
+    
+    
+    
+    as (select 
+
+    sum(
+        lifetime_value
+        )
+
+from dim_customers
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+03:27:47.718921 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:27:47.720890 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_stripe_payment"
+03:27:47.864714 [error]: [DbSyntaxInvalid (dbt1302)]: Database Error in model test (target/run/jaffle_shop/models/marts/marketing/test.sql)
+  [Snowflake] 002022 (42601): SQL compilation error:
+  Missing column specification
+  (in run/jaffle_shop/models/marts/marketing/test.sql)
+03:27:47.865102 [info ]: Finished running [  1.30s] model dbt_eelikem.test [error]
+03:27:47.865428 [info ]:     Failed [  1.31s] model dbt_eelikem.test (table)
+03:27:47.984091 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+create or replace   view analytics.dbt_eelikem.stg_stripe_payment
+  
+  
+  
+  
+  as (
+    
+select 
+    id as payment_id,
+    orderid as order_id,
+    paymentmethod as payment_method,
+    status,
+    -- amount is stored in cents, so we need to divide by 100 to get dollars
+    amount/100 as amount,
+    created as created_at
+    
+from raw.stripe.payment
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_stripe_payment", "profile_name": "default", "target_name": "dev"} */
+03:27:47.985252 [info ]: Finished running [  1.42s] model dbt_eelikem.stg_stripe_payment [success]
+03:27:47.985366 [info ]:  Succeeded [  1.44s] model dbt_eelikem.stg_stripe_payment (view)
+03:27:48.206967 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_customers:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:27:48.208314 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_jaffle_shop_customers"
+03:27:48.208744 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_orders:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:27:48.209681 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_jaffle_shop_orders"
+03:27:48.459644 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_customers:
+create or replace   view analytics.dbt_eelikem.stg_jaffle_shop_customers
+  
+  
+  
+  
+  as (
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from raw.jaffle_shop.customers
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_jaffle_shop_customers", "profile_name": "default", "target_name": "dev"} */
+03:27:48.461122 [info ]: Finished running [  1.90s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+03:27:48.461229 [info ]:  Succeeded [  1.91s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+03:27:48.463789 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_orders:
+create or replace   view analytics.dbt_eelikem.stg_jaffle_shop_orders
+  
+  
+  
+  
+  as (
+     select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status
+
+    from raw.jaffle_shop.orders
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_jaffle_shop_orders", "profile_name": "default", "target_name": "dev"} */
+03:27:48.465275 [info ]: Finished running [  1.90s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+03:27:48.465309 [info ]:  Succeeded [  1.92s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+03:27:48.465373 [info ]: Started model dbt_eelikem.fct_orders
+03:27:48.465391 [debug]: Started rendering model dbt_eelikem.fct_orders
+03:27:48.467483 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+03:27:48.467557 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+03:27:48.467591 [debug]: Started analyzing model dbt_eelikem.fct_orders
+03:27:48.481749 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.fct_orders [success]
+03:27:48.481848 [info ]: Started running model dbt_eelikem.fct_orders
+03:27:48.483924 [debug]: Writing runtime sql for node "model.jaffle_shop.fct_orders"
+03:27:49.825652 [debug]: Query executed on node model.jaffle_shop.fct_orders:
+create or replace transient  table analytics.dbt_eelikem.fct_orders
+    
+    
+    
+    
+    as (with payments as (
+
+    select * from analytics.dbt_eelikem.stg_stripe_payment
+
+), 
+
+orders as (
+
+    select * from analytics.dbt_eelikem.stg_jaffle_shop_orders
+
+),
+
+order_payment as (
+
+    select
+        order_id,
+        sum(
+            case
+                when status = 'success' then amount
+            end
+        ) as amount
+    from payments
+    group by 1
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        coalesce(order_payment.amount, 0) as amount
+    
+    from orders
+    left join order_payment using (order_id)
+    
+)    
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.fct_orders", "profile_name": "default", "target_name": "dev"} */
+03:27:49.826588 [info ]: Finished running [  1.34s] model dbt_eelikem.fct_orders [success]
+03:27:49.826648 [info ]:  Succeeded [  1.36s] model dbt_eelikem.fct_orders (table)
+03:27:49.826698 [info ]: Started model dbt_eelikem.dim_customers
+03:27:49.826712 [debug]: Started rendering model dbt_eelikem.dim_customers
+03:27:49.827552 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+03:27:49.827623 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+03:27:49.827651 [info ]: Finished rendering [  3.28s] (6 nodes, 0 skipped, 0 errors)
+03:27:49.827697 [debug]: Started analyzing model dbt_eelikem.dim_customers
+03:27:49.829571 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+03:27:49.829589 [info ]: Finished analyzing [  3.28s] (6 nodes, 0 skipped, 0 errors)
+03:27:49.829620 [info ]: Started running model dbt_eelikem.dim_customers
+03:27:49.831223 [debug]: Writing runtime sql for node "model.jaffle_shop.dim_customers"
+03:27:51.273350 [debug]: Query executed on node model.jaffle_shop.dim_customers:
+create or replace transient  table analytics.dbt_eelikem.dim_customers
+    
+    
+    
+    
+    as (with customers as (
+
+    -- use ref macro to reference the staging model for customers
+    select * from analytics.dbt_eelikem.stg_jaffle_shop_customers
+
+),
+
+orders as (
+
+    -- use ref macro to reference the staging model for orders
+    select * from analytics.dbt_eelikem.fct_orders
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders,
+        sum(amount) as lifetime_value
+
+    from orders
+
+    group by 1
+
+),
+
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        customer_orders.lifetime_value
+
+    from customers
+
+    left join customer_orders using (customer_id)
+    
+
+)
+
+select * from final
+
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.dim_customers", "profile_name": "default", "target_name": "dev"} */
+03:27:51.274454 [info ]: Finished running [  1.44s] model dbt_eelikem.dim_customers [success]
+03:27:51.274490 [info ]: Finished running [  4.71s] (6 nodes, 0 skipped, 1 errors)
+03:27:51.274517 [info ]:  Succeeded [  1.45s] model dbt_eelikem.dim_customers (table)
+03:27:51.343399 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [9.3s]
+Processed: 6 models
+Summary: 6 total | 5 success | 1 error
+==================== 2026-07-16T03:33:39.084295Z | 019f68fc-b281-7df3-822e-51b3aae306db ====================
+03:33:39.086287 [info ]: dbt-fusion 2.0.0-preview.199
+03:33:39.089549 [info ]: Started loading project
+03:33:39.102183 [info ]: Loading ~/.dbt/profiles.yml
+03:33:39.271313 [debug]:    Started loading packages
+03:33:39.279957 [debug]:     Loaded [  0.01s] packages
+03:33:39.283818 [info ]: Finished loading project [  0.19s]
+03:33:39.286621 [info ]: Started parsing
+03:33:39.328450 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+03:33:39.328813 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:33:39.330800 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:33:39.331096 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:33:39.331360 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:33:39.331610 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:33:39.340391 [info ]: Finished parsing [  0.05s]
+03:33:39.343776 [info ]: Started scheduling
+03:33:39.345157 [info ]: Finished scheduling [  0.00s]
+03:33:39.523364 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:33:39.527401 [info ]: Started building task graph
+03:33:39.530361 [info ]: Finished building task graph [  0.00s]
+03:33:41.008558 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:33:41.011964 [info ]: Started rendering (1 nodes)
+03:33:41.012280 [info ]: Started model dbt_eelikem.test
+03:33:41.012322 [debug]: Started rendering model dbt_eelikem.test
+03:33:41.016249 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/marts/marketing/test.sql
+03:33:41.016721 [debug]: Finished rendering [  0.00s] model dbt_eelikem.test [success]
+03:33:41.016775 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+03:33:41.017390 [info ]: Started analyzing (1 nodes)
+03:33:41.017573 [debug]: Started analyzing model dbt_eelikem.test
+03:33:41.034004 [debug]: Finished analyzing [  0.02s] model dbt_eelikem.test [success]
+03:33:41.034059 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+03:33:41.034081 [info ]: Started running (1 nodes)
+03:33:41.034105 [info ]: Started running model dbt_eelikem.test
+03:33:41.203725 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:33:41.205245 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+03:33:41.324507 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace   view analytics.dbt_eelikem.test
+  
+  
+  
+  
+  as (
+    
+
+select 
+
+    sum(
+        lifetime_value
+        )
+
+from dim_customers
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+03:33:42.335221 [error]: [DbSyntaxInvalid (dbt1302)]: Database Error in model test (target/run/jaffle_shop/models/marts/marketing/test.sql)
+  [Snowflake] 002022 (42601): SQL compilation error:
+  Missing column specification
+  (in run/jaffle_shop/models/marts/marketing/test.sql)
+03:33:42.336165 [info ]: Finished running [  1.30s] model dbt_eelikem.test [error]
+03:33:42.336578 [info ]: Finished running [  1.30s] (1 nodes, 0 skipped, 1 errors)
+03:33:42.336631 [info ]:     Failed [  1.32s] model dbt_eelikem.test (view)
+03:33:42.414394 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [3.3s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-07-16T03:34:20.310977Z | 019f68fd-5391-7fe3-a8fb-3d5a11a704a0 ====================
+03:34:20.311204 [info ]: dbt-fusion 2.0.0-preview.199
+03:34:20.311647 [info ]: Started loading project
+03:34:20.313106 [info ]: Loading ~/.dbt/profiles.yml
+03:34:20.490127 [debug]:    Started loading packages
+03:34:20.491199 [debug]:     Loaded [  0.00s] packages
+03:34:20.491703 [info ]: Finished loading project [  0.18s]
+03:34:20.491928 [info ]: Started parsing
+03:34:20.510822 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:34:20.511152 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:34:20.511660 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:34:20.511882 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:34:20.512087 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:34:20.512312 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:34:20.515074 [info ]: Finished parsing [  0.02s]
+03:34:20.515400 [info ]: Started scheduling
+03:34:20.516277 [info ]: Finished scheduling [  0.00s]
+03:34:20.721755 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:34:20.722139 [info ]: Started building task graph
+03:34:20.722230 [info ]: Finished building task graph [  0.00s]
+03:34:22.047343 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:34:22.047735 [info ]: Started rendering (1 nodes)
+03:34:22.047837 [info ]: Started model dbt_eelikem.test
+03:34:22.047864 [debug]: Started rendering model dbt_eelikem.test
+03:34:22.048852 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/marts/marketing/test.sql
+03:34:22.048979 [debug]: Finished rendering [  0.00s] model dbt_eelikem.test [success]
+03:34:22.049031 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+03:34:22.049083 [info ]: Started analyzing (1 nodes)
+03:34:22.049118 [debug]: Started analyzing model dbt_eelikem.test
+03:34:22.053987 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.test [success]
+03:34:22.054029 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+03:34:22.054046 [info ]: Started running (1 nodes)
+03:34:22.054067 [info ]: Started running model dbt_eelikem.test
+03:34:22.195619 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:34:22.196879 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+03:34:22.321840 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace   view analytics.dbt_eelikem.test
+  
+  
+  
+  
+  as (
+    
+
+select 
+
+    sum(
+        lifetime_value
+        )
+
+from dim_customers
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+03:34:23.328065 [error]: [DbSyntaxInvalid (dbt1302)]: Database Error in model test (target/run/jaffle_shop/models/marts/marketing/test.sql)
+  [Snowflake] 002022 (42601): SQL compilation error:
+  Missing column specification
+  (in run/jaffle_shop/models/marts/marketing/test.sql)
+03:34:23.328153 [info ]: Finished running [  1.27s] model dbt_eelikem.test [error]
+03:34:23.328200 [info ]: Finished running [  1.27s] (1 nodes, 0 skipped, 1 errors)
+03:34:23.328218 [info ]:     Failed [  1.28s] model dbt_eelikem.test (view)
+03:34:23.405662 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [3.1s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-07-16T03:36:11.102371Z | 019f68ff-0453-7613-a7e1-2818fbf1d760 ====================
+03:36:11.104167 [info ]: dbt-fusion 2.0.0-preview.199
+03:36:11.106658 [info ]: Started loading project
+03:36:11.117070 [info ]: Loading ~/.dbt/profiles.yml
+03:36:11.278643 [debug]:    Started loading packages
+03:36:11.279991 [debug]:     Loaded [  0.00s] packages
+03:36:11.280587 [info ]: Finished loading project [  0.17s]
+03:36:11.281121 [info ]: Started parsing
+03:36:11.300322 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:36:11.300710 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:36:11.300856 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:36:11.301156 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:36:11.301410 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:36:11.301698 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:36:11.304417 [info ]: Finished parsing [  0.02s]
+03:36:11.304766 [info ]: Started scheduling
+03:36:11.304844 [info ]: Finished scheduling [  0.00s]
+03:36:11.540870 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:36:11.541195 [info ]: Started building task graph
+03:36:11.541302 [info ]: Finished building task graph [  0.00s]
+03:36:13.531772 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:36:13.532250 [info ]: Started rendering (1 nodes)
+03:36:13.532354 [info ]: Started model dbt_eelikem.test
+03:36:13.532407 [debug]: Started rendering model dbt_eelikem.test
+03:36:13.534021 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/marts/marketing/test.sql
+03:36:13.534248 [debug]: Finished rendering [  0.00s] model dbt_eelikem.test [success]
+03:36:13.534336 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+03:36:13.534409 [info ]: Started analyzing (1 nodes)
+03:36:13.534462 [debug]: Started analyzing model dbt_eelikem.test
+03:36:13.540984 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.test [success]
+03:36:13.541046 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+03:36:13.541074 [info ]: Started running (1 nodes)
+03:36:13.541100 [info ]: Started running model dbt_eelikem.test
+03:36:13.686286 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:36:13.688085 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+03:36:13.825845 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace transient  table analytics.dbt_eelikem.test
+    
+    
+    
+    
+    as (
+select 
+
+    sum(
+        lifetime_value
+        )
+
+from dim_customers
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+03:36:14.831861 [error]: [DbSyntaxInvalid (dbt1302)]: Database Error in model test (target/run/jaffle_shop/models/marts/marketing/test.sql)
+  [Snowflake] 002022 (42601): SQL compilation error:
+  Missing column specification
+  (in run/jaffle_shop/models/marts/marketing/test.sql)
+03:36:14.832244 [info ]: Finished running [  1.29s] model dbt_eelikem.test [error]
+03:36:14.832848 [info ]: Finished running [  1.29s] (1 nodes, 0 skipped, 1 errors)
+03:36:14.832903 [info ]:     Failed [  1.30s] model dbt_eelikem.test (table)
+03:36:14.922580 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [3.8s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-07-16T03:36:34.437773Z | 019f68ff-5f84-7812-8798-eb7bd32be0d0 ====================
+03:36:34.438082 [info ]: dbt-fusion 2.0.0-preview.199
+03:36:34.438194 [info ]: Started loading project
+03:36:34.438725 [info ]: Loading ~/.dbt/profiles.yml
+03:36:34.607036 [debug]:    Started loading packages
+03:36:34.616590 [debug]:     Loaded [  0.01s] packages
+03:36:34.620879 [info ]: Finished loading project [  0.18s]
+03:36:34.623583 [info ]: Started parsing
+03:36:34.646792 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:36:34.647447 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:36:34.647635 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:36:34.647961 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:36:34.648311 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:36:34.648760 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:36:34.651461 [info ]: Finished parsing [  0.03s]
+03:36:34.652329 [info ]: Started scheduling
+03:36:34.652413 [info ]: Finished scheduling [  0.00s]
+03:36:34.653058 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_ORDERS" }) and interval: None
+03:36:34.653095 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_STRIPE_PAYMENT" }) and interval: None
+03:36:34.872908 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:36:34.873556 [info ]: Started building task graph
+03:36:34.873660 [info ]: Finished building task graph [  0.00s]
+03:36:36.363448 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:36:36.363692 [info ]: Started rendering (1 nodes)
+03:36:36.363736 [info ]: Started model dbt_eelikem.fct_orders
+03:36:36.363747 [debug]: Started rendering model dbt_eelikem.fct_orders
+03:36:36.364821 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+03:36:36.364912 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+03:36:36.364991 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+03:36:36.365056 [info ]: Started analyzing (1 nodes)
+03:36:36.365098 [debug]: Started analyzing model dbt_eelikem.fct_orders
+03:36:36.378394 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.fct_orders [success]
+03:36:36.378459 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+03:36:36.378490 [info ]: Started running (1 nodes)
+03:36:36.378514 [info ]: Started running model dbt_eelikem.fct_orders
+03:36:36.512822 [debug]: Query executed on node model.jaffle_shop.fct_orders:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:36:36.514205 [debug]: Writing runtime sql for node "model.jaffle_shop.fct_orders"
+03:36:37.297561 [debug]: Query executed on node model.jaffle_shop.fct_orders:
+create or replace transient  table analytics.dbt_eelikem.fct_orders
+    
+    
+    
+    
+    as (with payments as (
+
+    select * from analytics.dbt_eelikem.stg_stripe_payment
+
+), 
+
+orders as (
+
+    select * from analytics.dbt_eelikem.stg_jaffle_shop_orders
+
+),
+
+order_payment as (
+
+    select
+        order_id,
+        sum(
+            case
+                when status = 'success' then amount
+            end
+        ) as amount
+    from payments
+    group by 1
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        coalesce(order_payment.amount, 0) as amount
+    
+    from orders
+    left join order_payment using (order_id)
+    
+)    
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.fct_orders", "profile_name": "default", "target_name": "dev"} */
+03:36:37.299634 [info ]: Finished running [  0.92s] model dbt_eelikem.fct_orders [success]
+03:36:37.299706 [info ]: Finished running [  0.92s] (1 nodes, 0 skipped, 0 errors)
+03:36:37.299730 [info ]:  Succeeded [  0.94s] model dbt_eelikem.fct_orders (table)
+03:36:37.368144 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [2.9s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-07-16T03:37:21.257921Z | 019f6900-165e-7f43-b7b2-ec45f7cb88d7 ====================
+03:37:21.260914 [info ]: dbt-fusion 2.0.0-preview.199
+03:37:21.263596 [info ]: Started loading project
+03:37:21.274980 [info ]: Loading ~/.dbt/profiles.yml
+03:37:21.441742 [debug]:    Started loading packages
+03:37:21.447607 [debug]:     Loaded [  0.01s] packages
+03:37:21.450386 [info ]: Finished loading project [  0.19s]
+03:37:21.453308 [info ]: Started parsing
+03:37:21.489831 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:37:21.490219 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:37:21.491654 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:37:21.491930 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:37:21.492212 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:37:21.492455 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:37:21.498307 [info ]: Finished parsing [  0.04s]
+03:37:21.500252 [info ]: Started scheduling
+03:37:21.501437 [info ]: Finished scheduling [  0.00s]
+03:37:21.701101 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:37:21.704116 [info ]: Started building task graph
+03:37:21.706117 [info ]: Finished building task graph [  0.00s]
+03:37:23.754530 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:37:23.759395 [info ]: Started rendering (1 nodes)
+03:37:23.759737 [info ]: Started model dbt_eelikem.test
+03:37:23.759966 [debug]: Started rendering model dbt_eelikem.test
+03:37:23.765886 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/marts/marketing/test.sql
+03:37:23.766589 [debug]: Finished rendering [  0.01s] model dbt_eelikem.test [success]
+03:37:23.766681 [info ]: Finished rendering [  0.01s] (1 nodes, 0 skipped, 0 errors)
+03:37:23.767710 [info ]: Started analyzing (1 nodes)
+03:37:23.767777 [debug]: Started analyzing model dbt_eelikem.test
+03:37:23.786184 [debug]: Finished analyzing [  0.02s] model dbt_eelikem.test [success]
+03:37:23.786332 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+03:37:23.786387 [info ]: Started running (1 nodes)
+03:37:23.786433 [info ]: Started running model dbt_eelikem.test
+03:37:23.944654 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+03:37:23.946597 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+03:37:24.056371 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace   view analytics.dbt_eelikem.test
+  
+  
+  
+  
+  as (
+    
+
+select 
+
+    sum(
+        lifetime_value
+        )
+
+from dim_customers
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+03:37:25.064424 [error]: [DbSyntaxInvalid (dbt1302)]: Database Error in model test (target/run/jaffle_shop/models/marts/marketing/test.sql)
+  [Snowflake] 002022 (42601): SQL compilation error:
+  Missing column specification
+  (in run/jaffle_shop/models/marts/marketing/test.sql)
+03:37:25.064749 [info ]: Finished running [  1.28s] model dbt_eelikem.test [error]
+03:37:25.064817 [info ]: Finished running [  1.28s] (1 nodes, 0 skipped, 1 errors)
+03:37:25.064846 [info ]:     Failed [  1.30s] model dbt_eelikem.test (view)
+03:37:25.141087 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [3.9s]
+Processed: 1 model
+Summary: 1 total | 1 error
+==================== 2026-07-16T03:48:01.212502Z | 019f6909-da2f-7442-9bf1-50aefc774ca7 ====================
+03:48:01.214864 [info ]: dbt-fusion 2.0.0-preview.199
+03:48:01.217419 [info ]: Started loading project
+03:48:01.231990 [info ]: Loading ~/.dbt/profiles.yml
+03:48:01.401308 [debug]:    Started loading packages
+03:48:01.411075 [debug]:     Loaded [  0.01s] packages
+03:48:01.414584 [info ]: Finished loading project [  0.20s]
+03:48:01.417678 [info ]: Started parsing
+03:48:01.457094 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+03:48:01.457439 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:48:01.457685 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:48:01.457947 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:48:01.458205 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:48:01.458454 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:48:01.467060 [info ]: Finished parsing [  0.05s]
+03:48:01.471993 [info ]: Started scheduling
+03:48:01.474744 [info ]: Finished scheduling [  0.00s]
+03:48:01.656586 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:48:04.336384 [debug]: Query executed on node unknown:
+SELECT SUM(lifetime_value) FROM dim_customers
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:48:04.421766 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [3.2s]
+==================== 2026-07-16T03:49:07.495817Z | 019f690a-dd26-7311-9543-098fe9dd987e ====================
+03:49:07.495888 [info ]: dbt-fusion 2.0.0-preview.199
+03:49:07.496007 [info ]: Started loading project
+03:49:07.496515 [info ]: Loading ~/.dbt/profiles.yml
+03:49:07.644506 [debug]:    Started loading packages
+03:49:07.645574 [debug]:     Loaded [  0.00s] packages
+03:49:07.646071 [info ]: Finished loading project [  0.15s]
+03:49:07.646525 [info ]: Started parsing
+03:49:07.663963 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+03:49:07.664374 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+03:49:07.664529 [debug]: Finished parsing models/marts/marketing/test.sql [  0.00s]
+03:49:07.664857 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+03:49:07.665144 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+03:49:07.665397 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+03:49:07.667991 [info ]: Finished parsing [  0.02s]
+03:49:07.668298 [info ]: Started scheduling
+03:49:07.668376 [info ]: Finished scheduling [  0.00s]
+03:49:07.877354 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+03:49:09.459040 [debug]: Query executed on node unknown:
+SELECT SUM(lifetime_value) FROM dim_customers
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+03:49:09.527418 [info ]: 
+==================== Execution Summary =====================
+Finished 'run-operation' successfully for target 'dev' [2.0s]
+==================== 2026-07-16T19:10:28.882156Z | 019f6c56-6406-72f2-9834-34c517e697dc ====================
+19:10:28.884041 [info ]: dbt-fusion 2.0.0-preview.199
+19:10:28.886807 [info ]: Started loading project
+19:10:28.897671 [info ]: Loading ~/.dbt/profiles.yml
+19:10:29.064928 [debug]:    Started loading packages
+19:10:29.072342 [debug]:     Loaded [  0.01s] packages
+19:10:29.075185 [info ]: Finished loading project [  0.19s]
+19:10:29.077459 [info ]: Started parsing
+19:10:29.109505 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+19:10:29.115778 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+19:10:29.116113 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+19:10:29.116529 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+19:10:29.116798 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+19:10:29.117065 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+19:10:29.122305 [info ]: Finished parsing [  0.04s]
+19:10:29.124812 [info ]: Started scheduling
+19:10:29.126544 [info ]: Finished scheduling [  0.00s]
+19:10:29.128376 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+19:10:29.653942 [debug]: License from file /Users/eliess/.dbt/license.70506183148429 is in refresh window, attempting remote refresh
+19:10:29.805598 [debug]: Requesting license from https://nc356.us1.dbt.com/api/private/accounts/70506183148429/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+19:10:30.091639 [debug]: License successfully retrieved from remote
+19:10:30.093335 [debug]: License loaded from remote server nc356.us1.dbt.com
+19:10:30.096603 [debug]: License cached to file for account 70506183148429
+19:10:30.103203 [info ]: Started building task graph
+19:10:30.106197 [info ]: Finished building task graph [  0.00s]
+19:10:30.139224 [info ]: Started rendering (1 nodes)
+19:10:30.139473 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+19:10:30.139529 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+19:10:30.144926 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+19:10:30.145508 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+19:10:30.145569 [info ]: Finished rendering [  0.01s] (1 nodes, 0 skipped, 0 errors)
+19:10:30.146289 [info ]: Started analyzing (1 nodes)
+19:10:30.146339 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+19:10:30.165630 [debug]: Finished analyzing [  0.02s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+19:10:30.165761 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+19:10:30.165784 [info ]:  Succeeded [  0.02s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+19:10:30.174389 [info ]: Compiled node 'stg_jaffle_shop_customers' is:
+select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from raw.jaffle_shop.customers
+19:10:30.244383 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [1.4s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-07-16T19:21:51.341992Z | 019f6c60-cde2-7342-b161-55b32973e3bb ====================
+19:21:51.343893 [info ]: dbt-fusion 2.0.0-preview.199
+19:21:51.346398 [info ]: Started loading project
+19:21:51.357708 [info ]: Loading ~/.dbt/profiles.yml
+19:21:51.532920 [debug]:    Started loading packages
+19:21:51.539040 [debug]:     Loaded [  0.01s] packages
+19:21:51.541629 [info ]: Finished loading project [  0.20s]
+19:21:51.544032 [info ]: Started parsing
+19:21:51.574931 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+19:21:51.582613 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+19:21:51.582944 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+19:21:51.583273 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+19:21:51.583493 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+19:21:51.583814 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+19:21:51.589338 [info ]: Finished parsing [  0.05s]
+19:21:51.591571 [info ]: Started scheduling
+19:21:51.592815 [info ]: Finished scheduling [  0.00s]
+19:21:51.770579 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+19:21:51.773170 [info ]: Started analyzing freshness
+19:21:51.773837 [info ]: Started source jaffle_shop.orders
+19:21:55.599462 [debug]: Query executed on node unknown:
+SELECT
+                table_schema,
+                table_name,
+                last_altered,
+                (table_type = 'VIEW' OR table_type = 'MATERIALIZED VIEW') AS is_view
+             FROM "RAW".INFORMATION_SCHEMA.TABLES
+             WHERE table_schema = 'JAFFLE_SHOP' and table_name = 'ORDERS'
+19:21:55.603749 [error]: [StaleSource (dbt1063)]: Stale source source.jaffle_shop.jaffle_shop.orders
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+19:21:55.604261 [info ]:      Stale [  3.83s] source jaffle_shop.orders (last updated 5days 12h 22m 24s ago)
+19:21:55.604336 [info ]: Finished analyzing freshness [  3.83s]
+19:21:55.607319 [info ]: Successfully wrote sources.json
+19:21:55.683385 [info ]: 
+==================== Execution Summary =====================
+Finished 'freshness' with 1 error for target 'dev' [4.3s]
+==================== 2026-07-16T19:24:58.819868Z | 019f6c63-aa43-7251-8559-ff55f47afedc ====================
+19:24:58.819923 [info ]: dbt-fusion 2.0.0-preview.199
+19:24:58.820018 [info ]: Started loading project
+19:24:58.820522 [info ]: Loading ~/.dbt/profiles.yml
+19:24:58.967482 [debug]:    Started loading packages
+19:24:58.968562 [debug]:     Loaded [  0.00s] packages
+19:24:58.969062 [info ]: Finished loading project [  0.15s]
+19:24:58.969644 [info ]: Started parsing
+19:24:58.986465 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+19:24:58.987479 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+19:24:58.987882 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+19:24:58.988170 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+19:24:58.988389 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+19:24:58.988696 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+19:24:58.990817 [info ]: Finished parsing [  0.02s]
+19:24:58.991111 [info ]: Started scheduling
+19:24:58.991181 [info ]: Finished scheduling [  0.00s]
+19:24:59.185240 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+19:24:59.185439 [info ]: Started analyzing freshness
+19:24:59.185481 [info ]: Started source jaffle_shop.orders
+19:25:01.201791 [debug]: Query executed on node source.jaffle_shop.jaffle_shop.orders:
+select
+      max(_etl_loaded_at) as max_loaded_at,
+      convert_timezone('UTC', current_timestamp()) as snapshotted_at
+    from raw.jaffle_shop.orders
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "source.jaffle_shop.jaffle_shop.orders", "profile_name": "default", "target_name": "dev"} */
+19:25:01.203438 [warn ]: [Unexpected (dbt9002)]: Source 'source.jaffle_shop.jaffle_shop.orders' loaded_at_field has a timestamp type without a timezone, we will assume a UTC timezone
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+19:25:01.206758 [error]: [StaleSource (dbt1063)]: Stale source source.jaffle_shop.jaffle_shop.orders
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+19:25:01.206795 [info ]:      Stale [  2.02s] source jaffle_shop.orders (last updated 5days 19h 25m 30s ago)
+19:25:01.206894 [info ]: Finished analyzing freshness [  2.02s]
+19:25:01.208913 [info ]: Successfully wrote sources.json
+19:25:01.282259 [info ]: 
+==================== Execution Summary =====================
+Finished 'freshness' with 1 warning and 1 error for target 'dev' [2.5s]
+==================== 2026-07-16T19:31:09.508516Z | 019f6c69-5237-7f61-9199-37062458fefb ====================
+19:31:09.510708 [info ]: dbt-fusion 2.0.0-preview.199
+19:31:09.513478 [info ]: Started loading project
+19:31:09.528237 [info ]: Loading ~/.dbt/profiles.yml
+19:31:09.706059 [debug]:    Started loading packages
+19:31:09.716397 [debug]:     Loaded [  0.01s] packages
+19:31:09.721062 [info ]: Finished loading project [  0.21s]
+19:31:09.724498 [info ]: Started parsing
+19:31:09.762576 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+19:31:09.774091 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+19:31:09.774510 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+19:31:09.774861 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+19:31:09.775032 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+19:31:09.775300 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+19:31:09.783092 [info ]: Finished parsing [  0.06s]
+19:31:09.786308 [info ]: Started scheduling
+19:31:09.787522 [info ]: Finished scheduling [  0.00s]
+19:31:09.963887 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+19:31:09.967884 [info ]: Started analyzing freshness
+19:31:09.968898 [info ]: Started source jaffle_shop.orders
+19:31:12.241034 [debug]: Query executed on node source.jaffle_shop.jaffle_shop.orders:
+select
+      max(_etl_loaded_at) as max_loaded_at,
+      convert_timezone('UTC', current_timestamp()) as snapshotted_at
+    from raw.jaffle_shop.orders
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "source.jaffle_shop.jaffle_shop.orders", "profile_name": "default", "target_name": "dev"} */
+19:31:12.245905 [warn ]: [Unexpected (dbt9002)]: Source 'source.jaffle_shop.jaffle_shop.orders' loaded_at_field has a timestamp type without a timezone, we will assume a UTC timezone
+  --> models/staging/jaffle_shop/_src_jaffle_shop.yml
+19:31:12.249749 [info ]:     Passed [  2.28s] source jaffle_shop.orders (last updated 5days 19h 31m 41s ago)
+19:31:12.249849 [info ]: Finished analyzing freshness [  2.28s]
+19:31:12.251985 [info ]: Successfully wrote sources.json
+19:31:12.326714 [info ]: 
+==================== Execution Summary =====================
+Finished 'freshness' with 1 warning for target 'dev' [2.8s]
