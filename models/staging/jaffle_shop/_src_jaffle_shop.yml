@@ -4,6 +4,12 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+        columns:
+          - name: id
+          # configure data tests for the id column
+            data_tests:
+              - unique
+              - not_null
       - name: orders
       # configure freshness for the orders source model
         config: 

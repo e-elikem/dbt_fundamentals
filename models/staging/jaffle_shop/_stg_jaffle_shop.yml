@@ -1,0 +1,29 @@
+models:
+  - name: stg_jaffle_shop_customers
+    columns:
+      - name: customer_id
+      # conigure to check for uniqueness and not null for the customer_id column
+        data_tests:
+          - unique
+          - not_null
+  
+  - name: stg_jaffle_shop_orders
+    columns:
+      - name: order_id
+      # conigure to check for uniqueness and not null for the order_id column
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+      # conigure to check for accepted values for the status column
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+      - name: customer_id
+      # check for referential integrity for the customer_id column
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_jaffle_shop_customers')
+                field: customer_id

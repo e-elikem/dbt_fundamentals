@@ -3557,3 +3557,2077 @@ select
 20:50:53.172500 [info ]: 
 ==================== Execution Summary =====================
 Finished 'freshness' with 3 warnings and 2 errors for target 'dev' [3.5s]
+==================== 2026-07-16T22:36:44.198610Z | 019f6d13-3917-7142-b754-087f6fa6d8d8 ====================
+22:36:44.201473 [info ]: dbt-fusion 2.0.0-preview.199
+22:36:44.204592 [info ]: Started loading project
+22:36:44.222563 [info ]: Loading ~/.dbt/profiles.yml
+22:36:44.401686 [info ]: Loading packages.yml
+22:36:44.404213 [debug]:    Started loading packages
+22:36:44.419668 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+22:36:44.421820 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+22:36:44.422155 [debug]:     Loaded [  0.02s] packages
+22:36:44.426903 [info ]: Finished loading project [  0.22s]
+22:36:44.430400 [info ]: Started parsing
+22:36:44.488438 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+22:36:44.488599 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+22:36:44.488801 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+22:36:44.502572 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+22:36:44.502940 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+22:36:44.503293 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+22:36:44.503659 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+22:36:44.503994 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+22:36:44.513713 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:36:44.513966 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:36:44.517827 [info ]: Finished parsing [  0.09s]
+22:36:44.521687 [info ]: Started scheduling
+22:36:44.524399 [info ]: Finished scheduling [  0.00s]
+22:36:44.527101 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_CUSTOMERS" }) and interval: None
+22:36:45.070509 [debug]: License from file /Users/eliess/.dbt/license.70506183148429 is in refresh window, attempting remote refresh
+22:36:45.235243 [debug]: Requesting license from https://nc356.us1.dbt.com/api/private/accounts/70506183148429/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+22:36:45.494625 [debug]: License successfully retrieved from remote
+22:36:45.495739 [debug]: License loaded from remote server nc356.us1.dbt.com
+22:36:45.497530 [debug]: License cached to file for account 70506183148429
+22:36:45.560366 [info ]: Started building task graph
+22:36:45.563649 [info ]: Finished building task graph [  0.00s]
+22:36:45.595179 [info ]: Started rendering (2 nodes)
+22:36:45.595534 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:36:45.595711 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:36:45.595836 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:36:45.595843 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:36:45.615168 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+22:36:45.615175 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+22:36:45.616055 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:36:45.616998 [info ]: Started analyzing (2 nodes)
+22:36:45.617176 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:36:45.617351 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:36:45.617372 [info ]: Finished rendering [  0.02s] (2 nodes, 0 skipped, 0 errors)
+22:36:45.617391 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:36:45.639316 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:36:45.639406 [info ]: Started running (2 nodes)
+22:36:45.639439 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:36:45.639462 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:36:45.639491 [info ]: Finished analyzing [  0.02s] (2 nodes, 0 skipped, 0 errors)
+22:36:45.639510 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:36:45.643292 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+22:36:45.643292 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+22:36:48.231069 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+22:36:48.236618 [info ]: Finished running [  2.60s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+22:36:48.236734 [info ]:     Passed [  2.64s] test  not_null_stg_jaffle_shop_customers_customer_id
+22:36:48.283911 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+22:36:48.285269 [info ]: Finished running [  2.65s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+22:36:48.285362 [info ]: Finished running [  2.65s] (2 nodes, 0 skipped, 0 errors)
+22:36:48.285473 [info ]:     Passed [  2.69s] test  unique_stg_jaffle_shop_customers_customer_id
+22:36:48.342401 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+22:36:48.400428 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [4.2s]
+Processed: 2 tests
+Summary: 2 total | 2 success
+==================== 2026-07-16T22:40:08.742456Z | 019f6d16-5816-7d61-ba01-aa09b22b63e1 ====================
+22:40:08.744989 [info ]: dbt-fusion 2.0.0-preview.199
+22:40:08.747867 [info ]: Started loading project
+22:40:08.765172 [info ]: Loading ~/.dbt/profiles.yml
+22:40:08.941699 [info ]: Loading packages.yml
+22:40:08.944167 [debug]:    Started loading packages
+22:40:08.956823 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+22:40:08.958937 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+22:40:08.959188 [debug]:     Loaded [  0.02s] packages
+22:40:08.963965 [info ]: Finished loading project [  0.22s]
+22:40:08.967548 [info ]: Started parsing
+22:40:09.024704 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+22:40:09.025072 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+22:40:09.025336 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+22:40:09.039249 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+22:40:09.039629 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+22:40:09.040051 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+22:40:09.040350 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+22:40:09.040627 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+22:40:09.051092 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:40:09.051370 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:40:09.051620 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:40:09.051831 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:40:09.056781 [info ]: Finished parsing [  0.09s]
+22:40:09.060651 [info ]: Started scheduling
+22:40:09.062628 [info ]: Finished scheduling [  0.00s]
+22:40:09.065752 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_ORDERS" }) and interval: None
+22:40:09.065884 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_CUSTOMERS" }) and interval: None
+22:40:09.213424 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+22:40:09.256898 [info ]: Started building task graph
+22:40:09.259825 [info ]: Finished building task graph [  0.00s]
+22:40:09.293239 [info ]: Started rendering (4 nodes)
+22:40:09.293563 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:40:09.293750 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:40:09.293878 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:40:09.293884 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:40:09.293890 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:40:09.293894 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:40:09.293900 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:40:09.293906 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:40:09.315282 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+22:40:09.315283 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+22:40:09.315284 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql
+22:40:09.315285 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql
+22:40:09.316199 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:40:09.317192 [info ]: Started analyzing (4 nodes)
+22:40:09.317366 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:40:09.317567 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:40:09.317591 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:40:09.317599 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:40:09.317617 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:40:09.317626 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:40:09.317642 [info ]: Finished rendering [  0.02s] (4 nodes, 0 skipped, 0 errors)
+22:40:09.317656 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:40:09.343428 [debug]: Finished analyzing [  0.03s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:40:09.343516 [info ]: Started running (4 nodes)
+22:40:09.343549 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:40:09.343568 [debug]: Finished analyzing [  0.03s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:40:09.343594 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:40:09.343606 [debug]: Finished analyzing [  0.03s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:40:09.343627 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:40:09.343639 [debug]: Finished analyzing [  0.03s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:40:09.343656 [info ]: Finished analyzing [  0.03s] (4 nodes, 0 skipped, 0 errors)
+22:40:09.343675 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:40:09.347387 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af"
+22:40:09.347428 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac"
+22:40:09.347437 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+22:40:09.347457 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+22:40:10.835807 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+22:40:10.841480 [info ]: Finished running [  1.50s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+22:40:10.841535 [info ]:     Passed [  1.54s] test  unique_stg_jaffle_shop_customers_customer_id
+22:40:10.856066 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+22:40:10.857042 [info ]: Finished running [  1.51s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+22:40:10.857161 [info ]:     Passed [  1.56s] test  not_null_stg_jaffle_shop_customers_customer_id
+22:40:10.862765 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af", "profile_name": "default", "target_name": "dev"} */
+22:40:10.863447 [info ]: Finished running [  1.52s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [pass]
+22:40:10.863503 [info ]:     Passed [  1.57s] test  not_null_stg_jaffle_shop_orders_order_id
+22:40:10.945709 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac", "profile_name": "default", "target_name": "dev"} */
+22:40:10.946526 [info ]: Finished running [  1.60s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [pass]
+22:40:10.946588 [info ]: Finished running [  1.60s] (4 nodes, 0 skipped, 0 errors)
+22:40:10.946610 [info ]:     Passed [  1.65s] test  unique_stg_jaffle_shop_orders_order_id
+22:40:10.976684 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+22:40:11.036088 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [2.3s]
+Processed: 4 tests
+Summary: 4 total | 4 success
+==================== 2026-07-16T22:43:55.915002Z | 019f6d19-cf7b-71e2-8179-ee28df6ef130 ====================
+22:43:55.917707 [info ]: dbt-fusion 2.0.0-preview.199
+22:43:55.920957 [info ]: Started loading project
+22:43:55.936809 [info ]: Loading ~/.dbt/profiles.yml
+22:43:56.137500 [info ]: Loading packages.yml
+22:43:56.140231 [debug]:    Started loading packages
+22:43:56.153849 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+22:43:56.156155 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+22:43:56.156578 [debug]:     Loaded [  0.02s] packages
+22:43:56.162150 [info ]: Finished loading project [  0.24s]
+22:43:56.166722 [info ]: Started parsing
+22:43:56.219301 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+22:43:56.219461 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+22:43:56.219558 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+22:43:56.232929 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+22:43:56.233276 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+22:43:56.233626 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+22:43:56.233820 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+22:43:56.234054 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+22:43:56.243296 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:43:56.243632 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:43:56.243884 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:43:56.244091 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:43:56.244290 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_53a23605ea37455c0253cf671e0f2d2c.sql [  0.00s]
+22:43:56.249347 [info ]: Finished parsing [  0.08s]
+22:43:56.253760 [info ]: Started scheduling
+22:43:56.255350 [info ]: Finished scheduling [  0.00s]
+22:43:56.257819 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_CUSTOMERS" }) and interval: None
+22:43:56.257945 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_ORDERS" }) and interval: None
+22:43:56.432654 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+22:43:56.475269 [info ]: Started building task graph
+22:43:56.479631 [info ]: Finished building task graph [  0.00s]
+22:43:56.518230 [info ]: Started rendering (5 nodes)
+22:43:56.519176 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:43:56.519375 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:43:56.519537 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:43:56.519543 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:43:56.519551 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:43:56.519554 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:43:56.519561 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:43:56.519565 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:43:56.519572 [info ]: Started test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned
+22:43:56.519576 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned
+22:43:56.542716 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+22:43:56.542730 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql
+22:43:56.542718 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql
+22:43:56.542724 [debug]: Compiled SQL for node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned.73b5478818 at target/compiled/jaffle_shop/target/generic_tests/accepted_values_stg_jaffle_sho_53a23605ea37455c0253cf671e0f2d2c.sql
+22:43:56.542722 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+22:43:56.543710 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:43:56.544634 [info ]: Started analyzing (5 nodes)
+22:43:56.544809 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:43:56.544994 [debug]: Finished rendering [  0.03s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:43:56.545018 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:43:56.545026 [debug]: Finished rendering [  0.03s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned [success]
+22:43:56.545046 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned
+22:43:56.545054 [debug]: Finished rendering [  0.03s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:43:56.545074 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:43:56.545083 [debug]: Finished rendering [  0.03s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:43:56.545097 [info ]: Finished rendering [  0.03s] (5 nodes, 0 skipped, 0 errors)
+22:43:56.545111 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:43:56.567636 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:43:56.567736 [info ]: Started running (5 nodes)
+22:43:56.567769 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:43:56.567783 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:43:56.567810 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:43:56.567820 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:43:56.567845 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:43:56.567858 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:43:56.567879 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:43:56.567889 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned [success]
+22:43:56.567904 [info ]: Finished analyzing [  0.02s] (5 nodes, 0 skipped, 0 errors)
+22:43:56.567924 [info ]: Started running test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned
+22:43:56.572162 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af"
+22:43:56.572163 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+22:43:56.572162 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+22:43:56.572170 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac"
+22:43:56.572164 [debug]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned.73b5478818"
+22:43:58.197769 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+22:43:58.203160 [info ]: Finished running [  1.64s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+22:43:58.203276 [info ]:     Passed [  1.68s] test  unique_stg_jaffle_shop_customers_customer_id
+22:43:58.322840 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac", "profile_name": "default", "target_name": "dev"} */
+22:43:58.323783 [info ]: Finished running [  1.76s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [pass]
+22:43:58.323912 [info ]:     Passed [  1.80s] test  unique_stg_jaffle_shop_orders_order_id
+22:43:58.499562 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+22:43:58.500967 [info ]: Finished running [  1.93s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+22:43:58.501013 [info ]:     Passed [  1.98s] test  not_null_stg_jaffle_shop_customers_customer_id
+22:43:58.508019 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af", "profile_name": "default", "target_name": "dev"} */
+22:43:58.509017 [info ]: Finished running [  1.94s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [pass]
+22:43:58.509112 [info ]:     Passed [  1.99s] test  not_null_stg_jaffle_shop_orders_order_id
+22:43:58.685923 [debug]: Query executed on node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned.73b5478818:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned.73b5478818", "profile_name": "default", "target_name": "dev"} */
+22:43:58.687757 [info ]: Finished running [  2.12s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned [fail]
+22:43:58.687888 [info ]: Finished running [  2.12s] (5 nodes, 0 skipped, 1 errors)
+22:43:58.687966 [info ]:     Failed [  2.17s] test  accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned (models/staging/jaffle_shop/_stg_jaffle_shop.yml:20:13)
+22:43:58.721841 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+22:43:58.788034 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings and 1 error for target 'dev' [2.9s]
+Processed: 5 tests
+Summary: 5 total | 4 success | 1 error
+==================== 2026-07-16T22:50:43.758951Z | 019f6d20-08a3-7163-92cf-7fe6f0a45b50 ====================
+22:50:43.760740 [info ]: dbt-fusion 2.0.0-preview.199
+22:50:43.763025 [info ]: Started loading project
+22:50:43.776350 [info ]: Loading ~/.dbt/profiles.yml
+22:50:43.948093 [info ]: Loading packages.yml
+22:50:43.950202 [debug]:    Started loading packages
+22:50:43.959360 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+22:50:43.961046 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+22:50:43.961297 [debug]:     Loaded [  0.01s] packages
+22:50:43.964360 [info ]: Finished loading project [  0.20s]
+22:50:43.968271 [info ]: Started parsing
+22:50:44.018764 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+22:50:44.019076 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+22:50:44.019289 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+22:50:44.031379 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+22:50:44.031780 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+22:50:44.032300 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+22:50:44.032618 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+22:50:44.032877 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+22:50:44.033115 [debug]: Finished parsing models/test.sql [  0.00s]
+22:50:44.040384 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:50:44.040633 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+22:50:44.040843 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:50:44.041033 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+22:50:44.041231 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+22:50:44.045537 [info ]: Finished parsing [  0.08s]
+22:50:44.048158 [info ]: Started scheduling
+22:50:44.049717 [info ]: Finished scheduling [  0.00s]
+22:50:44.052605 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_CUSTOMERS" }) and interval: None
+22:50:44.052670 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_ORDERS" }) and interval: None
+22:50:44.212139 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+22:50:44.253689 [info ]: Started building task graph
+22:50:44.256784 [info ]: Finished building task graph [  0.00s]
+22:50:44.287292 [info ]: Started rendering (5 nodes)
+22:50:44.287607 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:50:44.287643 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:50:44.287793 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:50:44.287800 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:50:44.287807 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:50:44.287810 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:50:44.287816 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:50:44.287819 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:50:44.287826 [info ]: Started test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+22:50:44.287830 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+22:50:44.306238 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql
+22:50:44.306245 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+22:50:44.306236 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+22:50:44.306249 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql
+22:50:44.306240 [debug]: Compiled SQL for node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94 at target/compiled/jaffle_shop/target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql
+22:50:44.306862 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+22:50:44.307717 [info ]: Started analyzing (5 nodes)
+22:50:44.307889 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+22:50:44.308170 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:50:44.308232 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:50:44.308253 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:50:44.308283 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:50:44.308293 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:50:44.308315 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:50:44.308326 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:50:44.308346 [info ]: Finished rendering [  0.02s] (5 nodes, 0 skipped, 0 errors)
+22:50:44.308367 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:50:44.330098 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+22:50:44.330181 [info ]: Started running (5 nodes)
+22:50:44.330207 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+22:50:44.330224 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+22:50:44.330251 [info ]: Started running test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+22:50:44.330263 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+22:50:44.330286 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+22:50:44.330298 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+22:50:44.330319 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+22:50:44.330329 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+22:50:44.330345 [info ]: Finished analyzing [  0.02s] (5 nodes, 0 skipped, 0 errors)
+22:50:44.330362 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+22:50:44.332888 [debug]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94"
+22:50:44.332914 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+22:50:44.332919 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af"
+22:50:44.332962 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac"
+22:50:44.332999 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+22:50:45.920184 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac", "profile_name": "default", "target_name": "dev"} */
+22:50:45.925427 [info ]: Finished running [  1.60s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [pass]
+22:50:45.925524 [info ]:     Passed [  1.64s] test  unique_stg_jaffle_shop_orders_order_id
+22:50:45.948286 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+22:50:45.949487 [info ]: Finished running [  1.62s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+22:50:45.949587 [info ]:     Passed [  1.66s] test  unique_stg_jaffle_shop_customers_customer_id
+22:50:46.061897 [debug]: Query executed on node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned','return_pending'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94", "profile_name": "default", "target_name": "dev"} */
+22:50:46.062732 [info ]: Finished running [  1.73s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [pass]
+22:50:46.062803 [info ]:     Passed [  1.77s] test  accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+22:50:46.198907 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+22:50:46.200000 [info ]: Finished running [  1.87s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+22:50:46.200113 [info ]:     Passed [  1.91s] test  not_null_stg_jaffle_shop_customers_customer_id
+22:50:46.210776 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af", "profile_name": "default", "target_name": "dev"} */
+22:50:46.211659 [info ]: Finished running [  1.88s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [pass]
+22:50:46.211726 [info ]: Finished running [  1.88s] (5 nodes, 0 skipped, 0 errors)
+22:50:46.211790 [info ]:     Passed [  1.92s] test  not_null_stg_jaffle_shop_orders_order_id
+22:50:46.241832 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+22:50:46.298491 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [2.5s]
+Processed: 5 tests
+Summary: 5 total | 5 success
+==================== 2026-07-16T23:41:13.106632Z | 019f6d4e-4202-7630-8fcf-8d69e5fb0d25 ====================
+23:41:13.109519 [info ]: dbt-fusion 2.0.0-preview.199
+23:41:13.113101 [info ]: Started loading project
+23:41:13.131195 [info ]: Loading ~/.dbt/profiles.yml
+23:41:13.309431 [info ]: Loading packages.yml
+23:41:13.312174 [debug]:    Started loading packages
+23:41:13.326079 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+23:41:13.328513 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+23:41:13.328761 [debug]:     Loaded [  0.02s] packages
+23:41:13.333824 [info ]: Finished loading project [  0.22s]
+23:41:13.337626 [info ]: Started parsing
+23:41:13.395139 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+23:41:13.395453 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+23:41:13.395681 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+23:41:13.411380 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+23:41:13.411831 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+23:41:13.412354 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+23:41:13.412697 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+23:41:13.412977 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+23:41:13.413222 [debug]: Finished parsing models/test.sql [  0.00s]
+23:41:13.423532 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:41:13.423795 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:41:13.424031 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+23:41:13.424228 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:41:13.424420 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:41:13.424654 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+23:41:13.429049 [info ]: Finished parsing [  0.09s]
+23:41:13.432727 [info ]: Started scheduling
+23:41:13.433964 [info ]: Finished scheduling [  0.00s]
+23:41:13.436743 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_CUSTOMERS" }) and interval: None
+23:41:13.436987 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_JAFFLE_SHOP_ORDERS" }) and interval: None
+23:41:13.894952 [debug]: License from file /Users/eliess/.dbt/license.70506183148429 is in refresh window, attempting remote refresh
+23:41:14.054668 [debug]: Requesting license from https://nc356.us1.dbt.com/api/private/accounts/70506183148429/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+23:41:14.336900 [debug]: License successfully retrieved from remote
+23:41:14.337802 [debug]: License loaded from remote server nc356.us1.dbt.com
+23:41:14.338648 [debug]: License cached to file for account 70506183148429
+23:41:14.403357 [info ]: Started building task graph
+23:41:14.406624 [info ]: Finished building task graph [  0.00s]
+23:41:14.434277 [info ]: Started rendering (6 nodes)
+23:41:14.434667 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+23:41:14.434833 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+23:41:14.434864 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+23:41:14.434870 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+23:41:14.434877 [info ]: Started test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+23:41:14.434881 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+23:41:14.434887 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+23:41:14.434891 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+23:41:14.434900 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+23:41:14.434903 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+23:41:14.434909 [info ]: Started test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+23:41:14.434913 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+23:41:14.451363 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+23:41:14.451371 [debug]: Compiled SQL for node test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef at target/compiled/jaffle_shop/target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql
+23:41:14.451364 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+23:41:14.451368 [debug]: Compiled SQL for node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94 at target/compiled/jaffle_shop/target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql
+23:41:14.451368 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql
+23:41:14.451368 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql
+23:41:14.451898 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [success]
+23:41:14.452634 [info ]: Started analyzing (6 nodes)
+23:41:14.452694 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+23:41:14.452744 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+23:41:14.452787 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+23:41:14.452799 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+23:41:14.452825 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+23:41:14.452835 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+23:41:14.452857 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+23:41:14.452869 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+23:41:14.452891 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+23:41:14.452901 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+23:41:14.452917 [info ]: Finished rendering [  0.02s] (6 nodes, 0 skipped, 0 errors)
+23:41:14.452933 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+23:41:14.475679 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+23:41:14.475770 [info ]: Started running (6 nodes)
+23:41:14.475800 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+23:41:14.475816 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [success]
+23:41:14.475847 [info ]: Started running test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+23:41:14.475860 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+23:41:14.475888 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+23:41:14.475899 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+23:41:14.475924 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+23:41:14.475934 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+23:41:14.475957 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+23:41:14.475969 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+23:41:14.475989 [info ]: Finished analyzing [  0.02s] (6 nodes, 0 skipped, 0 errors)
+23:41:14.476076 [info ]: Started running test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+23:41:14.480133 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af"
+23:41:14.480161 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac"
+23:41:14.480169 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+23:41:14.480172 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+23:41:14.480225 [debug]: Writing runtime sql for node "test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef"
+23:41:14.480225 [debug]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94"
+23:41:16.437016 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af", "profile_name": "default", "target_name": "dev"} */
+23:41:16.437016 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac", "profile_name": "default", "target_name": "dev"} */
+23:41:16.440108 [info ]: Finished running [  1.96s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [pass]
+23:41:16.440160 [info ]:     Passed [  2.00s] test  not_null_stg_jaffle_shop_orders_order_id
+23:41:16.440205 [info ]: Finished running [  1.96s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [pass]
+23:41:16.440227 [info ]:     Passed [  2.00s] test  unique_stg_jaffle_shop_orders_order_id
+23:41:16.466012 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+23:41:16.466586 [info ]: Finished running [  1.99s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+23:41:16.466618 [info ]:     Passed [  2.03s] test  unique_stg_jaffle_shop_customers_customer_id
+23:41:16.468161 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+23:41:16.468670 [info ]: Finished running [  1.99s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+23:41:16.468697 [info ]:     Passed [  2.03s] test  not_null_stg_jaffle_shop_customers_customer_id
+23:41:16.736344 [debug]: Query executed on node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned','return_pending'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94", "profile_name": "default", "target_name": "dev"} */
+23:41:16.738212 [info ]: Finished running [  2.26s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [pass]
+23:41:16.738307 [info ]:     Passed [  2.30s] test  accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+23:41:17.261847 [debug]: Query executed on node test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from analytics.dbt_eelikem.stg_jaffle_shop_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef", "profile_name": "default", "target_name": "dev"} */
+23:41:17.262520 [info ]: Finished running [  2.79s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [pass]
+23:41:17.262568 [info ]: Finished running [  2.79s] (6 nodes, 0 skipped, 0 errors)
+23:41:17.262587 [info ]:     Passed [  2.83s] test  relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+23:41:17.286330 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+23:41:17.343065 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [4.2s]
+Processed: 6 tests
+Summary: 6 total | 6 success
+==================== 2026-07-16T23:52:39.750462Z | 019f6d58-bc37-7851-91b2-1f2fffe15fe7 ====================
+23:52:39.753421 [info ]: dbt-fusion 2.0.0-preview.199
+23:52:39.757516 [info ]: Started loading project
+23:52:39.773656 [info ]: Loading ~/.dbt/profiles.yml
+23:52:39.954331 [info ]: Loading packages.yml
+23:52:39.956891 [debug]:    Started loading packages
+23:52:39.970662 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+23:52:39.973262 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+23:52:39.973506 [debug]:     Loaded [  0.02s] packages
+23:52:39.978459 [info ]: Finished loading project [  0.22s]
+23:52:39.982024 [info ]: Started parsing
+23:52:40.035240 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+23:52:40.035705 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+23:52:40.035898 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+23:52:40.050397 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+23:52:40.050775 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+23:52:40.051212 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+23:52:40.051532 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+23:52:40.051790 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+23:52:40.052035 [debug]: Finished parsing models/test.sql [  0.00s]
+23:52:40.062864 [debug]: Finished parsing tests/assert_stg_stripe_payment_total_positive.sql [  0.00s]
+23:52:40.063219 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:52:40.063546 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:52:40.063786 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+23:52:40.064002 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:52:40.064223 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:52:40.064481 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+23:52:40.069355 [info ]: Finished parsing [  0.09s]
+23:52:40.073207 [info ]: Started scheduling
+23:52:40.075064 [info ]: Finished scheduling [  0.00s]
+23:52:40.077826 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_STRIPE_PAYMENT" }) and interval: None
+23:52:40.228198 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+23:52:40.272634 [info ]: Started building task graph
+23:52:40.275839 [info ]: Finished building task graph [  0.00s]
+23:52:40.310365 [info ]: Started rendering (1 nodes)
+23:52:40.311005 [info ]: Started test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:52:40.311216 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:52:40.319539 [debug]: Compiled SQL for node test.jaffle_shop.assert_stg_stripe_payment_total_positive at target/compiled/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql
+23:52:40.320251 [debug]: Finished rendering [  0.01s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:52:40.320280 [info ]: Finished rendering [  0.01s] (1 nodes, 0 skipped, 0 errors)
+23:52:40.321610 [info ]: Started analyzing (1 nodes)
+23:52:40.321831 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:52:40.350587 [warn ]: [SyntaxInvalid (dbt0101)]: mismatched input 'havting' expecting one of <EOF>, ';'
+  --> tests/assert_stg_stripe_payment_total_positive.sql:6:1 (target/compiled/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql:6:1)
+23:52:40.351593 [debug]: Finished analyzing [  0.03s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:52:40.351653 [info ]: Finished analyzing [  0.03s] (1 nodes, 0 skipped, 0 errors)
+23:52:40.351682 [info ]: Started running (1 nodes)
+23:52:40.351707 [info ]: Started running test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:52:40.368582 [debug]: Writing runtime sql for node "test.jaffle_shop.assert_stg_stripe_payment_total_positive"
+23:52:41.931872 [debug]: Query executed on node test.jaffle_shop.assert_stg_stripe_payment_total_positive:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    order_id,
+    sum(amount) as total_amount
+from analytics.dbt_eelikem.stg_stripe_payment
+group by 1
+havting total_amount < 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.assert_stg_stripe_payment_total_positive", "profile_name": "default", "target_name": "dev"} */
+23:52:42.939048 [error]: Error materializing test test.jaffle_shop.assert_stg_stripe_payment_total_positive (target/run/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql)
+  [Snowflake] 001003 (42000): SQL compilation error:
+  syntax error line 13 at position 0 unexpected 'havting'.
+  (in run/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql:1:1). Treating as failing test.
+23:52:42.940040 [info ]: Finished running [  2.59s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [fail]
+23:52:42.940150 [info ]: Finished running [  2.59s] (1 nodes, 0 skipped, 1 errors)
+23:52:42.940180 [info ]:     Failed [  2.63s] test  assert_stg_stripe_payment_total_positive (tests/assert_stg_stripe_payment_total_positive.sql)
+23:52:42.973977 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+23:52:43.037952 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 3 warnings and 2 errors for target 'dev' [3.3s]
+Processed: 1 test
+Summary: 1 total | 1 error
+==================== 2026-07-16T23:53:01.516003Z | 019f6d59-114a-7902-b08e-e0f55b98ed2a ====================
+23:53:01.516066 [info ]: dbt-fusion 2.0.0-preview.199
+23:53:01.516185 [info ]: Started loading project
+23:53:01.516679 [info ]: Loading ~/.dbt/profiles.yml
+23:53:01.697936 [info ]: Loading packages.yml
+23:53:01.698065 [debug]:    Started loading packages
+23:53:01.699717 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+23:53:01.700566 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+23:53:01.700582 [debug]:     Loaded [  0.00s] packages
+23:53:01.701058 [info ]: Finished loading project [  0.18s]
+23:53:01.701580 [info ]: Started parsing
+23:53:01.727144 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+23:53:01.727500 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+23:53:01.727738 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+23:53:01.728655 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+23:53:01.728977 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+23:53:01.729195 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+23:53:01.729450 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+23:53:01.729877 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+23:53:01.730088 [debug]: Finished parsing models/test.sql [  0.00s]
+23:53:01.733706 [debug]: Finished parsing tests/assert_stg_stripe_payment_total_positive.sql [  0.00s]
+23:53:01.733975 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:53:01.734203 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:53:01.734412 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+23:53:01.734626 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:53:01.734869 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:53:01.735098 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+23:53:01.737227 [info ]: Finished parsing [  0.04s]
+23:53:01.737513 [info ]: Started scheduling
+23:53:01.737617 [info ]: Finished scheduling [  0.00s]
+23:53:01.737748 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_STRIPE_PAYMENT" }) and interval: None
+23:53:01.933955 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+23:53:01.969462 [info ]: Started building task graph
+23:53:01.969556 [info ]: Finished building task graph [  0.00s]
+23:53:01.980950 [info ]: Started rendering (1 nodes)
+23:53:01.980980 [info ]: Started test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:01.980989 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:01.981628 [debug]: Compiled SQL for node test.jaffle_shop.assert_stg_stripe_payment_total_positive at target/compiled/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql
+23:53:01.981690 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:53:01.981719 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+23:53:01.981747 [info ]: Started analyzing (1 nodes)
+23:53:01.981765 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:01.987249 [debug]: Finished analyzing [  0.01s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:53:01.987277 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+23:53:01.987295 [info ]: Started running (1 nodes)
+23:53:01.987309 [info ]: Started running test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:01.988613 [debug]: Writing runtime sql for node "test.jaffle_shop.assert_stg_stripe_payment_total_positive"
+23:53:04.153561 [debug]: Query executed on node test.jaffle_shop.assert_stg_stripe_payment_total_positive:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    order_id,
+    sum(amount) as total_amount
+from analytics.dbt_eelikem.stg_stripe_payment
+group by 1
+having total_amount < 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.assert_stg_stripe_payment_total_positive", "profile_name": "default", "target_name": "dev"} */
+23:53:04.157487 [info ]: Finished running [  2.17s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [pass]
+23:53:04.157584 [info ]: Finished running [  2.17s] (1 nodes, 0 skipped, 0 errors)
+23:53:04.157612 [info ]:     Passed [  2.17s] test  assert_stg_stripe_payment_total_positive
+23:53:04.174609 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+23:53:04.231822 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [2.7s]
+Processed: 1 test
+Summary: 1 total | 1 success
+==================== 2026-07-16T23:53:40.579339Z | 019f6d59-a9e2-7a80-927f-8b06d7df5ef3 ====================
+23:53:40.579404 [info ]: dbt-fusion 2.0.0-preview.199
+23:53:40.579501 [info ]: Started loading project
+23:53:40.580005 [info ]: Loading ~/.dbt/profiles.yml
+23:53:40.727503 [info ]: Loading packages.yml
+23:53:40.727643 [debug]:    Started loading packages
+23:53:40.729663 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+23:53:40.730831 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+23:53:40.730857 [debug]:     Loaded [  0.00s] packages
+23:53:40.731416 [info ]: Finished loading project [  0.15s]
+23:53:40.731832 [info ]: Started parsing
+23:53:40.756493 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+23:53:40.756676 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+23:53:40.756784 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+23:53:40.757743 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+23:53:40.758044 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+23:53:40.758276 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+23:53:40.758534 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+23:53:40.758758 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+23:53:40.758943 [debug]: Finished parsing models/test.sql [  0.00s]
+23:53:40.762665 [debug]: Finished parsing tests/assert_stg_stripe_payment_total_positive.sql [  0.00s]
+23:53:40.762966 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:53:40.763217 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:53:40.763425 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+23:53:40.763605 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:53:40.763794 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:53:40.764010 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+23:53:40.766414 [info ]: Finished parsing [  0.03s]
+23:53:40.766788 [info ]: Started scheduling
+23:53:40.766920 [info ]: Finished scheduling [  0.00s]
+23:53:40.767057 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "ANALYTICS", schema: "DBT_EELIKEM", table: "STG_STRIPE_PAYMENT" }) and interval: None
+23:53:40.980829 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+23:53:41.017079 [info ]: Started building task graph
+23:53:41.017201 [info ]: Finished building task graph [  0.00s]
+23:53:41.028774 [info ]: Started rendering (1 nodes)
+23:53:41.028816 [info ]: Started test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:41.028827 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:41.029455 [debug]: Compiled SQL for node test.jaffle_shop.assert_stg_stripe_payment_total_positive at target/compiled/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql
+23:53:41.029521 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:53:41.029556 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+23:53:41.029600 [info ]: Started analyzing (1 nodes)
+23:53:41.029624 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:41.034560 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+23:53:41.034602 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+23:53:41.034623 [info ]: Started running (1 nodes)
+23:53:41.034664 [info ]: Started running test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+23:53:41.036015 [debug]: Writing runtime sql for node "test.jaffle_shop.assert_stg_stripe_payment_total_positive"
+23:53:43.615584 [debug]: Query executed on node test.jaffle_shop.assert_stg_stripe_payment_total_positive:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    order_id,
+    sum(amount) as total_amount
+from analytics.dbt_eelikem.stg_stripe_payment
+group by 1
+having total_amount < 10
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.assert_stg_stripe_payment_total_positive", "profile_name": "default", "target_name": "dev"} */
+23:53:43.617422 [info ]: Finished running [  2.58s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [fail]
+23:53:43.617549 [info ]: Finished running [  2.58s] (1 nodes, 0 skipped, 1 errors)
+23:53:43.617593 [info ]:     Failed [  2.59s] test  assert_stg_stripe_payment_total_positive (tests/assert_stg_stripe_payment_total_positive.sql)
+23:53:43.640687 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+23:53:43.700287 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings and 1 error for target 'dev' [3.1s]
+Processed: 1 test
+Summary: 1 total | 1 error
+==================== 2026-07-16T23:59:33.586813Z | 019f6d5f-0cc4-7161-bedb-bb582add699a ====================
+23:59:33.590068 [info ]: dbt-fusion 2.0.0-preview.199
+23:59:33.593158 [info ]: Started loading project
+23:59:33.608085 [info ]: Loading ~/.dbt/profiles.yml
+23:59:33.783654 [info ]: Loading packages.yml
+23:59:33.786216 [debug]:    Started loading packages
+23:59:33.800556 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+23:59:33.803374 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+23:59:33.803688 [debug]:     Loaded [  0.02s] packages
+23:59:33.808630 [info ]: Finished loading project [  0.22s]
+23:59:33.812427 [info ]: Started parsing
+23:59:33.893305 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+23:59:33.893617 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+23:59:33.893822 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+23:59:33.911199 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+23:59:33.911446 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+23:59:33.911804 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+23:59:33.912028 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+23:59:33.912215 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+23:59:33.912362 [debug]: Finished parsing models/test.sql [  0.00s]
+23:59:33.922275 [debug]: Finished parsing tests/assert_stg_stripe_payment_total_positive.sql [  0.00s]
+23:59:33.922618 [debug]: Finished parsing target/generic_tests/source_unique_jaffle_shop_customers_id.sql [  0.00s]
+23:59:33.922846 [debug]: Finished parsing target/generic_tests/source_not_null_jaffle_shop_customers_id.sql [  0.00s]
+23:59:33.923115 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:59:33.923426 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+23:59:33.923703 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+23:59:33.923931 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:59:33.924159 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+23:59:33.924383 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+23:59:33.930408 [info ]: Finished parsing [  0.12s]
+23:59:33.934716 [info ]: Started scheduling
+23:59:33.938872 [info ]: Finished scheduling [  0.00s]
+23:59:33.941755 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+23:59:34.090006 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+23:59:34.133982 [info ]: Started building task graph
+23:59:34.136386 [info ]: Finished building task graph [  0.00s]
+23:59:34.167903 [info ]: Started rendering (2 nodes)
+23:59:34.168243 [info ]: Started test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+23:59:34.168412 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+23:59:34.168537 [info ]: Started test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+23:59:34.168542 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+23:59:34.186522 [debug]: Compiled SQL for node test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e at target/compiled/jaffle_shop/target/generic_tests/source_unique_jaffle_shop_customers_id.sql
+23:59:34.186523 [debug]: Compiled SQL for node test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f at target/compiled/jaffle_shop/target/generic_tests/source_not_null_jaffle_shop_customers_id.sql
+23:59:34.187205 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [success]
+23:59:34.187912 [info ]: Started analyzing (2 nodes)
+23:59:34.188080 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+23:59:34.188264 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [success]
+23:59:34.188283 [info ]: Finished rendering [  0.02s] (2 nodes, 0 skipped, 0 errors)
+23:59:34.188299 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+23:59:34.209464 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [success]
+23:59:34.209541 [info ]: Started running (2 nodes)
+23:59:34.209568 [info ]: Started running test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+23:59:34.209589 [debug]: Finished analyzing [  0.02s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [success]
+23:59:34.209609 [info ]: Finished analyzing [  0.02s] (2 nodes, 0 skipped, 0 errors)
+23:59:34.209627 [info ]: Started running test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+23:59:34.212580 [debug]: Writing runtime sql for node "test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f"
+23:59:34.212581 [debug]: Writing runtime sql for node "test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e"
+23:59:35.874937 [debug]: Query executed on node test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from raw.jaffle_shop.customers
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f", "profile_name": "default", "target_name": "dev"} */
+23:59:35.878674 [info ]: Finished running [  1.67s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [pass]
+23:59:35.878732 [info ]:     Passed [  1.71s] test  source_not_null_jaffle_shop_customers_id
+23:59:35.920478 [debug]: Query executed on node test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from raw.jaffle_shop.customers
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e", "profile_name": "default", "target_name": "dev"} */
+23:59:35.921118 [info ]: Finished running [  1.71s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [pass]
+23:59:35.921197 [info ]: Finished running [  1.71s] (2 nodes, 0 skipped, 0 errors)
+23:59:35.921215 [info ]:     Passed [  1.75s] test  source_unique_jaffle_shop_customers_id
+23:59:35.946599 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+23:59:36.003101 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 2 warnings for target 'dev' [2.4s]
+Processed: 2 tests
+Summary: 2 total | 2 success
+==================== 2026-07-17T00:16:03.181801Z | 019f6d6e-265c-7451-8b65-33783838e2e7 ====================
+00:16:03.184645 [info ]: dbt-fusion 2.0.0-preview.199
+00:16:03.188300 [info ]: Started loading project
+00:16:03.208991 [info ]: Loading ~/.dbt/profiles.yml
+00:16:03.390425 [info ]: Loading packages.yml
+00:16:03.392960 [debug]:    Started loading packages
+00:16:03.407929 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package codegen 2 does not contain a dbt_project.yml file
+00:16:03.410793 [warn ]: [PackageMissingProjectFile (dbt1158)]: Package dbt_utils 2 does not contain a dbt_project.yml file
+00:16:03.411096 [debug]:     Loaded [  0.02s] packages
+00:16:03.414979 [info ]: Finished loading project [  0.23s]
+00:16:03.418517 [info ]: Started parsing
+00:16:03.476940 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+00:16:03.477377 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+00:16:03.477570 [debug]: Finished parsing models/staging/stripe/_src_stripe.yml [  0.00s]
+00:16:03.494648 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.01s]
+00:16:03.495018 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+00:16:03.495484 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_customers.sql [  0.00s]
+00:16:03.495820 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop_orders.sql [  0.00s]
+00:16:03.496078 [debug]: Finished parsing models/staging/stripe/stg_stripe_payment.sql [  0.00s]
+00:16:03.496305 [debug]: Finished parsing models/test.sql [  0.00s]
+00:16:03.507583 [debug]: Finished parsing tests/assert_stg_stripe_payment_total_positive.sql [  0.00s]
+00:16:03.507999 [debug]: Finished parsing target/generic_tests/source_unique_jaffle_shop_customers_id.sql [  0.00s]
+00:16:03.508367 [debug]: Finished parsing target/generic_tests/source_not_null_jaffle_shop_customers_id.sql [  0.00s]
+00:16:03.508689 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+00:16:03.509095 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql [  0.00s]
+00:16:03.509364 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql [  0.00s]
+00:16:03.509621 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+00:16:03.509847 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql [  0.00s]
+00:16:03.510064 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql [  0.00s]
+00:16:03.515832 [info ]: Finished parsing [  0.10s]
+00:16:03.519844 [info ]: Started scheduling
+00:16:03.521582 [info ]: Finished scheduling [  0.00s]
+00:16:03.524543 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "CUSTOMERS" }) and interval: None
+00:16:03.524678 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "JAFFLE_SHOP", table: "ORDERS" }) and interval: None
+00:16:03.524688 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "RAW", schema: "STRIPE", table: "PAYMENT" }) and interval: None
+00:16:03.672420 [debug]: License loaded from file /Users/eliess/.dbt/license.70506183148429
+00:16:03.716633 [info ]: Started building task graph
+00:16:03.720431 [info ]: Finished building task graph [  0.00s]
+00:16:06.330037 [debug]: Query executed on node unknown:
+show terse schemas in database analytics
+    limit 10000
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+00:16:06.337224 [info ]: Started rendering (15 nodes)
+00:16:06.338066 [info ]: Started test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+00:16:06.338213 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+00:16:06.338403 [info ]: Started test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+00:16:06.338411 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+00:16:06.338478 [info ]: Started model dbt_eelikem.test
+00:16:06.338494 [debug]: Started rendering model dbt_eelikem.test
+00:16:06.338511 [info ]: Started model dbt_eelikem.stg_jaffle_shop_customers
+00:16:06.338516 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_customers
+00:16:06.338528 [info ]: Started model dbt_eelikem.stg_stripe_payment
+00:16:06.338533 [debug]: Started rendering model dbt_eelikem.stg_stripe_payment
+00:16:06.338540 [info ]: Started model dbt_eelikem.stg_jaffle_shop_orders
+00:16:06.338543 [debug]: Started rendering model dbt_eelikem.stg_jaffle_shop_orders
+00:16:06.344861 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe_payment at target/compiled/jaffle_shop/models/staging/stripe/stg_stripe_payment.sql
+00:16:06.344863 [debug]: Compiled SQL for node model.jaffle_shop.test at target/compiled/jaffle_shop/models/test.sql
+00:16:06.344868 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_customers at target/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_customers.sql
+00:16:06.344891 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop_orders at target/compiled/jaffle_shop/models/staging/jaffle_shop/stg_jaffle_shop_orders.sql
+00:16:06.345984 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+00:16:06.347198 [info ]: Started analyzing (15 nodes)
+00:16:06.347510 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_customers
+00:16:06.347788 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_stripe_payment [success]
+00:16:06.347831 [debug]: Started analyzing model dbt_eelikem.stg_stripe_payment
+00:16:06.347846 [debug]: Finished rendering [  0.01s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+00:16:06.347872 [debug]: Started analyzing model dbt_eelikem.stg_jaffle_shop_orders
+00:16:06.347881 [debug]: Finished rendering [  0.01s] model dbt_eelikem.test [success]
+00:16:06.347906 [debug]: Started analyzing model dbt_eelikem.test
+00:16:06.359375 [debug]: Compiled SQL for node test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e at target/compiled/jaffle_shop/target/generic_tests/source_unique_jaffle_shop_customers_id.sql
+00:16:06.359385 [debug]: Compiled SQL for node test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f at target/compiled/jaffle_shop/target/generic_tests/source_not_null_jaffle_shop_customers_id.sql
+00:16:06.359500 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [success]
+00:16:06.359583 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+00:16:06.359603 [debug]: Finished rendering [  0.02s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [success]
+00:16:06.359632 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+00:16:06.374190 [debug]: Finished analyzing [  0.03s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+00:16:06.374258 [debug]: Finished analyzing [  0.01s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [success]
+00:16:06.374305 [info ]: Started running (15 nodes)
+00:16:06.374338 [info ]: Started running test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id
+00:16:06.374354 [debug]: Finished analyzing [  0.03s] model dbt_eelikem.stg_stripe_payment [success]
+00:16:06.374377 [info ]: Started running model dbt_eelikem.stg_stripe_payment
+00:16:06.374386 [debug]: Finished analyzing [  0.03s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+00:16:06.374404 [info ]: Started running model dbt_eelikem.stg_jaffle_shop_orders
+00:16:06.374413 [debug]: Finished analyzing [  0.03s] model dbt_eelikem.test [success]
+00:16:06.374434 [info ]: Started running model dbt_eelikem.test
+00:16:06.374444 [debug]: Finished analyzing [  0.01s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [success]
+00:16:06.374465 [info ]: Started running test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id
+00:16:06.378295 [debug]: Writing runtime sql for node "test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f"
+00:16:06.378295 [debug]: Writing runtime sql for node "test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e"
+00:16:06.523738 [debug]: Query executed on node model.jaffle_shop.test:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+00:16:06.525791 [debug]: Writing runtime sql for node "model.jaffle_shop.test"
+00:16:06.808813 [debug]: Query executed on node model.jaffle_shop.test:
+create or replace   view analytics.dbt_eelikem.test
+  
+  
+  
+  
+  as (
+    with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned'
+)
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.test", "profile_name": "default", "target_name": "dev"} */
+00:16:06.812310 [info ]: Finished running [  0.44s] model dbt_eelikem.test [success]
+00:16:06.812449 [info ]:  Succeeded [  0.47s] model dbt_eelikem.test (view)
+00:16:07.563519 [debug]: Query executed on node test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from raw.jaffle_shop.customers
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.source_not_null_jaffle_shop_customers_id.50aa22178f", "profile_name": "default", "target_name": "dev"} */
+00:16:07.565543 [info ]: Finished running [  1.19s] test dbt_eelikem_dbt_test__audit.source_not_null_jaffle_shop_customers_id [pass]
+00:16:07.565611 [info ]:     Passed [  1.23s] test  source_not_null_jaffle_shop_customers_id
+00:16:07.776014 [debug]: Query executed on node test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from raw.jaffle_shop.customers
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.source_unique_jaffle_shop_customers_id.2777a7933e", "profile_name": "default", "target_name": "dev"} */
+00:16:07.777202 [info ]: Finished running [  1.40s] test dbt_eelikem_dbt_test__audit.source_unique_jaffle_shop_customers_id [pass]
+00:16:07.777333 [info ]:     Passed [  1.44s] test  source_unique_jaffle_shop_customers_id
+00:16:07.777436 [info ]: Started running model dbt_eelikem.stg_jaffle_shop_customers
+00:16:07.780016 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_jaffle_shop_customers"
+00:16:07.793935 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+00:16:07.795699 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_stripe_payment"
+00:16:07.828045 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_orders:
+SHOW OBJECTS IN SCHEMA "ANALYTICS"."DBT_EELIKEM" LIMIT 10000
+00:16:07.829451 [debug]: Writing runtime sql for node "model.jaffle_shop.stg_jaffle_shop_orders"
+00:16:07.983919 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_customers:
+create or replace   view analytics.dbt_eelikem.stg_jaffle_shop_customers
+  
+  
+  
+  
+  as (
+    select
+        id as customer_id,
+        first_name,
+        last_name
+
+    from raw.jaffle_shop.customers
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_jaffle_shop_customers", "profile_name": "default", "target_name": "dev"} */
+00:16:07.986116 [info ]: Finished running [  0.21s] model dbt_eelikem.stg_jaffle_shop_customers [success]
+00:16:07.986234 [info ]:  Succeeded [  0.24s] model dbt_eelikem.stg_jaffle_shop_customers (view)
+00:16:07.986417 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+00:16:07.986444 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+00:16:07.986476 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+00:16:07.986484 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+00:16:07.988641 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2 at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_customers_customer_id.sql
+00:16:07.988763 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999 at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_customers_customer_id.sql
+00:16:07.988781 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+00:16:07.988858 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+00:16:07.988977 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+00:16:07.989074 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+00:16:07.989241 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [success]
+00:16:07.989284 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id
+00:16:07.989711 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [success]
+00:16:07.989764 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id
+00:16:07.992283 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2"
+00:16:07.992423 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999"
+00:16:08.012557 [debug]: Query executed on node model.jaffle_shop.stg_stripe_payment:
+create or replace   view analytics.dbt_eelikem.stg_stripe_payment
+  
+  
+  
+  
+  as (
+    
+select 
+    id as payment_id,
+    orderid as order_id,
+    paymentmethod as payment_method,
+    status,
+    -- amount is stored in cents, so we need to divide by 100 to get dollars
+    amount/100 as amount,
+    created as created_at
+    -- _batched_at
+    
+from raw.stripe.payment
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_stripe_payment", "profile_name": "default", "target_name": "dev"} */
+00:16:08.014079 [info ]: Finished running [  1.64s] model dbt_eelikem.stg_stripe_payment [success]
+00:16:08.014156 [info ]:  Succeeded [  1.67s] model dbt_eelikem.stg_stripe_payment (view)
+00:16:08.014266 [info ]: Started test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+00:16:08.014287 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+00:16:08.015847 [debug]: Compiled SQL for node test.jaffle_shop.assert_stg_stripe_payment_total_positive at target/compiled/jaffle_shop/tests/assert_stg_stripe_payment_total_positive.sql
+00:16:08.015927 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+00:16:08.015967 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+00:16:08.018459 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [success]
+00:16:08.018595 [info ]: Started running test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive
+00:16:08.020403 [debug]: Writing runtime sql for node "test.jaffle_shop.assert_stg_stripe_payment_total_positive"
+00:16:08.026298 [debug]: Query executed on node model.jaffle_shop.stg_jaffle_shop_orders:
+create or replace   view analytics.dbt_eelikem.stg_jaffle_shop_orders
+  
+  
+  
+  
+  as (
+     select
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status,
+        _etl_loaded_at
+
+    from raw.jaffle_shop.orders
+  )
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.stg_jaffle_shop_orders", "profile_name": "default", "target_name": "dev"} */
+00:16:08.027567 [info ]: Finished running [  1.65s] model dbt_eelikem.stg_jaffle_shop_orders [success]
+00:16:08.027612 [info ]:  Succeeded [  1.69s] model dbt_eelikem.stg_jaffle_shop_orders (view)
+00:16:08.027731 [info ]: Started test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+00:16:08.027748 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+00:16:08.027774 [info ]: Started test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+00:16:08.027783 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+00:16:08.027794 [info ]: Started model dbt_eelikem.fct_orders
+00:16:08.027799 [debug]: Started rendering model dbt_eelikem.fct_orders
+00:16:08.027851 [info ]: Started test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+00:16:08.027865 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+00:16:08.027884 [info ]: Started test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+00:16:08.027893 [debug]: Started rendering test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+00:16:08.029687 [debug]: Compiled SQL for node test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef at target/compiled/jaffle_shop/target/generic_tests/relationships_stg_jaffle_shop__3a4c5b7e76605024bff9af72d6fbad4e.sql
+00:16:08.029763 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [success]
+00:16:08.029761 [debug]: Compiled SQL for node model.jaffle_shop.fct_orders at target/compiled/jaffle_shop/models/marts/finance/fct_orders.sql
+00:16:08.029812 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+00:16:08.029970 [debug]: Finished rendering [  0.00s] model dbt_eelikem.fct_orders [success]
+00:16:08.029979 [debug]: Compiled SQL for node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac at target/compiled/jaffle_shop/target/generic_tests/unique_stg_jaffle_shop_orders_order_id.sql
+00:16:08.030000 [debug]: Started analyzing model dbt_eelikem.fct_orders
+00:16:08.030063 [debug]: Compiled SQL for node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94 at target/compiled/jaffle_shop/target/generic_tests/accepted_values_stg_jaffle_sho_9e737f1742bbf5f35cc658b19a560db5.sql
+00:16:08.030087 [debug]: Compiled SQL for node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af at target/compiled/jaffle_shop/target/generic_tests/not_null_stg_jaffle_shop_orders_order_id.sql
+00:16:08.030083 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+00:16:08.030138 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+00:16:08.030161 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+00:16:08.030187 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+00:16:08.030202 [debug]: Finished rendering [  0.00s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+00:16:08.030220 [debug]: Started analyzing test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+00:16:08.030328 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [success]
+00:16:08.030353 [info ]: Started running test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id
+00:16:08.030464 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [success]
+00:16:08.030501 [info ]: Started running test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+00:16:08.030522 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [success]
+00:16:08.030549 [info ]: Started running test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id
+00:16:08.032235 [debug]: Writing runtime sql for node "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af"
+00:16:08.032285 [debug]: Writing runtime sql for node "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94"
+00:16:08.032381 [debug]: Writing runtime sql for node "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac"
+00:16:08.034446 [debug]: Finished analyzing [  0.00s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [success]
+00:16:08.034501 [info ]: Started running test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+00:16:08.035953 [debug]: Writing runtime sql for node "test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef"
+00:16:08.038945 [debug]: Finished analyzing [  0.01s] model dbt_eelikem.fct_orders [success]
+00:16:08.624565 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_orders_order_id.489806f7af", "profile_name": "default", "target_name": "dev"} */
+00:16:08.626416 [debug]: Query executed on node test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.not_null_stg_jaffle_shop_customers_customer_id.1828149cc2", "profile_name": "default", "target_name": "dev"} */
+00:16:08.626479 [info ]: Finished running [  0.60s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_orders_order_id [pass]
+00:16:08.626630 [info ]:     Passed [  0.60s] test  not_null_stg_jaffle_shop_orders_order_id
+00:16:08.627215 [info ]: Finished running [  0.64s] test dbt_eelikem_dbt_test__audit.not_null_stg_jaffle_shop_customers_customer_id [pass]
+00:16:08.627247 [info ]:     Passed [  0.64s] test  not_null_stg_jaffle_shop_customers_customer_id
+00:16:08.655151 [debug]: Query executed on node test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned','return_pending'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending.5fb55a5c94", "profile_name": "default", "target_name": "dev"} */
+00:16:08.656251 [info ]: Finished running [  0.63s] test dbt_eelikem_dbt_test__audit.accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending [pass]
+00:16:08.656314 [info ]:     Passed [  0.63s] test  accepted_values_stg_jaffle_shop_orders_status__placed__shipped__completed__returned__return_pending
+00:16:08.674531 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_customers
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_customers_customer_id.b9becc3999", "profile_name": "default", "target_name": "dev"} */
+00:16:08.677086 [info ]: Finished running [  0.69s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_customers_customer_id [pass]
+00:16:08.677178 [info ]:     Passed [  0.69s] test  unique_stg_jaffle_shop_customers_customer_id
+00:16:08.687534 [debug]: Query executed on node test.jaffle_shop.assert_stg_stripe_payment_total_positive:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- This singular test ensures that the total amount for each order in the stg_stripe_payment table is positive
+
+select
+    order_id,
+    sum(amount) as total_amount
+from analytics.dbt_eelikem.stg_stripe_payment
+group by 1
+having total_amount < 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.assert_stg_stripe_payment_total_positive", "profile_name": "default", "target_name": "dev"} */
+00:16:08.688277 [info ]: Finished running [  0.67s] test dbt_eelikem_dbt_test__audit.assert_stg_stripe_payment_total_positive [pass]
+00:16:08.688318 [info ]:     Passed [  0.67s] test  assert_stg_stripe_payment_total_positive
+00:16:08.865466 [debug]: Query executed on node test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from analytics.dbt_eelikem.stg_jaffle_shop_orders
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from analytics.dbt_eelikem.stg_jaffle_shop_customers
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_.9f2d6690ef", "profile_name": "default", "target_name": "dev"} */
+00:16:08.867660 [info ]: Finished running [  0.83s] test dbt_eelikem_dbt_test__audit.relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_ [pass]
+00:16:08.867896 [info ]:     Passed [  0.84s] test  relationships_stg_jaffle_shop_orders_customer_id__customer_id__ref_stg_jaffle_shop_customers_
+00:16:09.501832 [debug]: Query executed on node test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac:
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from analytics.dbt_eelikem.stg_jaffle_shop_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.jaffle_shop.unique_stg_jaffle_shop_orders_order_id.50aa8222ac", "profile_name": "default", "target_name": "dev"} */
+00:16:09.503568 [info ]: Finished running [  1.47s] test dbt_eelikem_dbt_test__audit.unique_stg_jaffle_shop_orders_order_id [pass]
+00:16:09.503706 [info ]:     Passed [  1.48s] test  unique_stg_jaffle_shop_orders_order_id
+00:16:09.503806 [info ]: Started running model dbt_eelikem.fct_orders
+00:16:09.507155 [debug]: Writing runtime sql for node "model.jaffle_shop.fct_orders"
+00:16:10.272289 [debug]: Query executed on node model.jaffle_shop.fct_orders:
+create or replace transient  table analytics.dbt_eelikem.fct_orders
+    
+    
+    
+    
+    as (with payments as (
+
+    select * from analytics.dbt_eelikem.stg_stripe_payment
+
+), 
+
+orders as (
+
+    select * from analytics.dbt_eelikem.stg_jaffle_shop_orders
+
+),
+
+order_payment as (
+
+    select
+        order_id,
+        sum(
+            case
+                when status = 'success' then amount
+            end
+        ) as amount
+    from payments
+    group by 1
+
+),
+
+final as (
+
+    select
+        orders.order_id,
+        orders.customer_id,
+        orders.order_date,
+        coalesce(order_payment.amount, 0) as amount
+    
+    from orders
+    left join order_payment using (order_id)
+    
+)    
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.fct_orders", "profile_name": "default", "target_name": "dev"} */
+00:16:10.273753 [info ]: Finished running [  0.77s] model dbt_eelikem.fct_orders [success]
+00:16:10.273877 [info ]:  Succeeded [  0.78s] model dbt_eelikem.fct_orders (table)
+00:16:10.274069 [info ]: Started model dbt_eelikem.dim_customers
+00:16:10.274152 [debug]: Started rendering model dbt_eelikem.dim_customers
+00:16:10.276277 [debug]: Compiled SQL for node model.jaffle_shop.dim_customers at target/compiled/jaffle_shop/models/marts/marketing/dim_customers.sql
+00:16:10.276397 [debug]: Finished rendering [  0.00s] model dbt_eelikem.dim_customers [success]
+00:16:10.276485 [info ]: Finished rendering [  3.94s] (15 nodes, 0 skipped, 0 errors)
+00:16:10.276568 [debug]: Started analyzing model dbt_eelikem.dim_customers
+00:16:10.278949 [debug]: Finished analyzing [  0.00s] model dbt_eelikem.dim_customers [success]
+00:16:10.278985 [info ]: Finished analyzing [  3.93s] (15 nodes, 0 skipped, 0 errors)
+00:16:10.279040 [info ]: Started running model dbt_eelikem.dim_customers
+00:16:10.282148 [debug]: Writing runtime sql for node "model.jaffle_shop.dim_customers"
+00:16:11.138583 [debug]: Query executed on node model.jaffle_shop.dim_customers:
+create or replace transient  table analytics.dbt_eelikem.dim_customers
+    
+    
+    
+    
+    as (with customers as (
+
+    -- use ref macro to reference the staging model for customers
+    select * from analytics.dbt_eelikem.stg_jaffle_shop_customers
+
+),
+
+orders as (
+
+    -- use ref macro to reference the staging model for orders
+    select * from analytics.dbt_eelikem.fct_orders
+
+),
+
+customer_orders as (
+
+    select
+        customer_id,
+
+        min(order_date) as first_order_date,
+        max(order_date) as most_recent_order_date,
+        count(order_id) as number_of_orders,
+        sum(amount) as lifetime_value
+
+    from orders
+
+    group by 1
+
+),
+
+
+final as (
+
+    select
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
+        customer_orders.first_order_date,
+        customer_orders.most_recent_order_date,
+        coalesce(customer_orders.number_of_orders, 0) as number_of_orders,
+        customer_orders.lifetime_value
+
+    from customers
+
+    left join customer_orders using (customer_id)
+    
+
+)
+
+select * from final
+
+    )
+
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.jaffle_shop.dim_customers", "profile_name": "default", "target_name": "dev"} */
+00:16:11.140871 [info ]: Finished running [  0.86s] model dbt_eelikem.dim_customers [success]
+00:16:11.140953 [info ]: Finished running [  4.77s] (15 nodes, 0 skipped, 0 errors)
+00:16:11.141019 [info ]:  Succeeded [  0.86s] model dbt_eelikem.dim_customers (table)
+00:16:11.183249 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+00:16:11.247227 [info ]: 
+==================== Execution Summary =====================
+Finished 'build' with 2 warnings for target 'dev' [8.1s]
+Processed: 6 models | 9 tests
+Summary: 15 total | 15 success
