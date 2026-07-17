@@ -1,7 +1,9 @@
 models:
   - name: stg_jaffle_shop_customers
+    description: one unique customer per row
     columns:
       - name: customer_id
+        description: the primary key for the customers table
       # conigure to check for uniqueness and not null for the customer_id column
         data_tests:
           - unique
@@ -15,6 +17,8 @@ models:
           - unique
           - not_null
       - name: status
+      # reference the order_status doc for the status column
+        description: '{{ doc("order_status") }}'
       # conigure to check for accepted values for the status column
         data_tests:
           - accepted_values:
