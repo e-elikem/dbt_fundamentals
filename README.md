@@ -1,6 +1,6 @@
-# dbt_fundamentals
+# Build Data Models With dbt
 
-A learning project demonstrating **dbt (data build tool)** fundamentals with a sample Jaffle Shop data warehouse project.
+A learning project demonstrating **dbt (data build tool)** fundamentals with a sample Jaffle Shop data warehouse project. The starter project developed by [dbt-learn-group-traing](https://github.com/dbt-labs/dbt-learn-group-training.git) was used.
 
 ## 📋 Overview
 
@@ -48,42 +48,8 @@ dbt_fundamentals/
 
 ### Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/e-elikem/dbt_fundamentals.git
-   cd dbt_fundamentals
-   ```
+You can clone the starter project repository from [dbt-learn-group-traing](https://github.com/dbt-labs/dbt-learn-group-training.git).
 
-2. **Install dependencies:**
-   ```bash
-   dbt deps
-   ```
-
-3. **Configure your profile:**
-   Create or update your `~/.dbt/profiles.yml` to match your warehouse connection details. The project uses a `default` profile:
-   ```yaml
-   default:
-     target: dev
-     outputs:
-       dev:
-         type: [warehouse_type]  # e.g., snowflake, bigquery, etc.
-         # Add your warehouse-specific connection details
-   ```
-
-4. **Seed data (if applicable):**
-   ```bash
-   dbt seed
-   ```
-
-5. **Run the project:**
-   ```bash
-   dbt run
-   ```
-
-6. **Run tests:**
-   ```bash
-   dbt test
-   ```
 
 ## 📦 Project Dependencies
 
@@ -181,11 +147,6 @@ dbt clean
 2. **Review tests** — Look at `tests/` to see data quality checks in action
 3. **Generate documentation** — Run `dbt docs generate && dbt docs serve` to browse the project
 4. **Customize for your data** — Adapt sources and models to your warehouse schema
-
-## 📄 License
-
-This project is provided as-is for learning purposes.
-
 ---
 
 **Happy transforming! 🎉**
